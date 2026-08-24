@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "siteName": "Pousada Recanto do Park",
+    "titleHome": "Pousada Recanto do Park | Penha, Santa Catarina",
+    "descriptionHome": "Cozy lodging in Penha, Brazil, just minutes from Beto Carrero World and the best beaches in the region. Book your stay.",
+    "titleAccommodations": "Rooms | Pousada Recanto do Park",
+    "descriptionAccommodations": "Discover the rooms and suites at Pousada Recanto do Park, in Penha, Brazil."
+  },
+  "nav": {
+    "home": "Home",
+    "accommodations": "Rooms",
+    "amenities": "Services",
+    "location": "Location",
+    "contact": "Contact",
+    "bookNow": "Book now"
+  },
+  "hero": {
+    "eyebrow": "Penha, Santa Catarina",
+    "title": "Your getaway, steps from the magic",
+    "subtitle": "Just minutes from Beto Carrero World and the most beautiful beaches on the Santa Catarina coast.",
+    "ctaPrimary": "Book now",
+    "ctaWhatsapp": "Chat on WhatsApp",
+    "scrollHint": "Scroll to discover"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "Rest and adventure, side by side",
+    "body": "Pousada Recanto do Park was made to be the perfect starting point for your Beto Carrero World and Penha beach getaway. A family-friendly atmosphere, comfort in every detail, and the most convenient location in the area."
+  },
+  "location": {
+    "eyebrow": "Prime location",
+    "title": "Between the park and the sea",
+    "parkTitle": "Beto Carrero World",
+    "parkDistance": "5 minutes by car",
+    "parkDescription": "Latin America's largest theme park, right around the corner.",
+    "beachTitle": "Penha's beaches",
+    "beachDistance": "10 minutes by car",
+    "beachDescription": "Armação, Gravatá and Prainha beaches waiting for you."
+  },
+  "amenities": {
+    "eyebrow": "Services",
+    "title": "Everything you need to unwind",
+    "items": {
+      "pool": "Swimming pool",
+      "breakfast": "Breakfast included",
+      "wifi": "Free Wi-Fi",
+      "parking": "Free parking",
+      "ac": "Air conditioning",
+      "bbq": "Shared BBQ area",
+      "kidsArea": "Kids area",
+      "petFriendly": "Pet friendly"
+    }
+  },
+  "accommodationsPreview": {
+    "eyebrow": "Where you'll stay",
+    "title": "Rooms for every kind of trip",
+    "ctaAll": "View all rooms"
+  },
+  "accommodations": {
+    "hero": {
+      "eyebrow": "Our rooms",
+      "title": "Comfort designed for your stay",
+      "subtitle": "From cozy doubles to family suites: find the perfect space for your trip."
+    },
+    "bookRoom": "Book this room",
+    "capacityLabel": "Guests",
+    "detail": {
+      "backToRooms": "Back to rooms",
+      "sizeLabel": "Size",
+      "bedsLabel": "Beds",
+      "amenitiesLabel": "What this room offers",
+      "galleryHint": "Tap the photo to zoom in"
+    },
+    "rooms": {
+      "standardCasal": {
+        "name": "Standard Double",
+        "description": "A cozy room for couples, with a queen bed, air conditioning and garden views.",
+        "longDescription": "Designed for couples, the Standard Double combines comfort and simplicity: a queen bed, air conditioning, quality linens and garden views. Ideal for a calm base between park days and beach days.",
+        "beds": "1 queen bed"
+      },
+      "standardFamilia": {
+        "name": "Standard Family",
+        "description": "Room for up to 4 guests, ideal for small families visiting the park.",
+        "longDescription": "A room built for the whole family: space for up to 4 guests, a flexible bed setup, and everything you need to rest between a day at the park and a day at the beach.",
+        "beds": "1 double bed + 2 single beds"
+      },
+      "superiorVistaJardim": {
+        "name": "Superior Garden View",
+        "description": "A larger room with a private balcony overlooking the pousada's green area.",
+        "longDescription": "Roomier than the Standard, the Superior Garden View has a private balcony overlooking the pousada's green area. The perfect spot for a slow breakfast before heading out for the day.",
+        "beds": "1 queen bed"
+      },
+      "suiteMaster": {
+        "name": "Master Suite",
+        "description": "Our most complete room, with a whirlpool tub and mini fridge.",
+        "longDescription": "Our most complete room: a whirlpool tub, mini fridge, and the largest space in the whole pousada. For anyone who wants the stay itself to be part of the trip.",
+        "beds": "1 king bed"
+      },
+      "quartoGrupo": {
+        "name": "Group Room",
+        "description": "Comfortable bunk beds for up to 6 guests, perfect for the whole crew.",
+        "longDescription": "Built for groups and big families: comfortable bunk beds for up to 6 guests, plenty of room for luggage, and everything close by, perfect for a crew visiting the park and the beach together.",
+        "beds": "3 bunk beds"
+      }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "A taste of what awaits you"
+  },
+  "testimonials": {
+    "eyebrow": "Who's stayed here",
+    "title": "Stories from our guests",
+    "items": {
+      "t1": {
+        "name": "Camila R.",
+        "location": "Curitiba, Brazil",
+        "quote": "Perfect location for anyone visiting Beto Carrero. Great breakfast and very attentive staff!"
+      },
+      "t2": {
+        "name": "João and family",
+        "location": "São Paulo, Brazil",
+        "quote": "The kids loved the pool and we loved being so close to the beach. We'll definitely be back."
+      },
+      "t3": {
+        "name": "Marina S.",
+        "location": "Porto Alegre, Brazil",
+        "quote": "Clean, cozy pousada with great value for money. Highly recommend!"
+      }
+    }
+  },
+  "ctaFinal": {
+    "title": "Ready for your next adventure?",
+    "subtitle": "Secure your stay at Pousada Recanto do Park.",
+    "ctaPrimary": "Book now",
+    "ctaWhatsapp": "Chat on WhatsApp"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "addressLabel": "Address",
+    "address": "Rua das Palmeiras, 123, Armação, Penha, SC, Brazil",
+    "phoneLabel": "Phone / WhatsApp",
+    "emailLabel": "Email",
+    "instagramLabel": "Instagram"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "madeWith": "Made with care for everyone visiting Penha.",
+    "paymentMethods": "Accepted payment methods"
+  },
+  "whatsappButton": {
+    "label": "Chat with us on WhatsApp"
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  }
+}

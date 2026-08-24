@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "siteName": "Pousada Recanto do Park",
+    "titleHome": "Pousada Recanto do Park | Penha, Santa Catarina",
+    "descriptionHome": "Alojamiento acogedor en Penha, Brasil, a pocos minutos de Beto Carrero World y las mejores playas de la región. Reserva tu estadía.",
+    "titleAccommodations": "Habitaciones | Pousada Recanto do Park",
+    "descriptionAccommodations": "Conoce las habitaciones y suites de la Pousada Recanto do Park, en Penha, Brasil."
+  },
+  "nav": {
+    "home": "Inicio",
+    "accommodations": "Habitaciones",
+    "amenities": "Servicios",
+    "location": "Ubicación",
+    "contact": "Contacto",
+    "bookNow": "Reservar ahora"
+  },
+  "hero": {
+    "eyebrow": "Penha, Santa Catarina",
+    "title": "Tu refugio a pasos de la magia",
+    "subtitle": "A pocos minutos de Beto Carrero World y de las playas más lindas del litoral catarinense.",
+    "ctaPrimary": "Reservar ahora",
+    "ctaWhatsapp": "Hablar por WhatsApp",
+    "scrollHint": "Desliza para descubrir"
+  },
+  "about": {
+    "eyebrow": "Sobre nosotros",
+    "title": "Descanso y aventura, uno al lado del otro",
+    "body": "La Pousada Recanto do Park nació para ser el punto de partida perfecto para quienes vienen a disfrutar de Beto Carrero World y las playas de Penha. Ambiente familiar, confort en cada detalle y la ubicación más conveniente de la región."
+  },
+  "location": {
+    "eyebrow": "Ubicación privilegiada",
+    "title": "Entre el parque y el mar",
+    "parkTitle": "Beto Carrero World",
+    "parkDistance": "a 5 minutos en auto",
+    "parkDescription": "El parque temático más grande de América Latina, muy cerca de ti.",
+    "beachTitle": "Playas de Penha",
+    "beachDistance": "a 10 minutos en auto",
+    "beachDescription": "Playa de Armação, Gravatá y Prainha te esperan."
+  },
+  "amenities": {
+    "eyebrow": "Servicios",
+    "title": "Todo lo que necesitas para relajarte",
+    "items": {
+      "pool": "Piscina",
+      "breakfast": "Desayuno incluido",
+      "wifi": "Wi-Fi gratis",
+      "parking": "Estacionamiento gratuito",
+      "ac": "Aire acondicionado",
+      "bbq": "Área de parrilla compartida",
+      "kidsArea": "Área infantil",
+      "petFriendly": "Admite mascotas"
+    }
+  },
+  "accommodationsPreview": {
+    "eyebrow": "Dónde te vas a hospedar",
+    "title": "Habitaciones para cada tipo de viaje",
+    "ctaAll": "Ver todas las habitaciones"
+  },
+  "accommodations": {
+    "hero": {
+      "eyebrow": "Nuestras habitaciones",
+      "title": "Confort pensado para tu estadía",
+      "subtitle": "Desde habitaciones dobles hasta suites familiares: encuentra el espacio ideal para tu viaje."
+    },
+    "bookRoom": "Reservar esta habitación",
+    "capacityLabel": "Huéspedes",
+    "detail": {
+      "backToRooms": "Volver a las habitaciones",
+      "sizeLabel": "Tamaño",
+      "bedsLabel": "Camas",
+      "amenitiesLabel": "Qué ofrece esta habitación",
+      "galleryHint": "Toca la foto para ampliar"
+    },
+    "rooms": {
+      "standardCasal": {
+        "name": "Standard Doble",
+        "description": "Habitación acogedora para parejas, con cama queen, aire acondicionado y vista al jardín.",
+        "longDescription": "Pensada para parejas, la Standard Doble combina confort y simplicidad: cama queen, aire acondicionado, ropa de cama de calidad y vista al jardín de la pousada. Ideal para una base tranquila entre los días de parque y playa.",
+        "beds": "1 cama queen"
+      },
+      "standardFamilia": {
+        "name": "Standard Familiar",
+        "description": "Espacio para hasta 4 personas, ideal para familias pequeñas que vienen a disfrutar del parque.",
+        "longDescription": "Una habitación pensada para toda la familia: espacio para hasta 4 personas, configuración flexible de camas y todo lo necesario para descansar entre un día de parque y otro de playa.",
+        "beds": "1 cama matrimonial + 2 camas individuales"
+      },
+      "superiorVistaJardim": {
+        "name": "Superior Vista al Jardín",
+        "description": "Más amplia, con balcón privado y vista al área verde de la pousada.",
+        "longDescription": "Más amplia que la Standard, la Superior Vista al Jardín tiene balcón privado con vista al área verde de la pousada. El lugar perfecto para un desayuno tranquilo antes de salir.",
+        "beds": "1 cama queen"
+      },
+      "suiteMaster": {
+        "name": "Suite Master",
+        "description": "Nuestra habitación más completa, con hidromasaje y frigobar.",
+        "longDescription": "Nuestra habitación más completa: bañera de hidromasaje, frigobar y el mayor espacio de toda la pousada. Para quienes quieren que la estadía sea parte del viaje.",
+        "beds": "1 cama king"
+      },
+      "quartoGrupo": {
+        "name": "Habitación Grupal",
+        "description": "Literas cómodas para hasta 6 personas, perfecta para el grupo completo.",
+        "longDescription": "Hecha para grupos y familias numerosas: literas cómodas para hasta 6 personas, mucho espacio para el equipaje y todo cerca, perfecta para un grupo que viene a disfrutar del parque y la playa.",
+        "beds": "3 literas"
+      }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Galería",
+    "title": "Una probadita de lo que te espera"
+  },
+  "testimonials": {
+    "eyebrow": "Quiénes ya se hospedaron",
+    "title": "Historias de nuestros huéspedes",
+    "items": {
+      "t1": {
+        "name": "Camila R.",
+        "location": "Curitiba, Brasil",
+        "quote": "Ubicación perfecta para quienes visitan Beto Carrero. ¡Excelente desayuno y personal muy atento!"
+      },
+      "t2": {
+        "name": "João y familia",
+        "location": "São Paulo, Brasil",
+        "quote": "A los niños les encantó la piscina y a nosotros la cercanía con la playa. Sin duda volveremos."
+      },
+      "t3": {
+        "name": "Marina S.",
+        "location": "Porto Alegre, Brasil",
+        "quote": "Pousada limpia, acogedora y con una excelente relación calidad-precio. ¡La recomiendo mucho!"
+      }
+    }
+  },
+  "ctaFinal": {
+    "title": "¿Listo para tu próxima aventura?",
+    "subtitle": "Asegura tu estadía en la Pousada Recanto do Park.",
+    "ctaPrimary": "Reservar ahora",
+    "ctaWhatsapp": "Hablar por WhatsApp"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos",
+    "addressLabel": "Dirección",
+    "address": "Rua das Palmeiras, 123, Armação, Penha, SC, Brasil",
+    "phoneLabel": "Teléfono / WhatsApp",
+    "emailLabel": "Correo electrónico",
+    "instagramLabel": "Instagram"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "madeWith": "Hecho con cariño para quienes visitan Penha.",
+    "paymentMethods": "Formas de pago aceptadas"
+  },
+  "whatsappButton": {
+    "label": "Habla con nosotros por WhatsApp"
+  },
+  "languageSwitcher": {
+    "label": "Idioma"
+  }
+}
