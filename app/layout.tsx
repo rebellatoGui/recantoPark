@@ -5,7 +5,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://recantodopark.com.br"
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      "https://recantopark.guilherme-rebellato-dev.workers.dev"
   ),
   icons: {
     icon: [
