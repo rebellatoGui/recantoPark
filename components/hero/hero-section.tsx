@@ -138,7 +138,7 @@ export function HeroSection() {
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-navy/85 via-navy/35 to-transparent sm:h-80" />
       </div>
 
-      <div className="absolute left-1/2 top-5 z-10 w-40 -translate-x-1/2 sm:top-6 sm:w-72 md:w-80">
+      <div className="absolute left-1/2 top-[104px] z-10 w-40 -translate-x-1/2 sm:top-[112px] sm:w-72 md:w-80">
         <div
           data-hero-glow
           className="absolute left-1/2 top-0 aspect-square w-[58%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,theme(colors.gold)/40%,transparent_70%)] blur-2xl"

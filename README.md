@@ -1,7 +1,7 @@
 <h1 align="center"> Recanto do Park 🎢</h1>
 
 <p align="center">
-Site institucional da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World e das praias da região.
+Site institucional da Pousada Recanto do Park, em Penha/SC.
 </p>
 
 <p align="center">

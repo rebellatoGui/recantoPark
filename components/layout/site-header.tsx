@@ -54,12 +54,12 @@ export function SiteHeader() {
           <Image
             src="/brand/mark.png"
             alt=""
-            width={36}
-            height={36}
+            width={44}
+            height={44}
             priority
-            className="size-9 shrink-0 object-contain"
+            className="size-11 shrink-0 object-contain"
           />
-          <span className="font-display text-xl font-semibold tracking-wide text-gold">
+          <span className="font-wordmark text-2xl font-semibold tracking-wide text-gold">
             Recanto do Park
           </span>
         </Link>
@@ -101,13 +101,13 @@ export function SiteHeader() {
           </SheetTrigger>
           <SheetContent side="right" className="bg-navy text-navy-foreground">
             <SheetHeader>
-              <SheetTitle className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-wide text-gold">
+              <SheetTitle className="flex items-center gap-2.5 font-wordmark text-2xl font-semibold tracking-wide text-gold">
                 <Image
                   src="/brand/mark.png"
                   alt=""
-                  width={32}
-                  height={32}
-                  className="size-8 shrink-0 object-contain"
+                  width={40}
+                  height={40}
+                  className="size-10 shrink-0 object-contain"
                 />
                 Recanto do Park
               </SheetTitle>

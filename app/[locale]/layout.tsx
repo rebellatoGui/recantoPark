@@ -14,15 +14,46 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+const OG_LOCALES: Record<string, string> = {
+  pt: "pt_BR",
+  en: "en_US",
+  es: "es_ES",
+};
+
 export async function generateMetadata(
   props: LayoutProps<"/[locale]">
 ): Promise<Metadata> {
   const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: "meta" });
 
+  const title = t("titleHome");
+  const description = t("descriptionHome");
+  const siteName = t("siteName");
+
   return {
-    title: t("titleHome"),
-    description: t("descriptionHome"),
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      siteName,
+      type: "website",
+      locale: OG_LOCALES[locale] ?? "pt_BR",
+      images: [
+        {
+          url: "/brand/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: siteName,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/brand/og-image.png"],
+    },
   };
 }
 
