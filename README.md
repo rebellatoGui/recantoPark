@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center"> Recanto do Park 🎢</h1>
 
-## Getting Started
+<p align="center">
+Site institucional da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World e das praias da região.
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+  <img alt="Capa Recanto do Park" src="readme-preview.png" style="border-radius: 10px;">
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologias
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- GSAP
+- next-intl
+- Playwright
+- Git e Github
 
-## Learn More
+## 💻 Projeto
 
-To learn more about Next.js, take a look at the following resources:
+- Site multilíngue (pt/en/es) da pousada, com páginas de acomodações geradas estaticamente (SSG), animações de scroll com GSAP e modo claro/escuro.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Interface pensada para conversão via WhatsApp, com seções de localização, comodidades, galeria e depoimentos destacando a proximidade com o Beto Carrero World e as praias de Penha.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<h2 align="center">📌 Desenvolvedores</h2>
 
-## Deploy on Vercel
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/rebellatoGui" title="GitHub">
+        <img src="https://avatars.githubusercontent.com/u/146299321?v=4" width="100px;" alt="Foto do Guilherme Rebellato no GitHub"/><br>
+        <sub>
+          <b>Guilherme Rebellato</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<br>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+<p align="center">Feito com ♥ por rebellatoGui</p>
