@@ -59,7 +59,7 @@ function DestinationText({
         <MapPin className="size-3.5" />
         {distance}
       </span>
-      <h3 className="mt-4 font-display text-2xl leading-tight sm:text-3xl">
+      <h3 className="mt-4 font-display text-xl leading-tight sm:text-3xl">
         {title}
       </h3>
       <p className="mt-3 max-w-md text-sm leading-relaxed text-navy-foreground/70 sm:text-base">
@@ -89,13 +89,13 @@ export function LocationSection() {
           <p className="text-sm uppercase tracking-[0.35em] text-gold">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-4 font-display text-4xl sm:text-5xl">
+          <h2 className="mt-4 font-display text-3xl sm:text-5xl">
             {t("title")}
           </h2>
         </div>
 
-        <div className="mt-12 flex flex-col gap-12 md:gap-14">
-          <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+        <div className="mt-12 flex flex-col gap-8 md:gap-14">
+          <div className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
             <DestinationPhotos
               images={[parkImages[0], parkImages[1]]}
               alt={t("parkTitle")}
@@ -109,7 +109,7 @@ export function LocationSection() {
 
           <div className="h-px w-full bg-white/10" />
 
-          <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+          <div className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
             <DestinationPhotos
               images={[beachImages[0], beachImages[1]]}
               alt={t("beachTitle")}

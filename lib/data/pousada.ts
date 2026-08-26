@@ -13,10 +13,11 @@ import { poolImages, roomImages } from "./images";
 
 export const contact = {
   whatsappNumber:
-    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5547999990000",
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5547997491856",
+  phoneDisplay: "+55 47 99749-1856",
   bookingEngineUrl:
     process.env.NEXT_PUBLIC_BOOKING_ENGINE_URL ?? "#reservar-em-breve",
-  email: "contato@recantodopark.com.br",
+  email: "pousadarecantodopark@gmail.com",
   instagramHandle: "@recantodopark",
   instagramUrl: "https://instagram.com/recantodopark",
 };

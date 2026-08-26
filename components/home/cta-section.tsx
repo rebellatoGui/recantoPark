@@ -11,14 +11,14 @@ export function CtaSection() {
   const scope = useReveal<HTMLElement>();
 
   return (
-    <section ref={scope} className="mx-auto max-w-5xl px-6 py-24 text-center md:py-32">
-      <h2 data-reveal className="font-display text-4xl leading-tight text-foreground sm:text-5xl">
+    <section ref={scope} className="mx-auto max-w-5xl px-6 py-16 text-center md:py-32">
+      <h2 data-reveal className="font-display text-3xl leading-tight text-foreground sm:text-5xl">
         {t("title")}
       </h2>
-      <p data-reveal className="mx-auto mt-4 max-w-md text-lg text-muted-foreground">
+      <p data-reveal className="mx-auto mt-4 max-w-md text-base text-muted-foreground sm:text-lg">
         {t("subtitle")}
       </p>
-      <div data-reveal className="mt-10 flex flex-wrap justify-center gap-4">
+      <div data-reveal className="mt-10 flex flex-wrap justify-center gap-3 sm:gap-4">
         <Magnetic>
           <BookNowButton label={t("ctaPrimary")} />
         </Magnetic>

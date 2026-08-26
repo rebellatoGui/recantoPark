@@ -13,13 +13,13 @@ export function AccommodationsPreview() {
   const preview = rooms.slice(0, 3);
 
   return (
-    <section ref={scope} className="bg-secondary/40 py-24 md:py-32">
+    <section ref={scope} className="bg-secondary/40 py-16 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div
           data-reveal
           className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end"
         >
-          <h2 className="font-display text-4xl leading-tight text-foreground sm:text-5xl">
+          <h2 className="font-display text-3xl leading-tight text-foreground sm:text-5xl">
             {t("title")}
           </h2>
           <Button
@@ -32,7 +32,7 @@ export function AccommodationsPreview() {
           </Button>
         </div>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {preview.map((room) => (
             <RoomCard
               key={room.id}

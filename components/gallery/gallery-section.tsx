@@ -27,9 +27,9 @@ export function GallerySection() {
     );
 
   return (
-    <section ref={scope} className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+    <section ref={scope} className="mx-auto max-w-7xl px-6 py-16 md:py-32">
       <div data-reveal className="mx-auto max-w-2xl text-center">
-        <h2 className="font-display text-4xl leading-tight text-foreground sm:text-5xl">
+        <h2 className="font-display text-3xl leading-tight text-foreground sm:text-5xl">
           {t("title")}
         </h2>
       </div>

@@ -2,8 +2,7 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 
 const baseUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://recantopark.guilherme-rebellato-dev.workers.dev";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://pousadarecantodopark.com.br";
 const paths = ["", "/acomodacoes"];
 
 export default function sitemap(): MetadataRoute.Sitemap {

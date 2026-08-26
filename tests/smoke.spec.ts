@@ -32,10 +32,10 @@ test("whatsapp and booking CTAs point to configured placeholders", async ({
   const whatsapp = page
     .getByRole("button", { name: "Falar no WhatsApp" })
     .first();
-  await expect(whatsapp).toHaveAttribute("href", /wa\.me\/5547999990000/);
+  await expect(whatsapp).toHaveAttribute("href", /wa\.me\/5547997491856/);
 
   const floating = page.getByRole("link", {
     name: "Fale conosco no WhatsApp",
   });
-  await expect(floating).toHaveAttribute("href", /wa\.me\/5547999990000/);
+  await expect(floating).toHaveAttribute("href", /wa\.me\/5547997491856/);
 });

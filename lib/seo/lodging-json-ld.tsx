@@ -15,6 +15,7 @@ export function LodgingJsonLd() {
       addressCountry: "BR",
     },
     email: contact.email,
+    telephone: contact.phoneDisplay,
     sameAs: [contact.instagramUrl],
   };
 

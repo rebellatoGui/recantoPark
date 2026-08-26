@@ -21,9 +21,9 @@ export function SiteFooter() {
 
   return (
     <footer id="contato" className="border-t border-white/10 bg-navy text-navy-foreground">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 sm:gap-10 sm:py-16 md:grid-cols-3">
         <div className="flex flex-col items-center space-y-4 text-center md:items-start md:text-left">
-          <Logo spin={false} className="size-40" />
+          <Logo spin={false} className="size-28 sm:size-40" />
           <p className="max-w-xs text-sm text-navy-foreground/70">
             {tFooter("madeWith")}
           </p>

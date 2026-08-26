@@ -174,17 +174,17 @@ export function HeroSection() {
         </p>
         <h1
           data-hero-title
-          className="max-w-3xl font-display text-4xl leading-[1.05] font-semibold sm:text-6xl md:text-7xl"
+          className="max-w-3xl font-display text-3xl leading-[1.05] font-semibold sm:text-6xl md:text-7xl"
         >
           {t("title")}
         </h1>
         <p
           data-hero-subtitle
-          className="mt-6 max-w-xl text-lg text-navy-foreground/80"
+          className="mt-6 max-w-xl text-base text-navy-foreground/80 sm:text-lg"
         >
           {t("subtitle")}
         </p>
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-10 flex flex-wrap gap-3 sm:gap-4">
           <span data-hero-cta>
             <Magnetic>
               <BookNowButton label={t("ctaPrimary")} />

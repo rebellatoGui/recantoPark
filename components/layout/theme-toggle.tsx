@@ -16,7 +16,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       onClick={toggle}
       aria-label="Alternar tema"
       className={cn(
-        "flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-current transition-colors hover:bg-white/15",
+        "flex size-9 shrink-0 items-center justify-center rounded-full bg-navy/8 text-current transition-colors hover:bg-navy/15 dark:bg-white/10 dark:hover:bg-white/15",
         className
       )}
     >

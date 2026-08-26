@@ -14,8 +14,8 @@ export function AboutSection() {
   const lines = useDrawLine<HTMLDivElement>();
 
   return (
-    <section ref={scope} className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-      <div ref={lines} className="grid items-center gap-12 md:grid-cols-2">
+    <section ref={scope} className="mx-auto max-w-7xl px-6 py-16 md:py-32">
+      <div ref={lines} className="grid items-center gap-8 sm:gap-12 md:grid-cols-2">
         <div className="relative">
           <div
             data-reveal
@@ -52,10 +52,10 @@ export function AboutSection() {
               strokeLinecap="round"
             />
           </svg>
-          <h2 className="font-display text-4xl leading-tight text-foreground sm:text-5xl">
+          <h2 className="font-display text-3xl leading-tight text-foreground sm:text-5xl">
             {t("title")}
           </h2>
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
             {t("body")}
           </p>
         </div>

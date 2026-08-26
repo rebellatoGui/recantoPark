@@ -37,7 +37,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
             type="button"
             aria-label={names[locale]}
             className={cn(
-              "flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-2 text-base transition-colors hover:bg-white/15",
+              "flex items-center gap-2 rounded-full bg-navy/8 px-3.5 py-2 text-base transition-colors hover:bg-navy/15 dark:bg-white/10 dark:hover:bg-white/15",
               className
             )}
           />
