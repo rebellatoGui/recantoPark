@@ -26,14 +26,14 @@ export function TestimonialsSection() {
             <blockquote
               key={id}
               data-reveal
-              className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8"
+              className="rounded-3xl bg-white p-6 shadow-sm sm:p-8"
             >
-              <Quote className="size-6 text-gold" />
-              <p className="mt-4 text-navy-foreground/90">
+              <Quote className="size-6 text-terracotta" />
+              <p className="mt-4 text-[#1a1a1a]/90">
                 “{t(`items.${id}.quote`)}”
               </p>
-              <footer className="mt-6 text-sm text-navy-foreground/60">
-                <p className="font-medium text-navy-foreground">
+              <footer className="mt-6 text-sm text-[#1a1a1a]/60">
+                <p className="font-medium text-[#1a1a1a]">
                   {t(`items.${id}.name`)}
                 </p>
                 <p>{t(`items.${id}.location`)}</p>

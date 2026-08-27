@@ -58,6 +58,19 @@ export function AboutSection() {
           <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
             {t("body")}
           </p>
+
+          <dl className="mt-8 flex max-w-lg flex-wrap gap-x-8 gap-y-5 border-t border-border pt-8">
+            {(["suites", "distance", "reception"] as const).map((key) => (
+              <div key={key}>
+                <dt className="font-display text-2xl text-terracotta sm:text-3xl">
+                  {t(`stats.${key}Value`)}
+                </dt>
+                <dd className="mt-1 text-sm text-muted-foreground">
+                  {t(`stats.${key}Label`)}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>

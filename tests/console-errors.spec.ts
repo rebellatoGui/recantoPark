@@ -3,14 +3,12 @@ import { test, expect } from "@playwright/test";
 const routes = [
   "/",
   "/acomodacoes",
-  "/acomodacoes/standard-casal",
-  "/acomodacoes/standard-familia",
-  "/acomodacoes/superior-vista-jardim",
-  "/acomodacoes/suite-master",
-  "/acomodacoes/quarto-grupo",
+  "/acomodacoes/suite-01",
+  "/acomodacoes/suite-08",
+  "/acomodacoes/suite-16",
   "/en",
   "/en/acomodacoes",
-  "/en/acomodacoes/standard-casal",
+  "/en/acomodacoes/suite-01",
   "/es",
   "/es/acomodacoes",
 ];
@@ -96,7 +94,7 @@ test("room gallery thumbnail navigation works without errors", async ({ page }) 
   });
   page.on("pageerror", (err) => errors.push("pageerror: " + err.message));
 
-  await page.goto("/acomodacoes/suite-master", { waitUntil: "networkidle" });
+  await page.goto("/acomodacoes/suite-05", { waitUntil: "networkidle" });
   await page.waitForTimeout(800);
   const thumbs = page.locator("button img");
   const count = await thumbs.count();

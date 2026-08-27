@@ -1,12 +1,14 @@
 import { setRequestLocale } from "next-intl/server";
 import { HeroSection } from "@/components/hero/hero-section";
 import { ServicesStrip } from "@/components/home/services-strip";
+import { EssentialInfoSection } from "@/components/home/essential-info-section";
 import { AboutSection } from "@/components/home/about-section";
 import { LocationSection } from "@/components/home/location-section";
 import { AmenitiesSection } from "@/components/home/amenities-section";
 import { AmbientPhotos } from "@/components/home/ambient-photos";
 import { AccommodationsPreview } from "@/components/accommodations/accommodations-preview";
 import { GallerySection } from "@/components/gallery/gallery-section";
+import { GoogleReviewsSection } from "@/components/home/google-reviews-section";
 import { TestimonialsSection } from "@/components/testimonials/testimonials-section";
 import { CtaSection } from "@/components/home/cta-section";
 import { LodgingJsonLd } from "@/lib/seo/lodging-json-ld";
@@ -20,6 +22,7 @@ export default async function HomePage(props: PageProps<"/[locale]">) {
       <LodgingJsonLd />
       <HeroSection />
       <ServicesStrip />
+      <EssentialInfoSection />
       <AboutSection />
       <LocationSection />
       <div className="relative isolate">
@@ -28,6 +31,7 @@ export default async function HomePage(props: PageProps<"/[locale]">) {
         <AccommodationsPreview />
         <GallerySection />
       </div>
+      <GoogleReviewsSection />
       <TestimonialsSection />
       <CtaSection />
     </>

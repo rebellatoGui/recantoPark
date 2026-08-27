@@ -16,7 +16,7 @@ export function AmenitiesSection() {
         </h2>
       </div>
 
-      <div className="mt-16 grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-4">
+      <div className="mt-16 grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-3">
         {amenities.map(({ id, icon: Icon }) => (
           <div
             key={id}

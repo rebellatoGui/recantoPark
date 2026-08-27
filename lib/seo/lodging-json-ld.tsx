@@ -9,7 +9,7 @@ export function LodgingJsonLd() {
       "Pousada em Penha/SC, a poucos minutos do Beto Carrero World e das praias da região.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Rua das Palmeiras, 123",
+      streetAddress: "Rua Timóteo Perfeito Flores, 2994",
       addressLocality: "Penha",
       addressRegion: "SC",
       addressCountry: "BR",

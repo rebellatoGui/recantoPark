@@ -1,5 +1,6 @@
 "use client";
 
+import type { ComponentType } from "react";
 import { ChevronDown } from "lucide-react";
 import { useLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
@@ -11,11 +12,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { FlagBR, FlagUS, FlagES } from "@/components/icons/flag-icons";
 
-const flags: Record<string, string> = {
-  pt: "🇧🇷",
-  en: "🇺🇸",
-  es: "🇪🇸",
+const flags: Record<string, ComponentType<{ className?: string }>> = {
+  pt: FlagBR,
+  en: FlagUS,
+  es: FlagES,
 };
 
 const names: Record<string, string> = {
@@ -43,7 +45,12 @@ export function LanguageSwitcher({ className }: { className?: string }) {
           />
         }
       >
-        <span className="text-lg leading-none">{flags[locale]}</span>
+        <span className="block size-4 overflow-hidden rounded-[3px]">
+          {(() => {
+            const Flag = flags[locale];
+            return <Flag className="size-full object-cover" />;
+          })()}
+        </span>
         <ChevronDown className="size-3.5 opacity-70" />
       </DropdownMenuTrigger>
       <DropdownMenuContent
@@ -51,19 +58,24 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         sideOffset={8}
         className="rounded-2xl border-none p-1.5 shadow-lg ring-1 ring-black/5 duration-150 data-open:zoom-in-100 data-closed:zoom-out-100"
       >
-        {routing.locales.map((loc) => (
-          <DropdownMenuItem
-            key={loc}
-            onClick={() => router.replace(pathname, { locale: loc })}
-            className={cn(
-              "gap-2 rounded-xl px-3 py-2 text-sm",
-              loc === locale && "font-semibold"
-            )}
-          >
-            <span className="text-base">{flags[loc]}</span>
-            {names[loc]}
-          </DropdownMenuItem>
-        ))}
+        {routing.locales.map((loc) => {
+          const Flag = flags[loc];
+          return (
+            <DropdownMenuItem
+              key={loc}
+              onClick={() => router.replace(pathname, { locale: loc })}
+              className={cn(
+                "gap-2 rounded-xl px-3 py-2 text-sm",
+                loc === locale && "font-semibold"
+              )}
+            >
+              <span className="block size-4 shrink-0 overflow-hidden rounded-[3px]">
+                <Flag className="size-full object-cover" />
+              </span>
+              {names[loc]}
+            </DropdownMenuItem>
+          );
+        })}
       </DropdownMenuContent>
     </DropdownMenu>
   );

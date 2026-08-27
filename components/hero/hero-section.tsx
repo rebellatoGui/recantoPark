@@ -36,11 +36,11 @@ export function HeroSection() {
         .from(
           "[data-hero-seal]",
           {
-            scale: 2.4,
-            rotate: -30,
+            scale: 0.85,
+            y: 16,
             opacity: 0,
-            duration: 1.1,
-            ease: "back.out(1.5)",
+            duration: 1,
+            ease: "power3.out",
           },
           "<0.1"
         )
@@ -106,15 +106,47 @@ export function HeroSection() {
         });
       });
 
-      gsap.to("[data-hero-image]", {
-        yPercent: 14,
-        ease: "none",
-        scrollTrigger: {
-          trigger: scope.current,
-          start: "top top",
-          end: () => "+=" + window.innerHeight * 1.5,
-          scrub: 0.6,
-        },
+      mm.add("(max-width: 767px)", () => {
+        gsap.to(scope.current, {
+          scale: 0.94,
+          borderRadius: "1.75rem",
+          boxShadow: "0 30px 60px -20px rgba(0,0,0,0.55)",
+          ease: "none",
+          scrollTrigger: {
+            trigger: scope.current,
+            start: "top top",
+            end: () => "+=" + window.innerHeight * 1,
+            scrub: 0.6,
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+      });
+
+      mm.add("(min-width: 768px)", () => {
+        gsap.to("[data-hero-image]", {
+          yPercent: 14,
+          ease: "none",
+          scrollTrigger: {
+            trigger: scope.current,
+            start: "top top",
+            end: () => "+=" + window.innerHeight * 1.5,
+            scrub: 0.6,
+          },
+        });
+      });
+
+      mm.add("(max-width: 767px)", () => {
+        gsap.to("[data-hero-image]", {
+          yPercent: 10,
+          ease: "none",
+          scrollTrigger: {
+            trigger: scope.current,
+            start: "top top",
+            end: () => "+=" + window.innerHeight * 1,
+            scrub: 0.6,
+          },
+        });
       });
     },
     { scope }

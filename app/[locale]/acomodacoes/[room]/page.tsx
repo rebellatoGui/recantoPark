@@ -36,6 +36,7 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
   const roomId = room.id;
   const t = useTranslations("accommodations");
   const tAmenities = useTranslations("amenities");
+  const bedsText = t(`rooms.${roomId}.beds`);
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-12 md:py-16">
@@ -61,18 +62,24 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
           </h1>
 
           <div className="mt-5 flex flex-wrap gap-6 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1.5">
-              <Users className="size-4" />
-              {t("capacityLabel")}: {room.capacity}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Ruler className="size-4" />
-              {t("detail.sizeLabel")}: {room.sizeSqm} m²
-            </span>
-            <span className="flex items-center gap-1.5">
-              <BedDouble className="size-4" />
-              {t("detail.bedsLabel")}: {t(`rooms.${roomId}.beds`)}
-            </span>
+            {room.capacity !== undefined && (
+              <span className="flex items-center gap-1.5">
+                <Users className="size-4" />
+                {t("capacityLabel")}: {room.capacity}
+              </span>
+            )}
+            {room.sizeSqm !== undefined && (
+              <span className="flex items-center gap-1.5">
+                <Ruler className="size-4" />
+                {t("detail.sizeLabel")}: {room.sizeSqm} m²
+              </span>
+            )}
+            {bedsText && (
+              <span className="flex items-center gap-1.5">
+                <BedDouble className="size-4" />
+                {t("detail.bedsLabel")}: {bedsText}
+              </span>
+            )}
           </div>
 
           <p className="mt-6 text-lg leading-relaxed text-foreground">
@@ -101,9 +108,17 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
           <p className="font-display text-lg text-foreground">
             {t(`rooms.${roomId}.name`)}
           </p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            {t("capacityLabel")}: {room.capacity} · {room.sizeSqm} m²
-          </p>
+          {(room.capacity !== undefined || room.sizeSqm !== undefined) && (
+            <p className="mt-1 text-sm text-muted-foreground">
+              {[
+                room.capacity !== undefined &&
+                  `${t("capacityLabel")}: ${room.capacity}`,
+                room.sizeSqm !== undefined && `${room.sizeSqm} m²`,
+              ]
+                .filter(Boolean)
+                .join(" · ")}
+            </p>
+          )}
           <div className="mt-5 flex flex-col gap-3">
             <BookNowButton label={t("bookRoom")} className="w-full" />
             <WhatsappButton className="w-full" />

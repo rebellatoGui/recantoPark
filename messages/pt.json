@@ -22,10 +22,22 @@
     "ctaWhatsapp": "Falar no WhatsApp",
     "scrollHint": "Deslize para descobrir"
   },
+  "essentialInfo": {
+    "eyebrow": "Informações essenciais",
+    "receptionLabel": "Recepção"
+  },
   "about": {
     "eyebrow": "Sobre nós",
     "title": "Descanso e aventura, lado a lado",
-    "body": "A Pousada Recanto do Park nasceu para ser o ponto de partida perfeito para quem vem curtir o Beto Carrero World e as praias de Penha. Ambiente familiar, conforto pensado nos detalhes e a localização mais conveniente da região."
+    "body": "A Pousada Recanto do Park nasceu para ser o ponto de partida perfeito para quem vem curtir o Beto Carrero World e as praias de Penha. Ambiente familiar, conforto pensado nos detalhes e a localização mais conveniente da região.",
+    "stats": {
+      "suitesValue": "16",
+      "suitesLabel": "Suítes equipadas",
+      "distanceValue": "5 min",
+      "distanceLabel": "Do Beto Carrero World",
+      "receptionValue": "7h–00h",
+      "receptionLabel": "Recepção todos os dias"
+    }
   },
   "location": {
     "eyebrow": "Localização privilegiada",
@@ -41,14 +53,16 @@
     "eyebrow": "Serviços",
     "title": "Tudo o que você precisa para relaxar",
     "items": {
-      "pool": "Piscina",
+      "suites": "16 suítes",
       "breakfast": "Café da manhã incluso",
-      "wifi": "Wi-Fi gratuito",
-      "parking": "Estacionamento gratuito",
+      "parking": "Estacionamento",
+      "reception": "Recepção das 7h à meia-noite",
       "ac": "Ar-condicionado",
-      "bbq": "Churrasqueira compartilhada",
-      "kidsArea": "Área kids",
-      "petFriendly": "Pet friendly"
+      "privateBathroom": "Banheiro privativo",
+      "minibar": "Frigobar",
+      "tv": "TV",
+      "wifi": "Wi-Fi",
+      "accessibility": "Algumas suítes com acessibilidade"
     }
   },
   "accommodationsPreview": {
@@ -60,9 +74,11 @@
     "hero": {
       "eyebrow": "Nossas acomodações",
       "title": "Conforto pensado para sua estadia",
-      "subtitle": "De quartos a dois até suítes em família: encontre o espaço ideal para sua viagem."
+      "subtitle": "16 suítes equipadas com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi, a poucos minutos do Beto Carrero World."
     },
     "bookRoom": "Reservar este quarto",
+    "viewGrid": "Grade",
+    "viewList": "Lista",
     "capacityLabel": "Hóspedes",
     "detail": {
       "backToRooms": "Voltar para acomodações",
@@ -72,41 +88,114 @@
       "galleryHint": "Toque na foto para ampliar"
     },
     "rooms": {
-      "standardCasal": {
-        "name": "Standard Casal",
-        "description": "Quarto aconchegante para casais, com cama queen, ar-condicionado e vista para o jardim.",
-        "longDescription": "Pensado para casais, o Standard Casal combina conforto e simplicidade: cama queen size, ar-condicionado, enxoval de qualidade e vista para o jardim da pousada. Ideal para quem quer uma base tranquila entre os dias de parque e praia.",
-        "beds": "1 cama queen"
+      "suite01": {
+        "name": "Suíte 01",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
       },
-      "standardFamilia": {
-        "name": "Standard Família",
-        "description": "Espaço para até 4 pessoas, ideal para famílias pequenas que vêm curtir o parque.",
-        "longDescription": "Um quarto pensado para a família toda: espaço para até 4 pessoas, configuração flexível de camas e tudo o que vocês precisam para descansar entre um dia de parque e outro de praia.",
-        "beds": "1 cama de casal + 2 camas de solteiro"
+      "suite02": {
+        "name": "Suíte 02",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
       },
-      "superiorVistaJardim": {
-        "name": "Superior Vista Jardim",
-        "description": "Mais amplo, com varanda privativa e vista para a área verde da pousada.",
-        "longDescription": "Mais espaçoso que o Standard, o Superior Vista Jardim tem varanda privativa com vista para a área verde da pousada. O lugar perfeito para tomar aquele café da manhã com calma antes de sair para o dia.",
-        "beds": "1 cama queen"
+      "suite03": {
+        "name": "Suíte 03",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
       },
-      "suiteMaster": {
-        "name": "Suíte Master",
-        "description": "Nossa acomodação mais completa, com hidromassagem e frigobar.",
-        "longDescription": "Nossa acomodação mais completa: banheira de hidromassagem, frigobar e o maior espaço de toda a pousada. Para quem quer transformar a hospedagem em parte da viagem.",
-        "beds": "1 cama king"
+      "suite04": {
+        "name": "Suíte 04",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
       },
-      "quartoGrupo": {
-        "name": "Quarto para Grupos",
-        "description": "Beliches confortáveis para até 6 pessoas, perfeito para a turma que vem junto.",
-        "longDescription": "Feito para grupos e famílias grandes: beliches confortáveis para até 6 pessoas, bastante espaço para malas e tudo pertinho, perfeito para quem vem em turma curtir o parque e a praia.",
-        "beds": "3 beliches"
+      "suite05": {
+        "name": "Suíte 05",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite06": {
+        "name": "Suíte 06",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite07": {
+        "name": "Suíte 07",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite08": {
+        "name": "Suíte 08",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite09": {
+        "name": "Suíte 09",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite10": {
+        "name": "Suíte 10",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite11": {
+        "name": "Suíte 11",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite12": {
+        "name": "Suíte 12",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite13": {
+        "name": "Suíte 13",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite14": {
+        "name": "Suíte 14",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite15": {
+        "name": "Suíte 15",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
+      },
+      "suite16": {
+        "name": "Suíte 16",
+        "description": "Suíte da Pousada Recanto do Park com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi.",
+        "longDescription": "Suíte da Pousada Recanto do Park, em Penha/SC, a poucos minutos do Beto Carrero World. Conta com banheiro privativo, ar-condicionado, TV, frigobar e Wi-Fi gratuito.",
+        "beds": ""
       }
     }
   },
   "gallery": {
     "eyebrow": "Galeria",
     "title": "Um gostinho do que te espera"
+  },
+  "googleReviews": {
+    "eyebrow": "Nosso perfil no Google",
+    "title": "Encontre a gente no Google",
+    "noReviewsYet": "Ainda sem avaliações — seja o primeiro a avaliar!",
+    "viewOnMaps": "Ver no Google Maps",
+    "leaveReview": "Avaliar no Google"
   },
   "testimonials": {
     "eyebrow": "Quem já ficou aqui",
@@ -120,7 +209,7 @@
       "t2": {
         "name": "João e família",
         "location": "São Paulo, SP",
-        "quote": "As crianças amaram a piscina e nós amamos a proximidade da praia. Voltaremos com certeza."
+        "quote": "As crianças amaram a proximidade da praia e nós amamos a facilidade de acesso ao parque. Voltaremos com certeza."
       },
       "t3": {
         "name": "Marina S.",
@@ -139,7 +228,7 @@
     "eyebrow": "Contato",
     "title": "Fale com a gente",
     "addressLabel": "Endereço",
-    "address": "Rua das Palmeiras, 123, Armação, Penha, SC",
+    "address": "Rua Timóteo Perfeito Flores, nº 2994, Penha, SC",
     "phoneLabel": "Telefone / WhatsApp",
     "emailLabel": "E-mail",
     "instagramLabel": "Instagram"

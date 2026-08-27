@@ -1,15 +1,16 @@
 import {
-  Waves,
   Coffee,
   Wifi,
   Car,
   Snowflake,
-  Flame,
-  Baby,
-  PawPrint,
+  Bath,
+  Refrigerator,
+  Tv,
+  Accessibility,
+  BedDouble,
   type LucideIcon,
 } from "lucide-react";
-import { poolImages, roomImages } from "./images";
+import { roomImages } from "./images";
 
 export const contact = {
   whatsappNumber:
@@ -20,6 +21,11 @@ export const contact = {
   email: "pousadarecantodopark@gmail.com",
   instagramHandle: "@recantodopark",
   instagramUrl: "https://instagram.com/recantodopark",
+  googlePlaceId: "ChIJZYBvBUHR2JQR-sRR8mTT-gc",
+  googleMapsUrl:
+    "https://www.google.com/maps/place/?q=place_id:ChIJZYBvBUHR2JQR-sRR8mTT-gc",
+  googleReviewUrl:
+    "https://search.google.com/local/writereview?placeid=ChIJZYBvBUHR2JQR-sRR8mTT-gc",
 };
 
 export function whatsappLink(message?: string) {
@@ -28,82 +34,61 @@ export function whatsappLink(message?: string) {
 }
 
 export type AmenityId =
-  | "pool"
+  | "suites"
   | "breakfast"
-  | "wifi"
   | "parking"
+  | "reception"
   | "ac"
-  | "bbq"
-  | "kidsArea"
-  | "petFriendly";
+  | "privateBathroom"
+  | "minibar"
+  | "tv"
+  | "wifi"
+  | "accessibility";
 
 export const amenities: { id: AmenityId; icon: LucideIcon }[] = [
-  { id: "pool", icon: Waves },
+  { id: "suites", icon: BedDouble },
   { id: "breakfast", icon: Coffee },
-  { id: "wifi", icon: Wifi },
   { id: "parking", icon: Car },
   { id: "ac", icon: Snowflake },
-  { id: "bbq", icon: Flame },
-  { id: "kidsArea", icon: Baby },
-  { id: "petFriendly", icon: PawPrint },
+  { id: "privateBathroom", icon: Bath },
+  { id: "minibar", icon: Refrigerator },
+  { id: "tv", icon: Tv },
+  { id: "wifi", icon: Wifi },
+  { id: "accessibility", icon: Accessibility },
 ];
 
-export type RoomId =
-  | "standardCasal"
-  | "standardFamilia"
-  | "superiorVistaJardim"
-  | "suiteMaster"
-  | "quartoGrupo";
+const ROOM_AMENITY_IDS: AmenityId[] = [
+  "privateBathroom",
+  "ac",
+  "tv",
+  "wifi",
+  "minibar",
+];
+
+const SUITE_COUNT = 16;
+
+export type RoomId = `suite${string}`;
 
 export const rooms: {
   id: RoomId;
   slug: string;
-  capacity: number;
-  sizeSqm: number;
+  capacity?: number;
+  sizeSqm?: number;
   images: string[];
   amenityIds: AmenityId[];
-}[] = [
-  {
-    id: "standardCasal",
-    slug: "standard-casal",
-    capacity: 2,
-    sizeSqm: 18,
-    images: [roomImages[0], roomImages[5], roomImages[10], roomImages[15]],
-    amenityIds: ["wifi", "ac"],
-  },
-  {
-    id: "standardFamilia",
-    slug: "standard-familia",
-    capacity: 4,
-    sizeSqm: 24,
-    images: [roomImages[1], roomImages[6], roomImages[11], roomImages[16]],
-    amenityIds: ["wifi", "ac", "kidsArea"],
-  },
-  {
-    id: "superiorVistaJardim",
-    slug: "superior-vista-jardim",
-    capacity: 3,
-    sizeSqm: 22,
-    images: [roomImages[2], roomImages[7], roomImages[12], roomImages[17]],
-    amenityIds: ["wifi", "ac", "breakfast"],
-  },
-  {
-    id: "suiteMaster",
-    slug: "suite-master",
-    capacity: 2,
-    sizeSqm: 30,
-    images: [roomImages[3], roomImages[8], roomImages[13], roomImages[18]],
-    amenityIds: ["wifi", "ac", "breakfast", "pool"],
-  },
-  {
-    id: "quartoGrupo",
-    slug: "quarto-grupo",
-    capacity: 6,
-    sizeSqm: 28,
-    images: [roomImages[4], roomImages[9], roomImages[14], roomImages[19]],
-    amenityIds: ["wifi", "ac", "kidsArea"],
-  },
-];
+}[] = Array.from({ length: SUITE_COUNT }, (_, i) => {
+  const number = String(i + 1).padStart(2, "0");
+  return {
+    id: `suite${number}` as RoomId,
+    slug: `suite-${number}`,
+    images: [
+      roomImages[i % roomImages.length],
+      roomImages[(i + 5) % roomImages.length],
+      roomImages[(i + 10) % roomImages.length],
+    ],
+    amenityIds: ROOM_AMENITY_IDS,
+  };
+});
 
 export function getRoomBySlug(slug: string) {
   return rooms.find((room) => room.slug === slug);
@@ -111,4 +96,4 @@ export function getRoomBySlug(slug: string) {
 
 export const testimonialIds = ["t1", "t2", "t3"] as const;
 
-export const gallerySpotlight = poolImages[3];
+export const gallerySpotlight = roomImages[0];

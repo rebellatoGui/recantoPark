@@ -6,12 +6,16 @@ import { InstagramIcon } from "@/components/icons/instagram-icon";
 import { MastercardIcon } from "@/components/icons/mastercard-icon";
 import { VisaIcon } from "@/components/icons/visa-icon";
 import { PixIcon } from "@/components/icons/pix-icon";
+import { EloIcon } from "@/components/icons/elo-icon";
+import { BoletoIcon } from "@/components/icons/boleto-icon";
 import { contact, whatsappLink } from "@/lib/data/pousada";
 
 const paymentIcons = [
   { Icon: PixIcon, label: "Pix" },
   { Icon: VisaIcon, label: "Visa" },
   { Icon: MastercardIcon, label: "Mastercard" },
+  { Icon: EloIcon, label: "Elo" },
+  { Icon: BoletoIcon, label: "Boleto" },
 ];
 
 export function SiteFooter() {
@@ -89,7 +93,7 @@ export function SiteFooter() {
             {paymentIcons.map(({ Icon, label }) => (
               <span
                 key={label}
-                className="flex size-10 items-center justify-center rounded-lg bg-white text-navy"
+                className="flex size-10 items-center justify-center rounded-lg bg-white"
               >
                 <Icon className="size-6" />
               </span>
