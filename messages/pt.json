@@ -24,7 +24,15 @@
   },
   "essentialInfo": {
     "eyebrow": "Informações essenciais",
-    "receptionLabel": "Recepção"
+    "title": "O que você precisa saber antes de chegar",
+    "subtitle": "Um resumo rápido pra organizar sua viagem até a Pousada Recanto do Park.",
+    "checkinLabel": "Check-in",
+    "checkinValue": "A partir das 14h",
+    "checkoutLabel": "Check-out",
+    "checkoutValue": "Até 12h",
+    "receptionLabel": "Recepção",
+    "cancellationLabel": "Cancelamento",
+    "cancellationValue": "Flexível, até 48h antes da chegada"
   },
   "about": {
     "eyebrow": "Sobre nós",
@@ -34,9 +42,7 @@
       "suitesValue": "16",
       "suitesLabel": "Suítes equipadas",
       "distanceValue": "5 min",
-      "distanceLabel": "Do Beto Carrero World",
-      "receptionValue": "7h–00h",
-      "receptionLabel": "Recepção todos os dias"
+      "distanceLabel": "Do Beto Carrero World"
     }
   },
   "location": {

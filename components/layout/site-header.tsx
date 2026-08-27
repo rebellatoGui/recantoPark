@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "./language-switcher";
 import { ThemeToggle } from "./theme-toggle";
+import { CoasterBanner } from "./coaster-banner";
 import { BookNowButton } from "@/components/booking/book-now-button";
 import { gsap, useGSAP } from "@/lib/animations/gsap";
 
@@ -97,17 +98,12 @@ export function SiteHeader() {
             <Menu className="size-5" />
           </SheetTrigger>
           <SheetContent side="right" className="bg-white text-navy dark:bg-navy dark:text-navy-foreground">
-            <SheetHeader>
-              <SheetTitle className="flex items-center">
-                <Image
-                  src="/brand/logo-oficial.png"
-                  alt="Pousada Recanto do Park"
-                  width={1254}
-                  height={1254}
-                  className="size-9 shrink-0 object-contain dark:rounded-xl"
-                />
-              </SheetTitle>
+            <SheetHeader className="sr-only">
+              <SheetTitle>{t("home")}</SheetTitle>
             </SheetHeader>
+            <div className="px-6 pt-10 pb-2">
+              <CoasterBanner />
+            </div>
             <nav className="flex flex-col gap-6 px-6">
               {links.map((link) => (
                 <Link

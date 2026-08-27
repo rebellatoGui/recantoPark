@@ -41,9 +41,9 @@ export async function generateMetadata(
       locale: OG_LOCALES[locale] ?? "pt_BR",
       images: [
         {
-          url: "/brand/logo-oficial.png",
-          width: 1254,
-          height: 1254,
+          url: "/brand/og-image.png",
+          width: 1200,
+          height: 630,
           alt: siteName,
         },
       ],
@@ -52,7 +52,7 @@ export async function generateMetadata(
       card: "summary_large_image",
       title,
       description,
-      images: ["/brand/logo-oficial.png"],
+      images: ["/brand/og-image.png"],
     },
   };
 }

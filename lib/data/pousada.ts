@@ -7,7 +7,6 @@ import {
   Refrigerator,
   Tv,
   Accessibility,
-  BedDouble,
   type LucideIcon,
 } from "lucide-react";
 import { roomImages } from "./images";
@@ -46,7 +45,6 @@ export type AmenityId =
   | "accessibility";
 
 export const amenities: { id: AmenityId; icon: LucideIcon }[] = [
-  { id: "suites", icon: BedDouble },
   { id: "breakfast", icon: Coffee },
   { id: "parking", icon: Car },
   { id: "ac", icon: Snowflake },

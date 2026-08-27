@@ -2,10 +2,16 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { BedDouble, MapPin } from "lucide-react";
 import { poolImages } from "@/lib/data/images";
 import { useReveal } from "@/lib/animations/use-reveal";
 import { useParallax } from "@/lib/animations/use-parallax";
 import { useDrawLine } from "@/lib/animations/use-draw-line";
+
+const stats = [
+  { key: "suites", icon: BedDouble },
+  { key: "distance", icon: MapPin },
+] as const;
 
 export function AboutSection() {
   const t = useTranslations("about");
@@ -60,9 +66,13 @@ export function AboutSection() {
           </p>
 
           <dl className="mt-8 flex max-w-lg flex-wrap gap-x-8 gap-y-5 border-t border-border pt-8">
-            {(["suites", "distance", "reception"] as const).map((key) => (
+            {stats.map(({ key, icon: Icon }) => (
               <div key={key}>
-                <dt className="font-display text-2xl text-terracotta sm:text-3xl">
+                <dt className="flex items-center gap-2 font-display text-2xl text-terracotta sm:text-3xl">
+                  <Icon
+                    className="size-5 shrink-0 sm:size-6"
+                    strokeWidth={1.5}
+                  />
                   {t(`stats.${key}Value`)}
                 </dt>
                 <dd className="mt-1 text-sm text-muted-foreground">

@@ -17,7 +17,7 @@ Site institucional da Pousada Recanto do Park, em Penha/SC.
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- Next.js (App Router)
+- Next.js
 - React
 - TypeScript
 - Tailwind CSS
