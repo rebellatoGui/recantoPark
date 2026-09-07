@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
@@ -8,7 +8,7 @@ import { VisaIcon } from "@/components/icons/visa-icon";
 import { PixIcon } from "@/components/icons/pix-icon";
 import { EloIcon } from "@/components/icons/elo-icon";
 import { BoletoIcon } from "@/components/icons/boleto-icon";
-import { contact, whatsappLink } from "@/lib/data/pousada";
+import { contact } from "@/lib/data/pousada";
 
 const paymentIcons = [
   { Icon: PixIcon, label: "Pix" },
@@ -52,18 +52,14 @@ export function SiteFooter() {
           <p className="font-display text-base text-gold">
             {tContact("title")}
           </p>
-          <p className="flex items-start gap-2">
-            <MapPin className="mt-0.5 size-4 shrink-0" />
-            {tContact("address")}
-          </p>
           <a
-            href={whatsappLink()}
+            href={contact.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-gold"
+            className="flex items-start gap-2 hover:text-gold"
           >
-            <Phone className="size-4 shrink-0" />
-            {tContact("phoneLabel")}
+            <MapPin className="mt-0.5 size-4 shrink-0" />
+            {tContact("address")}
           </a>
           <a
             href={`mailto:${contact.email}`}

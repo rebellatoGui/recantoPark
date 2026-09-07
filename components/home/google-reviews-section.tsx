@@ -16,14 +16,14 @@ export function GoogleReviewsSection() {
   const scope = useReveal<HTMLElement>();
 
   return (
-    <section ref={scope} className="mx-auto max-w-5xl px-6 py-16 md:py-20">
+    <section ref={scope} className="mx-auto max-w-5xl px-6 pt-16 md:pt-20">
       <div
         data-reveal
         className="overflow-hidden rounded-3xl border border-border bg-card"
       >
         <div className="grid gap-8 p-8 sm:grid-cols-[1.1fr_1fr] sm:p-10">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+            <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs font-medium uppercase tracking-[0.06em] text-muted-foreground">
               <GoogleIcon className="size-3.5" />
               {t("eyebrow")}
             </span>

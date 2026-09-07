@@ -24,6 +24,8 @@ export default async function HomePage(props: PageProps<"/[locale]">) {
       <ServicesStrip />
       <EssentialInfoSection />
       <AboutSection />
+      <GoogleReviewsSection />
+      <TestimonialsSection />
       <LocationSection />
       <div className="relative isolate">
         <AmbientPhotos />
@@ -31,8 +33,6 @@ export default async function HomePage(props: PageProps<"/[locale]">) {
         <AccommodationsPreview />
         <GallerySection />
       </div>
-      <GoogleReviewsSection />
-      <TestimonialsSection />
       <CtaSection />
     </>
   );

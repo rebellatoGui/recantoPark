@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { LogIn, LogOut, Clock, CalendarCheck } from "lucide-react";
+import { Clock, CalendarCheck } from "lucide-react";
 import { useReveal } from "@/lib/animations/use-reveal";
 
 export function EssentialInfoSection() {
@@ -10,18 +10,6 @@ export function EssentialInfoSection() {
   const scope = useReveal<HTMLElement>();
 
   const items = [
-    {
-      id: "checkin",
-      icon: LogIn,
-      label: t("checkinLabel"),
-      value: t("checkinValue"),
-    },
-    {
-      id: "checkout",
-      icon: LogOut,
-      label: t("checkoutLabel"),
-      value: t("checkoutValue"),
-    },
     {
       id: "reception",
       icon: Clock,
@@ -55,7 +43,7 @@ export function EssentialInfoSection() {
 
       <div
         data-reveal
-        className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4"
+        className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5"
       >
         {items.map(({ id, icon: Icon, label, value }) => (
           <div

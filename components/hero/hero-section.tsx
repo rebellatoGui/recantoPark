@@ -88,66 +88,6 @@ export function HeroSection() {
         transformOrigin: "50% 50%",
       });
 
-      const mm = gsap.matchMedia();
-      mm.add("(min-width: 768px)", () => {
-        gsap.to(scope.current, {
-          scale: 0.92,
-          borderRadius: "2.5rem",
-          boxShadow: "0 60px 120px -30px rgba(0,0,0,0.6)",
-          ease: "none",
-          scrollTrigger: {
-            trigger: scope.current,
-            start: "top top",
-            end: () => "+=" + window.innerHeight * 1.5,
-            scrub: 0.6,
-            pin: true,
-            pinSpacing: true,
-          },
-        });
-      });
-
-      mm.add("(max-width: 767px)", () => {
-        gsap.to(scope.current, {
-          scale: 0.94,
-          borderRadius: "1.75rem",
-          boxShadow: "0 30px 60px -20px rgba(0,0,0,0.55)",
-          ease: "none",
-          scrollTrigger: {
-            trigger: scope.current,
-            start: "top top",
-            end: () => "+=" + window.innerHeight * 1,
-            scrub: 0.6,
-            pin: true,
-            pinSpacing: true,
-          },
-        });
-      });
-
-      mm.add("(min-width: 768px)", () => {
-        gsap.to("[data-hero-image]", {
-          yPercent: 14,
-          ease: "none",
-          scrollTrigger: {
-            trigger: scope.current,
-            start: "top top",
-            end: () => "+=" + window.innerHeight * 1.5,
-            scrub: 0.6,
-          },
-        });
-      });
-
-      mm.add("(max-width: 767px)", () => {
-        gsap.to("[data-hero-image]", {
-          yPercent: 10,
-          ease: "none",
-          scrollTrigger: {
-            trigger: scope.current,
-            start: "top top",
-            end: () => "+=" + window.innerHeight * 1,
-            scrub: 0.6,
-          },
-        });
-      });
     },
     { scope }
   );
@@ -157,7 +97,7 @@ export function HeroSection() {
       ref={scope}
       className="relative flex h-[92vh] min-h-[640px] items-end overflow-hidden bg-navy"
     >
-      <div data-hero-image className="absolute inset-0 scale-110">
+      <div className="absolute inset-0">
         <Image
           src={heroImages.main}
           alt="Pousada Recanto do Park"

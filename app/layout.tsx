@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Manrope, Cormorant } from "next/font/google";
+import { Bitter, Figtree } from "next/font/google";
 import { ThemeScript } from "@/components/layout/theme-script";
 import "./globals.css";
 
@@ -18,21 +18,15 @@ export const metadata: Metadata = {
   manifest: "/brand/site.webmanifest",
 };
 
-const playfair = Playfair_Display({
+const bitter = Bitter({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
 });
 
-const manrope = Manrope({
+const figtree = Figtree({
   variable: "--font-sans",
   subsets: ["latin"],
-});
-
-const cormorant = Cormorant({
-  variable: "--font-wordmark",
-  subsets: ["latin"],
-  weight: ["600", "700"],
 });
 
 export default function RootLayout({
@@ -44,7 +38,7 @@ export default function RootLayout({
     <html
       lang="pt"
       suppressHydrationWarning
-      className={`${playfair.variable} ${manrope.variable} ${cormorant.variable} antialiased`}
+      className={`${bitter.variable} ${figtree.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-background text-foreground font-sans">
         <ThemeScript />
