@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Clock, CalendarCheck } from "lucide-react";
+import { SectionBackdrop } from "@/components/home/section-backdrop";
 import { useReveal } from "@/lib/animations/use-reveal";
 
 export function EssentialInfoSection() {
@@ -27,42 +28,45 @@ export function EssentialInfoSection() {
   return (
     <section
       ref={scope}
-      className="mx-auto max-w-7xl px-6 py-16 md:py-20"
+      className="relative isolate overflow-hidden px-6 py-16 md:py-20"
     >
-      <div data-reveal className="mx-auto max-w-2xl text-center">
-        <p className="text-xs font-medium uppercase tracking-[0.25em] text-terracotta">
-          {t("eyebrow")}
-        </p>
-        <h2 className="mt-3 font-display text-2xl leading-tight text-foreground sm:text-3xl">
-          {t("title")}
-        </h2>
-        <p className="mt-3 text-sm text-muted-foreground sm:text-base">
-          {t("subtitle")}
-        </p>
-      </div>
+      <SectionBackdrop variant="topo" />
+      <div className="mx-auto max-w-7xl">
+        <div data-reveal className="mx-auto max-w-2xl text-center">
+          <p className="text-xs font-medium uppercase tracking-[0.25em] text-terracotta">
+            {t("eyebrow")}
+          </p>
+          <h2 className="mt-3 font-display text-2xl leading-tight text-foreground sm:text-3xl">
+            {t("title")}
+          </h2>
+          <p className="mt-3 text-sm text-muted-foreground sm:text-base">
+            {t("subtitle")}
+          </p>
+        </div>
 
-      <div
-        data-reveal
-        className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5"
-      >
-        {items.map(({ id, icon: Icon, label, value }) => (
-          <div
-            key={id}
-            className="flex flex-col items-center gap-3 rounded-2xl border border-border bg-card px-4 py-6 text-center sm:items-start sm:text-left"
-          >
-            <span className="flex size-10 items-center justify-center rounded-full bg-terracotta/10 text-terracotta">
-              <Icon className="size-5" strokeWidth={1.5} />
-            </span>
-            <div>
-              <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                {label}
-              </p>
-              <p className="mt-1 text-sm font-medium text-foreground sm:text-base">
-                {value}
-              </p>
+        <div
+          data-reveal
+          className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5"
+        >
+          {items.map(({ id, icon: Icon, label, value }) => (
+            <div
+              key={id}
+              className="flex flex-col items-center gap-3 rounded-2xl border border-border bg-card px-4 py-6 text-center sm:items-start sm:text-left"
+            >
+              <span className="flex size-10 items-center justify-center rounded-full bg-terracotta/10 text-terracotta">
+                <Icon className="size-5" strokeWidth={1.5} />
+              </span>
+              <div>
+                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                  {label}
+                </p>
+                <p className="mt-1 text-sm font-medium text-foreground sm:text-base">
+                  {value}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

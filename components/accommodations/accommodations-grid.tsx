@@ -15,7 +15,7 @@ export function AccommodationsGrid() {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-20">
-      <div className="mb-8 flex justify-end">
+      <div className="mb-8 hidden justify-end sm:flex">
         <div className="inline-flex items-center gap-1 rounded-full border border-border bg-card p-1">
           <button
             type="button"
@@ -50,25 +50,43 @@ export function AccommodationsGrid() {
         </div>
       </div>
 
-      <div
-        ref={scope}
-        className={cn(
-          view === "grid"
-            ? "grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
-            : "flex flex-col gap-6"
-        )}
-      >
-        {rooms.map((room) => (
-          <RoomCard
-            key={room.id}
-            id={room.id}
-            slug={room.slug}
-            capacity={room.capacity}
-            image={room.images[0]}
-            amenityIds={room.amenityIds}
-            layout={view}
-          />
-        ))}
+      <div ref={scope}>
+        {/* Mobile: sempre lista, independente do toggle (que fica oculto abaixo de sm) */}
+        <div className="flex flex-col gap-6 sm:hidden">
+          {rooms.map((room) => (
+            <RoomCard
+              key={room.id}
+              id={room.id}
+              slug={room.slug}
+              capacity={room.capacity}
+              image={room.images[0]}
+              amenityIds={room.amenityIds}
+              layout="list"
+            />
+          ))}
+        </div>
+
+        {/* Desktop/tablet: segue o toggle grade/lista */}
+        <div
+          className={cn(
+            "hidden",
+            view === "grid"
+              ? "sm:grid sm:grid-cols-2 sm:gap-8 lg:grid-cols-3"
+              : "sm:flex sm:flex-col sm:gap-6"
+          )}
+        >
+          {rooms.map((room) => (
+            <RoomCard
+              key={room.id}
+              id={room.id}
+              slug={room.slug}
+              capacity={room.capacity}
+              image={room.images[0]}
+              amenityIds={room.amenityIds}
+              layout={view}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -19,12 +19,12 @@ export function BookNowButton({
       nativeButton={false}
       size="lg"
       className={cn(
-        "bg-gold text-black hover:bg-gold/90",
-        "dark:bg-brown dark:text-white dark:hover:bg-brown/90",
+        "bg-terracotta text-white hover:bg-terracotta/90",
+        "dark:bg-brown dark:hover:bg-brown/90",
         className
       )}
     >
-      <CalendarIcon className="size-4 -translate-y-px" />
+      <CalendarIcon className="size-4" />
       {label ?? t("ctaPrimary")}
     </Button>
   );

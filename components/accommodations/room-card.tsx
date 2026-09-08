@@ -3,7 +3,6 @@ import { useTranslations } from "next-intl";
 import { Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { BookNowButton } from "@/components/booking/book-now-button";
-import { WhatsappButton } from "@/components/booking/whatsapp-button";
 import { Link } from "@/i18n/navigation";
 import type { RoomId, AmenityId } from "@/lib/data/pousada";
 
@@ -45,33 +44,34 @@ export function RoomCard({
           />
         </Link>
 
-        <div className="flex flex-1 flex-col p-6">
-          <Link href={href}>
-            <h3 className="font-display text-2xl text-foreground transition-colors group-hover:text-terracotta">
-              {t(`rooms.${id}.name`)}
-            </h3>
-          </Link>
-          {capacity !== undefined && (
-            <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground">
-              <Users className="size-4" />
-              {t("capacityLabel")}: {capacity}
+        <div className="flex flex-1 flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+          <div className="flex-1">
+            <Link href={href}>
+              <h3 className="font-display text-2xl text-foreground transition-colors group-hover:text-terracotta">
+                {t(`rooms.${id}.name`)}
+              </h3>
+            </Link>
+            {capacity !== undefined && (
+              <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground">
+                <Users className="size-4" />
+                {t("capacityLabel")}: {capacity}
+              </p>
+            )}
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              {t(`rooms.${id}.longDescription`)}
             </p>
-          )}
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            {t(`rooms.${id}.longDescription`)}
-          </p>
 
-          <div className="mt-4 flex flex-wrap gap-2">
-            {amenityIds.map((amenityId) => (
-              <Badge key={amenityId} variant="secondary" className="font-normal">
-                {tAmenities(`items.${amenityId}`)}
-              </Badge>
-            ))}
+            <div className="mt-4 flex flex-wrap gap-2">
+              {amenityIds.map((amenityId) => (
+                <Badge key={amenityId} variant="secondary" className="font-normal">
+                  {tAmenities(`items.${amenityId}`)}
+                </Badge>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-3 sm:mt-auto">
-            <BookNowButton label={t("bookRoom")} />
-            <WhatsappButton variant="outline" />
+          <div className="sm:shrink-0">
+            <BookNowButton label={t("bookRoom")} className="w-full sm:w-auto" />
           </div>
         </div>
       </article>
