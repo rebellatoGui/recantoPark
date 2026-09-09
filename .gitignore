@@ -51,6 +51,9 @@ next-env.d.ts
 # brand asset generation scratch (candidates, state, scripts)
 /brandkit/
 
+# fotos/vídeos originais pesados (fonte); só os webp/mp4 otimizados de public/photos vão pro repo
+/new_assets/
+
 # test artifacts
 /test-results/
 /playwright-report/

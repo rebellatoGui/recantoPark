@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bitter, Figtree } from "next/font/google";
+import { Lora, Figtree } from "next/font/google";
 import { ThemeScript } from "@/components/layout/theme-script";
 import "./globals.css";
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   manifest: "/brand/site.webmanifest",
 };
 
-const bitter = Bitter({
+const lora = Lora({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
@@ -38,7 +38,7 @@ export default function RootLayout({
     <html
       lang="pt"
       suppressHydrationWarning
-      className={`${bitter.variable} ${figtree.variable} antialiased`}
+      className={`${lora.variable} ${figtree.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-background text-foreground font-sans">
         <ThemeScript />

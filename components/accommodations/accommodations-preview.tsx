@@ -19,7 +19,7 @@ export function AccommodationsPreview() {
           data-reveal
           className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end"
         >
-          <h2 className="font-display text-3xl leading-tight text-foreground sm:text-5xl">
+          <h2 className="font-display text-3xl leading-tight text-foreground sm:text-4xl">
             {t("title")}
           </h2>
           <Button

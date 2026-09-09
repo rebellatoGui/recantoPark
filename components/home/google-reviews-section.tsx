@@ -1,14 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { MapPin, Star } from "lucide-react";
 import { GoogleIcon } from "@/components/icons/google-icon";
 import { contact } from "@/lib/data/pousada";
-import { roomImages, beachImages } from "@/lib/data/images";
 import { useReveal } from "@/lib/animations/use-reveal";
-
-const photos = [roomImages[2], beachImages[1], roomImages[7]];
 
 export function GoogleReviewsSection() {
   const t = useTranslations("googleReviews");
@@ -16,14 +12,14 @@ export function GoogleReviewsSection() {
   const scope = useReveal<HTMLElement>();
 
   return (
-    <section ref={scope} className="mx-auto max-w-5xl px-6 pt-16 md:pt-20">
+    <section ref={scope} className="mx-auto max-w-6xl px-6 pt-16 md:pt-24">
       <div
         data-reveal
         className="overflow-hidden rounded-3xl border border-border bg-card"
       >
-        <div className="grid gap-8 p-8 sm:grid-cols-[1.1fr_1fr] sm:p-10">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs font-medium uppercase tracking-[0.06em] text-muted-foreground">
+        <div className="grid gap-8 p-8 sm:grid-cols-[1fr_1.15fr] sm:gap-10 sm:p-12">
+          <div className="flex h-full flex-col">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs font-medium uppercase tracking-[0.06em] text-muted-foreground">
               <GoogleIcon className="size-3.5" />
               {t("eyebrow")}
             </span>
@@ -46,7 +42,7 @@ export function GoogleReviewsSection() {
               {t("noReviewsYet")}
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-auto flex flex-wrap gap-3 pt-8">
               <a
                 href={contact.googleReviewUrl}
                 target="_blank"
@@ -68,34 +64,15 @@ export function GoogleReviewsSection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-2 sm:grid-rows-2 sm:gap-3">
-            <div className="relative col-span-2 row-span-2 aspect-4/5 overflow-hidden rounded-2xl sm:aspect-auto">
-              <Image
-                src={photos[0]}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(min-width: 640px) 20vw, 40vw"
-              />
-            </div>
-            <div className="relative aspect-square overflow-hidden rounded-2xl">
-              <Image
-                src={photos[1]}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="15vw"
-              />
-            </div>
-            <div className="relative aspect-square overflow-hidden rounded-2xl">
-              <Image
-                src={photos[2]}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="15vw"
-              />
-            </div>
+          <div className="relative min-h-[300px] overflow-hidden rounded-2xl border border-border sm:min-h-[440px]">
+            <iframe
+              src={contact.googleMapsEmbedUrl}
+              title={t("mapTitle")}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 h-full w-full"
+              style={{ border: 0 }}
+            />
           </div>
         </div>
       </div>

@@ -7,7 +7,6 @@ import { LocationSection } from "@/components/home/location-section";
 import { AmenitiesSection } from "@/components/home/amenities-section";
 import { AmbientPhotos } from "@/components/home/ambient-photos";
 import { AccommodationsPreview } from "@/components/accommodations/accommodations-preview";
-import { GallerySection } from "@/components/gallery/gallery-section";
 import { GoogleReviewsSection } from "@/components/home/google-reviews-section";
 import { TestimonialsSection } from "@/components/testimonials/testimonials-section";
 import { CtaSection } from "@/components/home/cta-section";
@@ -31,7 +30,6 @@ export default async function HomePage(props: PageProps<"/[locale]">) {
         <AmbientPhotos />
         <AmenitiesSection />
         <AccommodationsPreview />
-        <GallerySection />
       </div>
       <CtaSection />
     </>

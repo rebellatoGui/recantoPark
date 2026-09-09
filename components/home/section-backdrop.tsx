@@ -9,7 +9,7 @@ export function SectionBackdrop({
   variant,
   className,
 }: {
-  variant: "sunset" | "topo";
+  variant: "sunset" | "topo" | "map";
   className?: string;
 }) {
   const scope = useRef<HTMLDivElement>(null);
@@ -30,6 +30,12 @@ export function SectionBackdrop({
           "[data-backdrop-layer]",
           { backgroundPositionY: "100%" },
           { backgroundPositionY: "70%", ease: "none", scrollTrigger },
+        );
+      } else if (variant === "map") {
+        gsap.fromTo(
+          "[data-backdrop-layer]",
+          { backgroundPositionY: "42%" },
+          { backgroundPositionY: "58%", ease: "none", scrollTrigger },
         );
       } else {
         gsap.to("[data-backdrop-layer]", {
@@ -58,6 +64,15 @@ export function SectionBackdrop({
             className="absolute inset-x-0 bottom-0 h-[125%] bg-[url('/brand/bg-sunset.webp')] bg-cover bg-bottom bg-no-repeat opacity-55 dark:opacity-30 dark:brightness-[0.45] dark:saturate-[0.85]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-transparent" />
+        </>
+      ) : variant === "map" ? (
+        <>
+          <div
+            data-backdrop-layer
+            className="absolute inset-x-0 top-0 h-[120%] scale-105 bg-[url('/photos/google-maps.webp')] bg-cover bg-center blur-[3px]"
+          />
+          <div className="absolute inset-0 bg-navy/88" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,theme(colors.gold)/10%,transparent_70%)]" />
         </>
       ) : (
         <div

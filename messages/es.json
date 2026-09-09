@@ -16,8 +16,8 @@
   },
   "hero": {
     "eyebrow": "Penha, Santa Catarina",
-    "title": "Tu refugio a pasos de la magia",
-    "subtitle": "A pocos minutos de Beto Carrero World y de las playas más lindas del litoral catarinense.",
+    "title": "Tu refugio entre el parque y el mar",
+    "subtitle": "A 5 minutos de Beto Carrero World y muy cerca de la Playa de Gravatá. Confort, desayuno incluido y estacionamiento para toda la familia.",
     "ctaPrimary": "Reservar ahora",
     "ctaWhatsapp": "Hablar por WhatsApp",
     "scrollHint": "Desliza para descubrir"
@@ -33,7 +33,7 @@
   "about": {
     "eyebrow": "Sobre nosotros",
     "title": "Descanso y aventura, uno al lado del otro",
-    "body": "La Pousada Recanto do Park nació para ser el punto de partida perfecto para quienes vienen a disfrutar de Beto Carrero World y las playas de Penha. Ambiente familiar, confort en cada detalle y la ubicación más conveniente de la región.",
+    "body": "La Pousada Recanto do Park es la base ideal para quienes vienen a vivir Beto Carrero World y relajarse en la Playa de Gravatá. Suites cómodas, desayuno incluido, estacionamiento propio y una atención de quien conoce la región de verdad. Todo para que tu familia disfrute Penha sin preocupaciones.",
     "stats": {
       "suitesValue": "16",
       "suitesLabel": "Suites equipadas",
@@ -47,13 +47,15 @@
     "parkTitle": "Beto Carrero World",
     "parkDistance": "a 5 minutos en auto",
     "parkDescription": "El parque temático más grande de América Latina, muy cerca de ti.",
-    "beachTitle": "Playas de Penha",
-    "beachDistance": "a 10 minutos en auto",
-    "beachDescription": "Playa de Armação, Gravatá y Prainha te esperan."
+    "beachTitle": "Playa de Gravatá",
+    "beachDistance": "muy cerca de la posada",
+    "beachDescription": "Rocas, mar abierto y arena amplia. Y lo mejor: pet friendly, tu perro es bienvenido.",
+    "carouselTitle": "La playa que te espera",
+    "carouselSubtitle": "Un poco de lo que encontrarás cerca de la posada, en la Playa de Gravatá."
   },
   "amenities": {
     "eyebrow": "Servicios",
-    "title": "Todo lo que necesitas para relajarte",
+    "title": "Comodidades pensadas para tu estadía",
     "items": {
       "suites": "16 suites",
       "breakfast": "Desayuno incluido",
@@ -87,7 +89,8 @@
       "sizeLabel": "Tamaño",
       "bedsLabel": "Camas",
       "amenitiesLabel": "Qué ofrece esta habitación",
-      "galleryHint": "Toca la foto para ampliar"
+      "galleryHint": "Toca la foto para ampliar",
+      "nearbyTitle": "A minutos de todo"
     },
     "rooms": {
       "suite01": {
@@ -195,9 +198,10 @@
   "googleReviews": {
     "eyebrow": "Nuestro perfil en Google",
     "title": "Encuéntranos en Google",
-    "noReviewsYet": "Todavía sin reseñas — ¡sé el primero en dejar una!",
+    "noReviewsYet": "Aún sin reseñas. ¡Sé el primero en opinar!",
     "viewOnMaps": "Ver en Google Maps",
-    "leaveReview": "Reseñar en Google"
+    "leaveReview": "Reseñar en Google",
+    "mapTitle": "Mapa de Pousada Recanto do Park"
   },
   "testimonials": {
     "eyebrow": "Quiénes ya se hospedaron",
@@ -222,7 +226,7 @@
   },
   "ctaFinal": {
     "title": "¿Listo para tu próxima aventura?",
-    "subtitle": "Asegura tu estadía en la Pousada Recanto do Park.",
+    "subtitle": "Reserva tu estadía a pocos minutos de Beto Carrero y la Playa de Gravatá.",
     "ctaPrimary": "Reservar ahora",
     "ctaWhatsapp": "Hablar por WhatsApp"
   },

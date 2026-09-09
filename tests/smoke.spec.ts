@@ -4,7 +4,7 @@ test("home renders in Portuguese by default", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveTitle(/Recanto do Park/);
   await expect(
-    page.getByRole("heading", { name: /refúgio a poucos passos da magia/i })
+    page.getByRole("heading", { name: /refúgio entre o parque e o mar/i })
   ).toBeVisible();
 });
 

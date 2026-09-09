@@ -9,7 +9,7 @@ import {
   Accessibility,
   type LucideIcon,
 } from "lucide-react";
-import { roomImages } from "./images";
+import { roomImages, photos } from "./images";
 
 export const contact = {
   whatsappNumber:
@@ -23,6 +23,8 @@ export const contact = {
   googlePlaceId: "ChIJZYBvBUHR2JQR-sRR8mTT-gc",
   googleMapsUrl:
     "https://www.google.com/maps/place/?q=place_id:ChIJZYBvBUHR2JQR-sRR8mTT-gc",
+  googleMapsEmbedUrl:
+    "https://maps.google.com/maps?q=-26.8145072,-48.6156718&z=16&output=embed",
   googleReviewUrl:
     "https://search.google.com/local/writereview?placeid=ChIJZYBvBUHR2JQR-sRR8mTT-gc",
 };
@@ -76,14 +78,19 @@ export const rooms: {
   amenityIds: AmenityId[];
 }[] = Array.from({ length: SUITE_COUNT }, (_, i) => {
   const number = String(i + 1).padStart(2, "0");
+  // Suíte 01 tem fotografia real (as demais seguem banco de imagens por ora).
+  const images =
+    i === 0
+      ? [photos.quarto1, photos.quarto2, photos.banheiro1]
+      : [
+          roomImages[i % roomImages.length],
+          roomImages[(i + 5) % roomImages.length],
+          roomImages[(i + 10) % roomImages.length],
+        ];
   return {
     id: `suite${number}` as RoomId,
     slug: `suite-${number}`,
-    images: [
-      roomImages[i % roomImages.length],
-      roomImages[(i + 5) % roomImages.length],
-      roomImages[(i + 10) % roomImages.length],
-    ],
+    images,
     amenityIds: ROOM_AMENITY_IDS,
   };
 });
@@ -94,4 +101,3 @@ export function getRoomBySlug(slug: string) {
 
 export const testimonialIds = ["t1", "t2", "t3"] as const;
 
-export const gallerySpotlight = roomImages[0];

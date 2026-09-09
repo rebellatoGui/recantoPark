@@ -2,8 +2,28 @@ function unsplash(id: string, width = 1600, height = 1200) {
   return `https://images.unsplash.com/photo-${id}?w=${width}&h=${height}&fit=crop&auto=format&q=80`;
 }
 
+// Fotografia real da pousada, do Beto Carrero e da Praia do Gravatá.
+// Otimizadas em public/photos/*.webp (fonte em new_assets/, fora do repo).
+export const photos = {
+  betoCarreroHero: "/photos/beto-carrero-world-parque.webp",
+  betoCarrero: "/photos/beto-carrero-world.webp",
+  googleMaps: "/photos/google-maps.webp",
+  gravataPedras: "/photos/praia-gravata-pedras.webp",
+  gravataMar: "/photos/praia-gravata-mar.webp",
+  acessoPraia: "/photos/acesso-a-praia.webp",
+  cachorroPraia: "/photos/cachorro-praia.webp",
+  oMar: "/photos/o-mar.webp",
+  entrada: "/photos/entrada.webp",
+  estacionamento: "/photos/estacionamento.webp",
+  quarto1: "/photos/quarto1.webp",
+  quarto2: "/photos/quarto2.webp",
+  banheiro1: "/photos/banheiro1.webp",
+  droneGravata: "/photos/drone-gravata.mp4",
+  droneGravataPoster: "/photos/drone-gravata-poster.webp",
+} as const;
+
 export const heroImages = {
-  main: unsplash("1610641818989-c2051b5e2cfd", 2400, 1500),
+  main: photos.betoCarreroHero,
 };
 
 export const poolImages = [
@@ -43,28 +63,12 @@ export const roomImages = [
   unsplash("1586023492125-27b2c045efd7"),
 ];
 
-export const parkImages = [
-  unsplash("1704925052388-070244d29a3a"),
-  unsplash("1621445944472-f252571005b6"),
-  unsplash("1713426225330-014fbfd04aa0"),
-  unsplash("1613546167482-b3280d75f796"),
-];
 
-export const breakfastImages = [
-  unsplash("1596701062351-8c2c14d1fdd0"),
-  unsplash("1540304453527-62f979142a17"),
-  unsplash("1630582837298-49d1927726e5"),
-];
-
-export const galleryImages = [
-  poolImages[0],
-  beachImages[0],
-  roomImages[0],
-  parkImages[0],
-  breakfastImages[0],
-  poolImages[1],
-  beachImages[1],
-  roomImages[2],
-  parkImages[1],
-  beachImages[2],
+// Carrossel da Praia do Gravatá (seção Localização) — fotografia real.
+export const gravataCarousel: { src: string; alt: string }[] = [
+  { src: photos.gravataPedras, alt: "Costão de pedras e o mar na Praia do Gravatá" },
+  { src: photos.oMar, alt: "Mar aberto visto da Praia do Gravatá" },
+  { src: photos.cachorroPraia, alt: "Cachorro passeando na areia da praia" },
+  { src: photos.acessoPraia, alt: "Passarela de acesso à praia entre a vegetação" },
+  { src: photos.gravataMar, alt: "Ondas quebrando na Praia do Gravatá" },
 ];

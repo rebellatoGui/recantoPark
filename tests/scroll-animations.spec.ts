@@ -13,10 +13,10 @@ test("header reacts to scroll and progress bar fills", async ({ page }) => {
   expect(transform).not.toBe("scaleX(0)");
 });
 
-test("about section image parallax moves with scroll", async ({ page }) => {
+test("ambient photos parallax moves with scroll", async ({ page }) => {
   await page.goto("/");
   await page.waitForTimeout(3500);
-  const image = page.locator("[data-parallax]").first();
+  const image = page.locator("[data-ambient-photo]").first();
 
   await image.scrollIntoViewIfNeeded();
   await page.waitForTimeout(400);

@@ -20,7 +20,7 @@ export function CtaSection() {
       <div className="mx-auto max-w-5xl">
         <h2
           data-reveal
-          className="font-display text-3xl leading-tight text-foreground sm:text-5xl"
+          className="font-display text-3xl leading-tight text-foreground sm:text-4xl"
         >
           {t("title")}
         </h2>

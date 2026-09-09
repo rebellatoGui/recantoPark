@@ -3,68 +3,51 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { MapPin } from "lucide-react";
-import { parkImages, beachImages } from "@/lib/data/images";
+import { photos, gravataCarousel } from "@/lib/data/images";
 import { useReveal } from "@/lib/animations/use-reveal";
+import { SectionBackdrop } from "@/components/home/section-backdrop";
+import { PhotoCarousel } from "@/components/ui/photo-carousel";
 
-function DestinationPhotos({
-  images,
+function DestinationCard({
+  image,
   alt,
-  reverse,
+  distance,
+  title,
+  description,
 }: {
-  images: [string, string];
+  image: string;
   alt: string;
-  reverse?: boolean;
+  distance: string;
+  title: string;
+  description: string;
 }) {
   return (
     <div
       data-reveal
-      className={`grid grid-cols-2 gap-3 sm:gap-4 ${reverse ? "md:order-2" : ""}`}
+      className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm"
     >
-      <div className="relative aspect-[4/5] overflow-hidden rounded-3xl will-change-transform [backface-visibility:hidden]">
+      <div className="relative aspect-[16/10] overflow-hidden">
         <Image
-          src={images[0]}
+          src={image}
           alt={alt}
           fill
-          className="object-cover transition-transform duration-700 hover:scale-105"
-          sizes="(min-width: 768px) 26vw, 45vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(min-width: 768px) 45vw, 90vw"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" />
+        <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-navy/70 px-3 py-1 text-xs font-medium text-gold backdrop-blur">
+          <MapPin className="size-3.5" />
+          {distance}
+        </span>
       </div>
-      <div className="relative aspect-[4/5] overflow-hidden rounded-3xl will-change-transform [backface-visibility:hidden]">
-        <Image
-          src={images[1]}
-          alt=""
-          fill
-          className="object-cover transition-transform duration-700 hover:scale-105"
-          sizes="(min-width: 768px) 26vw, 45vw"
-        />
+      <div className="p-6">
+        <h3 className="font-display text-xl leading-tight sm:text-2xl">
+          {title}
+        </h3>
+        <p className="mt-2 text-sm leading-relaxed text-navy-foreground/70">
+          {description}
+        </p>
       </div>
-    </div>
-  );
-}
-
-function DestinationText({
-  title,
-  distance,
-  description,
-  reverse,
-}: {
-  title: string;
-  distance: string;
-  description: string;
-  reverse?: boolean;
-}) {
-  return (
-    <div data-reveal className={reverse ? "md:order-1" : undefined}>
-      <span className="inline-flex items-center gap-1.5 rounded-full bg-gold/15 px-3 py-1 text-xs font-medium text-gold">
-        <MapPin className="size-3.5" />
-        {distance}
-      </span>
-      <h3 className="mt-4 font-display text-xl leading-tight sm:text-3xl">
-        {title}
-      </h3>
-      <p className="mt-3 max-w-md text-sm leading-relaxed text-navy-foreground/70 sm:text-base">
-        {description}
-      </p>
     </div>
   );
 }
@@ -77,50 +60,46 @@ export function LocationSection() {
     <section
       ref={scope}
       id="localizacao"
-      className="relative overflow-hidden bg-navy py-16 text-navy-foreground md:py-20"
+      className="relative isolate overflow-hidden bg-navy py-16 text-navy-foreground md:py-24"
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,theme(colors.gold)/12%,transparent_70%)]"
-      />
+      <SectionBackdrop variant="map" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div data-reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-gold">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-4 font-display text-3xl sm:text-5xl">
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl">
             {t("title")}
           </h2>
         </div>
 
-        <div className="mt-12 flex flex-col gap-8 md:gap-14">
-          <div className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
-            <DestinationPhotos
-              images={[parkImages[0], parkImages[1]]}
-              alt={t("parkTitle")}
-            />
-            <DestinationText
-              title={t("parkTitle")}
-              distance={t("parkDistance")}
-              description={t("parkDescription")}
-            />
-          </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 md:gap-8">
+          <DestinationCard
+            image={photos.betoCarrero}
+            alt={t("parkTitle")}
+            distance={t("parkDistance")}
+            title={t("parkTitle")}
+            description={t("parkDescription")}
+          />
+          <DestinationCard
+            image={photos.gravataPedras}
+            alt={t("beachTitle")}
+            distance={t("beachDistance")}
+            title={t("beachTitle")}
+            description={t("beachDescription")}
+          />
+        </div>
 
-          <div className="h-px w-full bg-white/10" />
-
-          <div className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
-            <DestinationPhotos
-              images={[beachImages[0], beachImages[1]]}
-              alt={t("beachTitle")}
-              reverse
-            />
-            <DestinationText
-              title={t("beachTitle")}
-              distance={t("beachDistance")}
-              description={t("beachDescription")}
-              reverse
-            />
+        <div data-reveal className="mt-16">
+          <h3 className="font-display text-2xl sm:text-3xl">
+            {t("carouselTitle")}
+          </h3>
+          <p className="mt-2 max-w-xl text-sm leading-relaxed text-navy-foreground/70 sm:text-base">
+            {t("carouselSubtitle")}
+          </p>
+          <div className="mt-6">
+            <PhotoCarousel photos={gravataCarousel} />
           </div>
         </div>
       </div>

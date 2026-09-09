@@ -8,7 +8,6 @@ import { heroImages } from "@/lib/data/images";
 import { WhatsappButton } from "@/components/booking/whatsapp-button";
 import { BookNowButton } from "@/components/booking/book-now-button";
 import { Magnetic } from "@/components/animations/magnetic";
-import { HeroLines } from "@/components/hero/hero-lines";
 import { prefersReducedMotion } from "@/lib/animations/reduced-motion";
 
 export function HeroSection() {
@@ -20,9 +19,9 @@ export function HeroSection() {
       if (prefersReducedMotion()) {
         gsap.set(
           "[data-hero-glow], [data-hero-seal], [data-hero-eyebrow], [data-hero-title], [data-hero-subtitle], [data-hero-cta]",
-          { opacity: 1, scale: 1, rotate: 0, y: 0 }
+          { opacity: 1, scale: 1, y: 0 }
         );
-        gsap.set("[data-hero-line]", { strokeDashoffset: 0 });
+        gsap.set("[data-hero-image]", { scale: 1 });
         return;
       }
 
@@ -43,16 +42,6 @@ export function HeroSection() {
             ease: "power3.out",
           },
           "<0.1"
-        )
-        .to(
-          "[data-hero-line]",
-          {
-            strokeDashoffset: 0,
-            duration: 1.2,
-            stagger: 0.04,
-            ease: "power2.out",
-          },
-          "<0.2"
         )
         .from(
           "[data-hero-eyebrow]",
@@ -80,14 +69,13 @@ export function HeroSection() {
           "-=0.5"
         );
 
-      gsap.to("[data-hero-orbit]", {
-        rotate: 360,
-        duration: 60,
-        ease: "none",
-        repeat: -1,
-        transformOrigin: "50% 50%",
-      });
-
+      // Abertura: a imagem entra com zoom e vai "abrindo a vista" até o
+      // enquadramento natural, então para (uma vez só, sem loop).
+      gsap.fromTo(
+        "[data-hero-image]",
+        { scale: 1.18 },
+        { scale: 1, duration: 5, ease: "power2.out" }
+      );
     },
     { scope }
   );
@@ -97,10 +85,10 @@ export function HeroSection() {
       ref={scope}
       className="relative flex h-[92vh] min-h-[640px] items-end overflow-hidden bg-navy"
     >
-      <div className="absolute inset-0">
+      <div data-hero-image className="absolute inset-0 will-change-transform">
         <Image
           src={heroImages.main}
-          alt="Pousada Recanto do Park"
+          alt="Castelo do Beto Carrero World, a poucos minutos da pousada"
           fill
           priority
           className="object-cover"
@@ -115,12 +103,6 @@ export function HeroSection() {
           data-hero-glow
           className="absolute left-1/2 top-0 aspect-square w-[58%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,theme(colors.gold)/40%,transparent_70%)] blur-2xl"
         />
-        <div
-          data-hero-orbit
-          className="absolute left-1/2 top-0 aspect-square w-[58%] -translate-x-1/2 text-gold/70"
-        >
-          <HeroLines className="size-full" />
-        </div>
         <div
           data-hero-seal
           className="relative w-full drop-shadow-[0_8px_28px_rgba(0,0,0,0.45)]"
@@ -146,7 +128,7 @@ export function HeroSection() {
         </p>
         <h1
           data-hero-title
-          className="max-w-3xl font-display text-3xl leading-[1.05] font-semibold sm:text-6xl md:text-7xl"
+          className="max-w-3xl font-display text-3xl leading-[1.05] font-semibold sm:text-5xl md:text-6xl"
         >
           {t("title")}
         </h1>

@@ -63,23 +63,20 @@ test("home page has no console warnings across theme/language interactions", asy
   expect(messages).toEqual([]);
 });
 
-test("gallery lightbox opens and closes without errors", async ({ page }) => {
+test("room gallery lightbox opens and closes without errors", async ({ page }) => {
   const errors: string[] = [];
   page.on("console", (msg) => {
     if (msg.type() === "error") errors.push(msg.text());
   });
   page.on("pageerror", (err) => errors.push("pageerror: " + err.message));
 
-  await page.goto("/", { waitUntil: "networkidle" });
-  await page.evaluate(() => {
-    const heading = Array.from(document.querySelectorAll("h2")).find((h) =>
-      h.textContent?.includes("gostinho")
-    );
-    heading?.scrollIntoView();
-  });
+  await page.goto("/acomodacoes/suite-01", { waitUntil: "networkidle" });
   await page.waitForTimeout(800);
-  const firstTile = page.locator("button").filter({ has: page.locator("img") }).first();
-  await firstTile.click();
+  const mainImage = page
+    .locator("button")
+    .filter({ has: page.locator("img") })
+    .first();
+  await mainImage.click();
   await page.waitForTimeout(500);
   await page.keyboard.press("Escape");
   await page.waitForTimeout(300);

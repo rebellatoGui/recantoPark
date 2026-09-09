@@ -45,7 +45,7 @@ export function SiteHeader() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-40 border-b border-navy/10 bg-background text-navy shadow-none transition-shadow duration-300 [&.is-scrolled]:shadow-lg [&.is-scrolled]:shadow-black/10 dark:border-white/10 dark:bg-navy dark:text-navy-foreground"
+      className="sticky top-0 z-40 border-b border-navy/10 bg-white text-navy shadow-none transition-shadow duration-300 [&.is-scrolled]:shadow-lg [&.is-scrolled]:shadow-black/10 dark:border-white/10 dark:bg-navy dark:text-navy-foreground"
     >
       <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 transition-[padding] duration-300 sm:py-5 [.is-scrolled_&]:py-3 sm:[.is-scrolled_&]:py-3.5">
         <Link
