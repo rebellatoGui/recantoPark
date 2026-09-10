@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Lora, Figtree } from "next/font/google";
-import { ThemeScript } from "@/components/layout/theme-script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -41,7 +40,6 @@ export default function RootLayout({
       className={`${lora.variable} ${figtree.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-background text-foreground font-sans">
-        <ThemeScript />
         {children}
       </body>
     </html>

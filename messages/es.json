@@ -19,8 +19,7 @@
     "title": "Tu refugio entre el parque y el mar",
     "subtitle": "A 5 minutos de Beto Carrero World y muy cerca de la Playa de Gravatá. Confort, desayuno incluido y estacionamiento para toda la familia.",
     "ctaPrimary": "Reservar ahora",
-    "ctaWhatsapp": "Hablar por WhatsApp",
-    "scrollHint": "Desliza para descubrir"
+    "ctaWhatsapp": "Hablar por WhatsApp"
   },
   "essentialInfo": {
     "eyebrow": "Información esencial",
@@ -191,10 +190,6 @@
       }
     }
   },
-  "gallery": {
-    "eyebrow": "Galería",
-    "title": "Una probadita de lo que te espera"
-  },
   "googleReviews": {
     "eyebrow": "Nuestro perfil en Google",
     "title": "Encuéntranos en Google",
@@ -231,13 +226,8 @@
     "ctaWhatsapp": "Hablar por WhatsApp"
   },
   "contact": {
-    "eyebrow": "Contacto",
     "title": "Hablemos",
-    "addressLabel": "Dirección",
-    "address": "Rua Timóteo Perfeito Flores, 2994, Penha, SC, Brasil",
-    "phoneLabel": "Teléfono / WhatsApp",
-    "emailLabel": "Correo electrónico",
-    "instagramLabel": "Instagram"
+    "address": "Rua Timóteo Perfeito Flores, 2994, Penha, SC, Brasil"
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
@@ -246,8 +236,5 @@
   },
   "whatsappButton": {
     "label": "Habla con nosotros por WhatsApp"
-  },
-  "languageSwitcher": {
-    "label": "Idioma"
   }
 }

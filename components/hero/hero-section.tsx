@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/animations/gsap";
-import { heroImages } from "@/lib/data/images";
+import { photos } from "@/lib/data/images";
 import { WhatsappButton } from "@/components/booking/whatsapp-button";
 import { BookNowButton } from "@/components/booking/book-now-button";
 import { Magnetic } from "@/components/animations/magnetic";
@@ -21,7 +21,7 @@ export function HeroSection() {
           "[data-hero-glow], [data-hero-seal], [data-hero-eyebrow], [data-hero-title], [data-hero-subtitle], [data-hero-cta]",
           { opacity: 1, scale: 1, y: 0 }
         );
-        gsap.set("[data-hero-image]", { scale: 1 });
+        gsap.set("[data-hero-image]", { autoAlpha: 1, scale: 1 });
         return;
       }
 
@@ -69,12 +69,12 @@ export function HeroSection() {
           "-=0.5"
         );
 
-      // Abertura: a imagem entra com zoom e vai "abrindo a vista" até o
-      // enquadramento natural, então para (uma vez só, sem loop).
+      // Abertura suave: o vídeo surge do fundo escuro com um leve recuo de
+      // enquadramento, sem competir com o movimento do próprio drone.
       gsap.fromTo(
         "[data-hero-image]",
-        { scale: 1.18 },
-        { scale: 1, duration: 5, ease: "power2.out" }
+        { autoAlpha: 0, scale: 1.1 },
+        { autoAlpha: 1, scale: 1, duration: 2.8, ease: "power2.out" }
       );
     },
     { scope }
@@ -86,13 +86,16 @@ export function HeroSection() {
       className="relative flex h-[92vh] min-h-[640px] items-end overflow-hidden bg-navy"
     >
       <div data-hero-image className="absolute inset-0 will-change-transform">
-        <Image
-          src={heroImages.main}
-          alt="Castelo do Beto Carrero World, a poucos minutos da pousada"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
+        <video
+          className="h-full w-full object-cover"
+          src={photos.heroVideo}
+          poster={photos.heroVideoPoster}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label="Vista aérea do Beto Carrero World, a poucos minutos da pousada"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-navy/10" />
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-navy/85 via-navy/35 to-transparent sm:h-80" />

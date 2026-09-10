@@ -19,8 +19,7 @@
     "title": "Seu refúgio entre o parque e o mar",
     "subtitle": "A 5 minutos do Beto Carrero World e pertinho da Praia do Gravatá. Conforto, café da manhã incluso e estacionamento para a família toda.",
     "ctaPrimary": "Reservar agora",
-    "ctaWhatsapp": "Falar no WhatsApp",
-    "scrollHint": "Deslize para descobrir"
+    "ctaWhatsapp": "Falar no WhatsApp"
   },
   "essentialInfo": {
     "eyebrow": "Informações essenciais",
@@ -191,10 +190,6 @@
       }
     }
   },
-  "gallery": {
-    "eyebrow": "Galeria",
-    "title": "Um gostinho do que te espera"
-  },
   "googleReviews": {
     "eyebrow": "Nosso perfil no Google",
     "title": "Encontre a gente no Google",
@@ -231,13 +226,8 @@
     "ctaWhatsapp": "Falar no WhatsApp"
   },
   "contact": {
-    "eyebrow": "Contato",
     "title": "Fale com a gente",
-    "addressLabel": "Endereço",
-    "address": "Rua Timóteo Perfeito Flores, nº 2994, Penha, SC",
-    "phoneLabel": "Telefone / WhatsApp",
-    "emailLabel": "E-mail",
-    "instagramLabel": "Instagram"
+    "address": "Rua Timóteo Perfeito Flores, nº 2994, Penha, SC"
   },
   "footer": {
     "rights": "Todos os direitos reservados.",
@@ -246,8 +236,5 @@
   },
   "whatsappButton": {
     "label": "Fale conosco no WhatsApp"
-  },
-  "languageSwitcher": {
-    "label": "Idioma"
   }
 }

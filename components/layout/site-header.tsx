@@ -52,14 +52,17 @@ export function SiteHeader() {
           href="/"
           className="w-20 shrink-0 transition-opacity duration-300 hover:opacity-80 sm:w-24 md:w-28"
         >
-          <Image
-            src="/brand/logo-oficial.png"
-            alt="Pousada Recanto do Park"
-            width={1254}
-            height={1254}
-            priority
-            className="absolute bottom-0 left-6 z-10 h-20 w-20 translate-y-1/2 object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)] dark:rounded-2xl sm:h-24 sm:w-24 md:h-28 md:w-28"
-          />
+          <span className="absolute bottom-0 left-6 z-10 block h-20 w-20 translate-y-1/2 sm:h-24 sm:w-24 md:h-28 md:w-28">
+            <Image
+              data-header-logo
+              src="/brand/logo-oficial.png"
+              alt="Pousada Recanto do Park"
+              width={1254}
+              height={1254}
+              priority
+              className="h-full w-full object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)] dark:rounded-2xl"
+            />
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

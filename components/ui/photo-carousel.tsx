@@ -1,21 +1,57 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { prefersReducedMotion } from "@/lib/animations/reduced-motion";
 
 export function PhotoCarousel({
   photos,
+  autoPlayMs = 3800,
 }: {
   photos: { src: string; alt: string }[];
+  autoPlayMs?: number;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
 
   const scrollByCards = (dir: 1 | -1) => {
     const track = trackRef.current;
     if (!track) return;
     track.scrollBy({ left: dir * track.clientWidth * 0.8, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track || prefersReducedMotion()) return;
+
+    const pause = () => (pausedRef.current = true);
+    const resume = () => (pausedRef.current = false);
+    track.addEventListener("pointerenter", pause);
+    track.addEventListener("pointerleave", resume);
+    track.addEventListener("pointerdown", pause);
+    track.addEventListener("focusin", pause);
+    track.addEventListener("focusout", resume);
+
+    const id = window.setInterval(() => {
+      if (pausedRef.current || document.hidden) return;
+      const atEnd =
+        track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+      track.scrollTo({
+        left: atEnd ? 0 : track.scrollLeft + track.clientWidth * 0.8,
+        behavior: "smooth",
+      });
+    }, autoPlayMs);
+
+    return () => {
+      window.clearInterval(id);
+      track.removeEventListener("pointerenter", pause);
+      track.removeEventListener("pointerleave", resume);
+      track.removeEventListener("pointerdown", pause);
+      track.removeEventListener("focusin", pause);
+      track.removeEventListener("focusout", resume);
+    };
+  }, [autoPlayMs]);
 
   return (
     <div className="relative">

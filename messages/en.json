@@ -19,8 +19,7 @@
     "title": "Your retreat between the park and the sea",
     "subtitle": "Five minutes from Beto Carrero World and steps from Gravatá Beach. Comfort, breakfast included and on-site parking for the whole family.",
     "ctaPrimary": "Book now",
-    "ctaWhatsapp": "Chat on WhatsApp",
-    "scrollHint": "Scroll to discover"
+    "ctaWhatsapp": "Chat on WhatsApp"
   },
   "essentialInfo": {
     "eyebrow": "Essential information",
@@ -191,10 +190,6 @@
       }
     }
   },
-  "gallery": {
-    "eyebrow": "Gallery",
-    "title": "A taste of what awaits you"
-  },
   "googleReviews": {
     "eyebrow": "Our Google profile",
     "title": "Find us on Google",
@@ -231,13 +226,8 @@
     "ctaWhatsapp": "Chat on WhatsApp"
   },
   "contact": {
-    "eyebrow": "Contact",
     "title": "Get in touch",
-    "addressLabel": "Address",
-    "address": "Rua Timóteo Perfeito Flores, 2994, Penha, SC, Brazil",
-    "phoneLabel": "Phone / WhatsApp",
-    "emailLabel": "Email",
-    "instagramLabel": "Instagram"
+    "address": "Rua Timóteo Perfeito Flores, 2994, Penha, SC, Brazil"
   },
   "footer": {
     "rights": "All rights reserved.",
@@ -246,8 +236,5 @@
   },
   "whatsappButton": {
     "label": "Chat with us on WhatsApp"
-  },
-  "languageSwitcher": {
-    "label": "Language"
   }
 }

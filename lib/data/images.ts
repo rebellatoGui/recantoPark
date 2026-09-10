@@ -20,11 +20,11 @@ export const photos = {
   banheiro1: "/photos/banheiro1.webp",
   droneGravata: "/photos/drone-gravata.mp4",
   droneGravataPoster: "/photos/drone-gravata-poster.webp",
+  droneGravata2: "/photos/drone-gravata-2.mp4",
+  droneGravata2Poster: "/photos/drone-gravata-2-poster.webp",
+  heroVideo: "/photos/hero-beto-carrero.mp4",
+  heroVideoPoster: "/photos/hero-beto-carrero-poster.webp",
 } as const;
-
-export const heroImages = {
-  main: photos.betoCarreroHero,
-};
 
 export const poolImages = [
   unsplash("1623718649591-311775a30c43"),
