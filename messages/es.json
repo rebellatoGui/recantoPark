@@ -28,8 +28,8 @@
     "receptionLabel": "Recepción",
     "cancellationLabel": "Cancelación",
     "cancellationValue": "Flexible, hasta 48h antes de la llegada",
-    "petLabel": "Pet friendly",
-    "petValue": "Solo mascotas de porte pequeño, con tarifa y solicitud previa"
+    "petLabel": "Pet-Friendly",
+    "petValue": "Consultar previamente"
   },
   "about": {
     "eyebrow": "Sobre nosotros",
@@ -50,7 +50,7 @@
     "parkDescription": "El parque temático más grande de América Latina, muy cerca de ti.",
     "beachTitle": "Playa de Gravatá",
     "beachDistance": "muy cerca de la posada",
-    "beachDescription": "Rocas, mar abierto y arena amplia. Y lo mejor: pet friendly, tu perro es bienvenido.",
+    "beachDescription": "Rocas, mar abierto y arena amplia. Y lo mejor: pet-friendly, tu perro es bienvenido.",
     "carouselTitle": "La playa que te espera",
     "carouselSubtitle": "Un poco de lo que encontrarás cerca de la posada, en la Playa de Gravatá."
   },
@@ -68,7 +68,7 @@
       "tv": "TV",
       "wifi": "Wi-Fi",
       "accessibility": "Algunas suites con accesibilidad",
-      "petFriendly": "Pet friendly (consultar previamente)"
+      "petFriendly": "Pet-Friendly"
     }
   },
   "accommodationsPreview": {
@@ -196,32 +196,20 @@
   "googleReviews": {
     "eyebrow": "Nuestro perfil en Google",
     "title": "Encuéntranos en Google",
-    "noReviewsYet": "Aún sin reseñas. ¡Sé el primero en opinar!",
     "viewOnMaps": "Ver en Google Maps",
     "leaveReview": "Reseñar en Google",
     "mapTitle": "Mapa de Pousada Recanto do Park",
-    "getDirections": "Cómo llegar"
+    "getDirections": "Cómo llegar",
+    "reviewCount": "{count, plural, =1 {# reseña en Google} other {# reseñas en Google}}",
+    "seeReviews": "Ver reseñas"
   },
   "testimonials": {
-    "eyebrow": "Quiénes ya se hospedaron",
-    "title": "Historias de nuestros huéspedes",
-    "items": {
-      "t1": {
-        "name": "Camila R.",
-        "location": "Curitiba, Brasil",
-        "quote": "Ubicación perfecta para quienes visitan Beto Carrero. ¡Excelente desayuno y personal muy atento!"
-      },
-      "t2": {
-        "name": "João y familia",
-        "location": "São Paulo, Brasil",
-        "quote": "A los niños les encantó la cercanía con la playa y a nosotros lo fácil que fue llegar al parque. Sin duda volveremos."
-      },
-      "t3": {
-        "name": "Marina S.",
-        "location": "Porto Alegre, Brasil",
-        "quote": "Pousada limpia, acogedora y con una excelente relación calidad-precio. ¡La recomiendo mucho!"
-      }
-    }
+    "eyebrow": "Quienes ya se hospedaron",
+    "title": "Historias de quienes vivieron esta experiencia",
+    "source": "en Google",
+    "placeholderTitle": "¡Deja tu reseña!",
+    "placeholderBody": "¿Ya te hospedaste con nosotros? Cuéntanos cómo fue tu estadía.",
+    "placeholderCta": "Reseñar en Google"
   },
   "ctaFinal": {
     "title": "¿Listo para tu próxima aventura?",

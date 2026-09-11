@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { amenities } from "@/lib/data/pousada";
 import { useReveal } from "@/lib/animations/use-reveal";
@@ -9,27 +10,52 @@ export function AmenitiesSection() {
   const scope = useReveal<HTMLElement>();
 
   return (
-    <section id="servicos" ref={scope} className="mx-auto max-w-7xl px-6 py-16 md:py-32">
+    <section
+      id="servicos"
+      ref={scope}
+      className="mx-auto max-w-6xl px-6 py-16 md:py-28"
+    >
       <div data-reveal className="mx-auto max-w-2xl text-center">
-        <h2 className="font-display text-3xl leading-tight text-foreground sm:text-4xl">
+        <p className="text-xs font-medium uppercase tracking-[0.06em] text-terracotta">
+          {t("eyebrow")}
+        </p>
+        <h2 className="mt-3 font-display text-3xl leading-tight text-foreground sm:text-4xl">
           {t("title")}
         </h2>
       </div>
 
-      <div className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
-        {amenities.map(({ id, icon: Icon }) => (
-          <div
+      <ul className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 sm:gap-x-8 lg:gap-x-12">
+        {amenities.map(({ id, icon: Icon, image }) => (
+          <li
             key={id}
             data-reveal
-            className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card px-4 py-8 text-center last:col-span-2 sm:last:col-span-1"
+            className="group flex flex-col items-center text-center"
           >
-            <Icon className="size-7 text-terracotta" strokeWidth={1.5} />
-            <span className="text-sm text-foreground">
+            <div className="relative aspect-square w-full max-w-[160px] overflow-hidden rounded-full border border-border bg-secondary shadow-sm">
+              {image ? (
+                <Image
+                  src={image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 160px, (min-width: 640px) 22vw, 40vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              ) : (
+                <span className="flex h-full w-full items-center justify-center">
+                  <Icon
+                    className="size-10 text-terracotta transition-transform duration-500 group-hover:scale-110"
+                    strokeWidth={1.25}
+                  />
+                </span>
+              )}
+            </div>
+
+            <span className="mt-4 text-sm font-medium text-foreground sm:text-base">
               {t(`items.${id}`)}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

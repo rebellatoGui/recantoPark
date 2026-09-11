@@ -31,16 +31,22 @@ test("logo desce do header pro card do maps e volta (desktop)", async ({
   expect(naSecao.header).toBeLessThan(0.1);
   expect(naSecao.card).toBeGreaterThan(0.9);
 
-  // pousa acima dos botões e centrada neles
+  // pousa centrada na coluna de texto e acima da linha de botões, que ocupa
+  // a largura inteira do card
   const geo = await page.evaluate(() => {
     const c = (
       document.querySelector("[data-card-logo]") as HTMLElement
+    ).getBoundingClientRect();
+    const coluna = (
+      document.querySelector("[data-card-column]") as HTMLElement
     ).getBoundingClientRect();
     const acoes = (
       document.querySelector('a[href*="writereview"]') as HTMLElement
     ).parentElement!.getBoundingClientRect();
     return {
-      dxCentro: Math.abs(c.left + c.width / 2 - (acoes.left + acoes.width / 2)),
+      dxCentro: Math.abs(
+        c.left + c.width / 2 - (coluna.left + coluna.width / 2),
+      ),
       acimaDosBotoes: c.bottom <= acoes.top,
     };
   });
@@ -80,4 +86,38 @@ test("logo desce do header pro card do maps e volta (desktop)", async ({
   await page.evaluate(() => window.scrollTo({ top: 0 }));
   await page.waitForTimeout(2000);
   expect((await estado(page)).header).toBeGreaterThan(0.9);
+});
+
+test("logo tambem voa no mobile e pousa sem oscilar", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  await page.waitForTimeout(2000);
+
+  const topo = await estado(page);
+  expect(topo.header).toBeGreaterThan(0.9);
+  expect(topo.card).toBeLessThan(0.1);
+
+  await page.locator("#maps").scrollIntoViewIfNeeded();
+  await page.waitForTimeout(2500);
+
+  const naSecao = await estado(page);
+  expect(naSecao.card).toBeGreaterThan(0.9);
+
+  // parada, a logo não pode oscilar de escala/opacidade (o crossfade binário
+  // antigo piscava ao cruzar o limiar)
+  const amostras: number[] = [];
+  for (let i = 0; i < 10; i++) {
+    amostras.push(
+      await page.evaluate(() => {
+        const h = document.querySelector("[data-header-logo]") as HTMLElement;
+        const c = document.querySelector("[data-card-logo]") as HTMLElement;
+        return (
+          new DOMMatrixReadOnly(getComputedStyle(h).transform).a +
+          Number(getComputedStyle(c).opacity)
+        );
+      }),
+    );
+    await page.waitForTimeout(60);
+  }
+  expect(Math.max(...amostras) - Math.min(...amostras)).toBeLessThan(0.01);
 });

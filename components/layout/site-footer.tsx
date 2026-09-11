@@ -9,6 +9,7 @@ import { PixIcon } from "@/components/icons/pix-icon";
 import { EloIcon } from "@/components/icons/elo-icon";
 import { BoletoIcon } from "@/components/icons/boleto-icon";
 import { contact } from "@/lib/data/pousada";
+import { HashLink } from "@/components/layout/hash-link";
 
 const paymentIcons = [
   { Icon: PixIcon, label: "Pix" },
@@ -42,9 +43,9 @@ export function SiteFooter() {
             <Link href="/acomodacoes" className="hover:text-gold">
               {tNav("accommodations")}
             </Link>
-            <Link href="/#localizacao" className="hover:text-gold">
+            <HashLink href="/#maps" className="hover:text-gold">
               {tNav("location")}
-            </Link>
+            </HashLink>
           </nav>
         </div>
 

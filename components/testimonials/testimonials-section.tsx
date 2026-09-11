@@ -1,13 +1,30 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Quote } from "lucide-react";
-import { testimonialIds } from "@/lib/data/pousada";
+import { PenLine, Star } from "lucide-react";
+import { contact, googleReviews, TESTIMONIAL_SLOTS } from "@/lib/data/pousada";
+import { GoogleIcon } from "@/components/icons/google-icon";
 import { useReveal } from "@/lib/animations/use-reveal";
+
+function Stars({ rating }: { rating: number }) {
+  return (
+    <span className="flex items-center gap-0.5 text-terracotta">
+      {Array.from({ length: 5 }, (_, i) => (
+        <Star
+          key={i}
+          className="size-4"
+          strokeWidth={1.5}
+          fill={i < rating ? "currentColor" : "none"}
+        />
+      ))}
+    </span>
+  );
+}
 
 export function TestimonialsSection() {
   const t = useTranslations("testimonials");
   const scope = useReveal<HTMLElement>();
+  const emptySlots = Math.max(0, TESTIMONIAL_SLOTS - googleReviews.length);
 
   return (
     <section ref={scope} className="pb-16 pt-10 md:pb-20 md:pt-12">
@@ -22,23 +39,49 @@ export function TestimonialsSection() {
         </div>
 
         <div className="mt-10 grid gap-5 sm:gap-6 md:grid-cols-3">
-          {testimonialIds.map((id) => (
-            <blockquote
-              key={id}
+          {googleReviews.map((review) => (
+            <figure
+              key={review.id}
               data-reveal
-              className="rounded-3xl border border-border bg-card p-6 sm:p-8"
+              className="flex flex-col items-center justify-center rounded-3xl border border-border bg-card p-6 text-center sm:p-8"
             >
-              <Quote className="size-6 text-terracotta" />
-              <p className="mt-4 text-foreground/90">
-                “{t(`items.${id}.quote`)}”
+              <Stars rating={review.rating} />
+              <figcaption className="mt-4 text-sm text-muted-foreground">
+                <p className="font-medium text-foreground">{review.author}</p>
+                <a
+                  href={contact.googleReviewsListUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-flex items-center gap-1.5 underline-offset-4 hover:underline"
+                >
+                  <GoogleIcon className="size-3.5" />
+                  {t("source")}
+                </a>
+              </figcaption>
+            </figure>
+          ))}
+
+          {Array.from({ length: emptySlots }, (_, i) => (
+            <a
+              key={`slot-${i}`}
+              data-reveal
+              href={contact.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center justify-center rounded-3xl border border-dashed border-border bg-card/40 p-6 text-center transition-colors hover:border-terracotta/60 hover:bg-card sm:p-8"
+            >
+              <PenLine className="size-6 text-terracotta" />
+              <p className="mt-4 font-medium text-foreground">
+                {t("placeholderTitle")}
               </p>
-              <footer className="mt-6 text-sm text-muted-foreground">
-                <p className="font-medium text-foreground">
-                  {t(`items.${id}.name`)}
-                </p>
-                <p>{t(`items.${id}.location`)}</p>
-              </footer>
-            </blockquote>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {t("placeholderBody")}
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-terracotta underline-offset-4 group-hover:underline">
+                <GoogleIcon className="size-3.5" />
+                {t("placeholderCta")}
+              </span>
+            </a>
           ))}
         </div>
       </div>

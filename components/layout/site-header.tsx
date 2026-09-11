@@ -18,6 +18,7 @@ import { ThemeToggle } from "./theme-toggle";
 import { CoasterBanner } from "./coaster-banner";
 import { BookNowButton } from "@/components/booking/book-now-button";
 import { gsap, useGSAP } from "@/lib/animations/gsap";
+import { handleHashNav } from "@/lib/nav/hash-scroll";
 
 export function SiteHeader() {
   const t = useTranslations("nav");
@@ -39,6 +40,7 @@ export function SiteHeader() {
     { href: "/", label: t("home") },
     { href: "/acomodacoes", label: t("accommodations") },
     { href: "/#servicos", label: t("amenities") },
+    { href: "/#maps", label: t("location") },
     { href: "/#contato", label: t("contact") },
   ];
 
@@ -70,6 +72,7 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
+              onClick={(e) => handleHashNav(e, link.href)}
               className="group relative text-sm tracking-wide text-navy/70 transition-colors hover:text-gold dark:text-navy-foreground/80"
             >
               {link.label}
@@ -112,7 +115,10 @@ export function SiteHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    setOpen(false);
+                    handleHashNav(e, link.href);
+                  }}
                   className="text-base text-navy/80 hover:text-gold dark:text-navy-foreground/90"
                 >
                   {link.label}

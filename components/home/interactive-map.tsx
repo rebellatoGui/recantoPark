@@ -62,7 +62,6 @@ export function InteractiveMap({ className = "" }: { className?: string }) {
       >
         <MapPin className="size-8 animate-pulse text-muted-foreground" />
       </div>
-
     </div>
   );
 }

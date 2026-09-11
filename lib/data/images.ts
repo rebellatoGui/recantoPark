@@ -26,6 +26,18 @@ export const photos = {
   heroVideoPoster: "/photos/hero-beto-carrero-poster.webp",
 } as const;
 
+// Banco de imagens (Unsplash) para os serviços que ainda não têm foto própria
+// da pousada. Trocar por fotografia real assim que houver.
+export const amenityStock = {
+  breakfast: unsplash("1504754524776-8f4f37790ca0", 600, 600),
+  ac: unsplash("1762341123870-d706f257a12e", 600, 600),
+  minibar: unsplash("1540961403310-79825242906e", 600, 600),
+  wifi: unsplash("1453928582365-b6ad33cbcf64", 600, 600),
+  accessibility: unsplash("1656646523834-dd1cc57d33c9", 600, 600),
+  tv: unsplash("1595935736128-db1f0a261263", 600, 600),
+  petFriendly: unsplash("1698949654875-544ecfef27ac", 600, 600),
+} as const;
+
 export const poolImages = [
   unsplash("1623718649591-311775a30c43"),
   unsplash("1582719508461-905c673771fd"),

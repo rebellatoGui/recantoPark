@@ -28,8 +28,8 @@
     "receptionLabel": "Front desk",
     "cancellationLabel": "Cancellation",
     "cancellationValue": "Flexible, up to 48h before arrival",
-    "petLabel": "Pet friendly",
-    "petValue": "Small pets only, subject to a fee and prior request"
+    "petLabel": "Pet-Friendly",
+    "petValue": "Please ask in advance"
   },
   "about": {
     "eyebrow": "About us",
@@ -50,7 +50,7 @@
     "parkDescription": "Latin America's largest theme park, right around the corner.",
     "beachTitle": "Gravatá Beach",
     "beachDistance": "just steps away",
-    "beachDescription": "Rocky headlands, open sea and wide sand. And best of all: pet friendly, your dog is welcome.",
+    "beachDescription": "Rocky headlands, open sea and wide sand. And best of all: pet-friendly, your dog is welcome.",
     "carouselTitle": "The beach that awaits you",
     "carouselSubtitle": "A glimpse of what you'll find near the pousada, at Gravatá Beach."
   },
@@ -68,7 +68,7 @@
       "tv": "TV",
       "wifi": "Wi-Fi",
       "accessibility": "Some accessible suites",
-      "petFriendly": "Pet friendly (please ask in advance)"
+      "petFriendly": "Pet-Friendly"
     }
   },
   "accommodationsPreview": {
@@ -196,32 +196,20 @@
   "googleReviews": {
     "eyebrow": "Our Google profile",
     "title": "Find us on Google",
-    "noReviewsYet": "No reviews yet. Be the first to review!",
     "viewOnMaps": "View on Google Maps",
     "leaveReview": "Review us on Google",
     "mapTitle": "Map of Pousada Recanto do Park",
-    "getDirections": "Get directions"
+    "getDirections": "Get directions",
+    "reviewCount": "{count, plural, =1 {# review on Google} other {# reviews on Google}}",
+    "seeReviews": "See reviews"
   },
   "testimonials": {
-    "eyebrow": "Who's stayed here",
-    "title": "Stories from our guests",
-    "items": {
-      "t1": {
-        "name": "Camila R.",
-        "location": "Curitiba, Brazil",
-        "quote": "Perfect location for anyone visiting Beto Carrero. Great breakfast and very attentive staff!"
-      },
-      "t2": {
-        "name": "João and family",
-        "location": "São Paulo, Brazil",
-        "quote": "The kids loved how close we were to the beach, and we loved how easy it was to get to the park. We'll definitely be back."
-      },
-      "t3": {
-        "name": "Marina S.",
-        "location": "Porto Alegre, Brazil",
-        "quote": "Clean, cozy pousada with great value for money. Highly recommend!"
-      }
-    }
+    "eyebrow": "Guests who stayed here",
+    "title": "Stories from those who lived the experience",
+    "source": "on Google",
+    "placeholderTitle": "Leave your review!",
+    "placeholderBody": "Have you stayed with us? Tell us how it went.",
+    "placeholderCta": "Review on Google"
   },
   "ctaFinal": {
     "title": "Ready for your next adventure?",

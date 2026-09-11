@@ -28,7 +28,7 @@
     "receptionLabel": "Recepção",
     "cancellationLabel": "Cancelamento",
     "cancellationValue": "Flexível, até 48h antes da chegada",
-    "petLabel": "Pet friendly",
+    "petLabel": "Pet-Friendly",
     "petValue": "Consultar previamente"
   },
   "about": {
@@ -50,7 +50,7 @@
     "parkDescription": "O maior parque temático da América Latina, pertinho de você.",
     "beachTitle": "Praia do Gravatá",
     "beachDistance": "pertinho da pousada",
-    "beachDescription": "Costão de pedras, mar aberto e areia larga. E o melhor: pet friendly, seu cachorro é bem-vindo.",
+    "beachDescription": "Costão de pedras, mar aberto e areia larga. E o melhor: pet-friendly, seu cachorro é bem-vindo.",
     "carouselTitle": "A praia que te espera",
     "carouselSubtitle": "Um pouco do que você encontra pertinho da pousada, na Praia do Gravatá."
   },
@@ -68,7 +68,7 @@
       "tv": "TV",
       "wifi": "Wi-Fi",
       "accessibility": "Algumas suítes com acessibilidade",
-      "petFriendly": "Pet friendly"
+      "petFriendly": "Pet-Friendly"
     }
   },
   "accommodationsPreview": {
@@ -196,32 +196,20 @@
   "googleReviews": {
     "eyebrow": "Nosso perfil no Google",
     "title": "Encontre a gente no Google",
-    "noReviewsYet": "Ainda sem avaliações. Seja o primeiro a avaliar!",
     "viewOnMaps": "Ver no Google Maps",
     "leaveReview": "Avaliar no Google",
     "mapTitle": "Mapa da Pousada Recanto do Park",
-    "getDirections": "Como chegar"
+    "getDirections": "Como chegar",
+    "reviewCount": "{count, plural, =1 {# avaliação no Google} other {# avaliações no Google}}",
+    "seeReviews": "Ver avaliações"
   },
   "testimonials": {
     "eyebrow": "Quem já ficou aqui",
     "title": "Histórias de quem viveu essa experiência",
-    "items": {
-      "t1": {
-        "name": "Camila R.",
-        "location": "Curitiba, PR",
-        "quote": "Localização perfeita para quem vai ao Beto Carrero. Café da manhã excelente e atendimento muito atencioso!"
-      },
-      "t2": {
-        "name": "João e família",
-        "location": "São Paulo, SP",
-        "quote": "As crianças amaram a proximidade da praia e nós amamos a facilidade de acesso ao parque. Voltaremos com certeza."
-      },
-      "t3": {
-        "name": "Marina S.",
-        "location": "Porto Alegre, RS",
-        "quote": "Pousada limpa, aconchegante e com um custo-benefício ótimo. Recomendo muito!"
-      }
-    }
+    "source": "no Google",
+    "placeholderTitle": "Deixe sua avaliação!",
+    "placeholderBody": "Já se hospedou com a gente? Conte como foi a sua estadia.",
+    "placeholderCta": "Avaliar no Google"
   },
   "ctaFinal": {
     "title": "Pronto para sua próxima aventura?",

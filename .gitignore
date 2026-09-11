@@ -61,6 +61,5 @@ next-env.d.ts
 /playwright/.cache/
 
 # editor
-.vscode/*
-!.vscode/settings.json
+.vscode/
 .idea/

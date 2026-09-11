@@ -10,7 +10,7 @@ import {
   PawPrint,
   type LucideIcon,
 } from "lucide-react";
-import { roomImages, photos } from "./images";
+import { roomImages, photos, amenityStock } from "./images";
 
 const GOOGLE_PLACE_ID = "ChIJZYBvBUHR2JQR-sRR8mTT-gc";
 const GOOGLE_PLACE_CID = "575004332958795002";
@@ -39,6 +39,7 @@ export const contact = {
     PLACE_NAME,
   )}&destination_place_id=${GOOGLE_PLACE_ID}`,
   googleReviewUrl: `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`,
+  googleReviewsListUrl: `https://search.google.com/local/reviews?placeid=${GOOGLE_PLACE_ID}`,
 };
 
 export function googleMapsEmbedUrl(locale: string) {
@@ -63,16 +64,20 @@ export type AmenityId =
   | "accessibility"
   | "petFriendly";
 
-export const amenities: { id: AmenityId; icon: LucideIcon }[] = [
-  { id: "breakfast", icon: Coffee },
-  { id: "parking", icon: Car },
-  { id: "ac", icon: Snowflake },
-  { id: "privateBathroom", icon: Bath },
-  { id: "minibar", icon: Refrigerator },
-  { id: "tv", icon: Tv },
-  { id: "wifi", icon: Wifi },
-  { id: "accessibility", icon: Accessibility },
-  { id: "petFriendly", icon: PawPrint },
+export const amenities: {
+  id: AmenityId;
+  icon: LucideIcon;
+  image?: string;
+}[] = [
+  { id: "breakfast", icon: Coffee, image: amenityStock.breakfast },
+  { id: "parking", icon: Car, image: photos.estacionamento },
+  { id: "ac", icon: Snowflake, image: amenityStock.ac },
+  { id: "privateBathroom", icon: Bath, image: photos.banheiro1 },
+  { id: "minibar", icon: Refrigerator, image: amenityStock.minibar },
+  { id: "tv", icon: Tv, image: amenityStock.tv },
+  { id: "wifi", icon: Wifi, image: amenityStock.wifi },
+  { id: "accessibility", icon: Accessibility, image: amenityStock.accessibility },
+  { id: "petFriendly", icon: PawPrint, image: amenityStock.petFriendly },
 ];
 
 const ROOM_AMENITY_IDS: AmenityId[] = [
@@ -117,5 +122,20 @@ export function getRoomBySlug(slug: string) {
   return rooms.find((room) => room.slug === slug);
 }
 
-export const testimonialIds = ["t1", "t2", "t3"] as const;
+export const googleRating = {
+  value: 5,
+  count: 1,
+};
+
+export type GoogleReview = {
+  id: string;
+  author: string;
+  rating: number;
+};
+
+export const googleReviews: GoogleReview[] = [
+  { id: "ariane-rebellato", author: "Ariane Rebellato", rating: 5 },
+];
+
+export const TESTIMONIAL_SLOTS = 3;
 
