@@ -27,7 +27,9 @@
     "subtitle": "Um resumo rápido pra organizar sua viagem até a Pousada Recanto do Park.",
     "receptionLabel": "Recepção",
     "cancellationLabel": "Cancelamento",
-    "cancellationValue": "Flexível, até 48h antes da chegada"
+    "cancellationValue": "Flexível, até 48h antes da chegada",
+    "petLabel": "Pet friendly",
+    "petValue": "Consultar previamente"
   },
   "about": {
     "eyebrow": "Sobre nós",
@@ -54,7 +56,7 @@
   },
   "amenities": {
     "eyebrow": "Serviços",
-    "title": "Comodidades pensadas para a sua estadia",
+    "title": "Serviços pensados para a sua estadia",
     "items": {
       "suites": "16 suítes",
       "breakfast": "Café da manhã incluso",
@@ -65,7 +67,8 @@
       "minibar": "Frigobar",
       "tv": "TV",
       "wifi": "Wi-Fi",
-      "accessibility": "Algumas suítes com acessibilidade"
+      "accessibility": "Algumas suítes com acessibilidade",
+      "petFriendly": "Pet friendly"
     }
   },
   "accommodationsPreview": {
@@ -196,7 +199,8 @@
     "noReviewsYet": "Ainda sem avaliações. Seja o primeiro a avaliar!",
     "viewOnMaps": "Ver no Google Maps",
     "leaveReview": "Avaliar no Google",
-    "mapTitle": "Mapa da Pousada Recanto do Park"
+    "mapTitle": "Mapa da Pousada Recanto do Park",
+    "getDirections": "Como chegar"
   },
   "testimonials": {
     "eyebrow": "Quem já ficou aqui",

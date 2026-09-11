@@ -3,9 +3,10 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { useTranslations } from "next-intl";
-import { MapPin, Star } from "lucide-react";
+import { MapPin, Navigation, Star } from "lucide-react";
 import { GoogleIcon } from "@/components/icons/google-icon";
 import { contact } from "@/lib/data/pousada";
+import { InteractiveMap } from "@/components/home/interactive-map";
 import { useReveal } from "@/lib/animations/use-reveal";
 import { gsap, ScrollTrigger, useGSAP } from "@/lib/animations/gsap";
 import { prefersReducedMotion } from "@/lib/animations/reduced-motion";
@@ -177,21 +178,21 @@ export function GoogleReviewsSection() {
                     <MapPin className="size-4" />
                     {t("viewOnMaps")}
                   </a>
+                  <a
+                    href={contact.googleMapsDirectionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+                  >
+                    <Navigation className="size-4" />
+                    {t("getDirections")}
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="relative min-h-[300px] overflow-hidden rounded-2xl border border-border sm:min-h-[440px]">
-            <iframe
-              src={contact.googleMapsEmbedUrl}
-              title={t("mapTitle")}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0 h-full w-full"
-              style={{ border: 0 }}
-            />
-          </div>
+          <InteractiveMap className="min-h-[300px] sm:min-h-[440px]" />
         </div>
       </div>
     </section>

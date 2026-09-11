@@ -38,7 +38,7 @@ export function SiteHeader() {
   const links = [
     { href: "/", label: t("home") },
     { href: "/acomodacoes", label: t("accommodations") },
-    { href: "/#comodidades", label: t("amenities") },
+    { href: "/#servicos", label: t("amenities") },
     { href: "/#contato", label: t("contact") },
   ];
 

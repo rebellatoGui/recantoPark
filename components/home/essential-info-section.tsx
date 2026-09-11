@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Clock, CalendarCheck } from "lucide-react";
+import { Clock, CalendarCheck, PawPrint } from "lucide-react";
 import { SectionBackdrop } from "@/components/home/section-backdrop";
 import { useReveal } from "@/lib/animations/use-reveal";
 
@@ -22,6 +22,12 @@ export function EssentialInfoSection() {
       icon: CalendarCheck,
       label: t("cancellationLabel"),
       value: t("cancellationValue"),
+    },
+    {
+      id: "pet",
+      icon: PawPrint,
+      label: t("petLabel"),
+      value: t("petValue"),
     },
   ];
 
@@ -46,7 +52,7 @@ export function EssentialInfoSection() {
 
         <div
           data-reveal
-          className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5"
+          className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
         >
           {items.map(({ id, icon: Icon, label, value }) => (
             <div

@@ -14,6 +14,12 @@ export function LodgingJsonLd() {
       addressRegion: "SC",
       addressCountry: "BR",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: contact.latitude,
+      longitude: contact.longitude,
+    },
+    hasMap: contact.googleMapsUrl,
     email: contact.email,
     telephone: contact.phoneDisplay,
     sameAs: [contact.instagramUrl],
