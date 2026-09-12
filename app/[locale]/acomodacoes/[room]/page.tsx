@@ -17,6 +17,7 @@ import {
 } from "@/lib/data/pousada";
 import { photos } from "@/lib/data/images";
 import { routing } from "@/i18n/routing";
+import { pageMetadata } from "@/lib/seo/site";
 
 const amenityIcon = Object.fromEntries(
   amenities.map((a) => [a.id, a.icon])
@@ -41,11 +42,16 @@ export async function generateMetadata(
   if (!room) return {};
 
   const t = await getTranslations({ locale, namespace: "accommodations" });
+  const tMeta = await getTranslations({ locale, namespace: "meta" });
+  const siteName = tMeta("siteName");
 
-  return {
-    title: `${t(`rooms.${room.id}.name`)} | Pousada Recanto do Park`,
+  return pageMetadata({
+    locale,
+    path: `/acomodacoes/${room.slug}`,
+    title: `${t(`rooms.${room.id}.name`)} | ${siteName}`,
     description: t(`rooms.${room.id}.description`),
-  };
+    siteName,
+  });
 }
 
 function RoomDetail({ room }: { room: (typeof rooms)[number] }) {

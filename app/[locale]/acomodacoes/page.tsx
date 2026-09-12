@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { AccommodationsGrid } from "@/components/accommodations/accommodations-grid";
 import { photos } from "@/lib/data/images";
+import { pageMetadata } from "@/lib/seo/site";
 
 export async function generateMetadata(
   props: PageProps<"/[locale]/acomodacoes">
@@ -11,10 +12,13 @@ export async function generateMetadata(
   const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: "meta" });
 
-  return {
+  return pageMetadata({
+    locale,
+    path: "/acomodacoes",
     title: t("titleAccommodations"),
     description: t("descriptionAccommodations"),
-  };
+    siteName: t("siteName"),
+  });
 }
 
 function AccommodationsHero() {

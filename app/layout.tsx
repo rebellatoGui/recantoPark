@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora, Figtree } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,12 +17,6 @@ export const metadata: Metadata = {
   manifest: "/brand/site.webmanifest",
 };
 
-const lora = Lora({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
-
 const figtree = Figtree({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -37,7 +31,7 @@ export default function RootLayout({
     <html
       lang="pt"
       suppressHydrationWarning
-      className={`${lora.variable} ${figtree.variable} antialiased`}
+      className={`${figtree.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-background text-foreground font-sans">
         {children}

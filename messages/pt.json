@@ -17,7 +17,7 @@
   "hero": {
     "eyebrow": "Penha, Santa Catarina",
     "title": "Seu refúgio entre o parque e o mar",
-    "subtitle": "A 5 minutos do Beto Carrero World e pertinho da Praia do Gravatá. Conforto, café da manhã incluso e estacionamento para a família toda.",
+    "subtitle": "A 5 minutos do Beto Carrero World e pertinho da Praia do Gravatá. Conforto para a família toda.",
     "ctaPrimary": "Reservar agora",
     "ctaWhatsapp": "Falar no WhatsApp"
   },
@@ -86,6 +86,7 @@
     "viewGrid": "Grade",
     "viewList": "Lista",
     "capacityLabel": "Hóspedes",
+    "roomLabel": "Quarto",
     "detail": {
       "backToRooms": "Voltar para acomodações",
       "sizeLabel": "Tamanho",

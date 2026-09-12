@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "brandkit/**",
+    "new_assets/**",
+    ".open-next/**",
+    ".wrangler/**",
   ]),
 ]);
 

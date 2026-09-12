@@ -131,13 +131,13 @@ export function HeroSection() {
         </p>
         <h1
           data-hero-title
-          className="max-w-3xl font-display text-3xl leading-[1.05] font-semibold sm:text-5xl md:text-6xl"
+          className="max-w-[20ch] font-display text-3xl leading-[1.05] font-semibold text-balance sm:text-5xl md:text-6xl"
         >
           {t("title")}
         </h1>
         <p
           data-hero-subtitle
-          className="mt-6 max-w-xl text-base text-navy-foreground/80 sm:text-lg"
+          className="mt-6 max-w-[36ch] text-base text-navy-foreground/80 text-balance sm:text-lg"
         >
           {t("subtitle")}
         </p>

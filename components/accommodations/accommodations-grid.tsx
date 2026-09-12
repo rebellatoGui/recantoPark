@@ -71,7 +71,7 @@ export function AccommodationsGrid() {
           className={cn(
             "hidden",
             view === "grid"
-              ? "sm:grid sm:grid-cols-2 sm:gap-8 lg:grid-cols-3"
+              ? "sm:grid sm:grid-cols-2 sm:gap-6 xl:grid-cols-4"
               : "sm:flex sm:flex-col sm:gap-6"
           )}
         >

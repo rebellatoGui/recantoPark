@@ -1,10 +1,14 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Users } from "lucide-react";
+import { BedDouble, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { BookNowButton } from "@/components/booking/book-now-button";
 import { Link } from "@/i18n/navigation";
-import type { RoomId, AmenityId } from "@/lib/data/pousada";
+import { amenities, type RoomId, type AmenityId } from "@/lib/data/pousada";
+
+const amenityIcon = Object.fromEntries(
+  amenities.map((a) => [a.id, a.icon])
+) as Partial<Record<AmenityId, (typeof amenities)[number]["icon"]>>;
 
 export function RoomCard({
   id,
@@ -62,10 +66,13 @@ export function RoomCard({
             </p>
 
             <div className="mt-4 flex flex-wrap gap-2">
+              <AmenityBadge label={t("roomLabel")} Icon={BedDouble} />
               {amenityIds.map((amenityId) => (
-                <Badge key={amenityId} variant="secondary" className="font-normal">
-                  {tAmenities(`items.${amenityId}`)}
-                </Badge>
+                <AmenityBadge
+                  key={amenityId}
+                  label={tAmenities(`items.${amenityId}`)}
+                  Icon={amenityIcon[amenityId]}
+                />
               ))}
             </div>
           </div>
@@ -86,11 +93,11 @@ export function RoomCard({
           alt={t(`rooms.${id}.name`)}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
-          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
         />
       </Link>
 
-      <div className="p-6">
+      <div className="p-5">
         <Link href={href}>
           <h3 className="font-display text-xl text-foreground transition-colors group-hover:text-terracotta">
             {t(`rooms.${id}.name`)}
@@ -107,15 +114,33 @@ export function RoomCard({
         </p>
 
         <div className="mt-4 flex flex-wrap gap-2">
+          <AmenityBadge label={t("roomLabel")} Icon={BedDouble} />
           {amenityIds.map((amenityId) => (
-            <Badge key={amenityId} variant="secondary" className="font-normal">
-              {tAmenities(`items.${amenityId}`)}
-            </Badge>
+            <AmenityBadge
+              key={amenityId}
+              label={tAmenities(`items.${amenityId}`)}
+              Icon={amenityIcon[amenityId]}
+            />
           ))}
         </div>
 
         <BookNowButton label={t("bookRoom")} className="mt-6 w-full" />
       </div>
     </article>
+  );
+}
+
+function AmenityBadge({
+  label,
+  Icon,
+}: {
+  label: string;
+  Icon?: (typeof amenities)[number]["icon"];
+}) {
+  return (
+    <Badge variant="secondary" className="gap-1.5 font-normal">
+      {Icon && <Icon className="size-3.5 text-terracotta" aria-hidden />}
+      {label}
+    </Badge>
   );
 }

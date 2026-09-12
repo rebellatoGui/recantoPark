@@ -5,7 +5,6 @@ function unsplash(id: string, width = 1600, height = 1200) {
 // Fotografia real da pousada, do Beto Carrero e da Praia do Gravatá.
 // Otimizadas em public/photos/*.webp (fonte em new_assets/, fora do repo).
 export const photos = {
-  betoCarreroHero: "/photos/beto-carrero-world-parque.webp",
   betoCarrero: "/photos/beto-carrero-world.webp",
   googleMaps: "/photos/google-maps.webp",
   gravataPedras: "/photos/praia-gravata-pedras.webp",
@@ -13,7 +12,6 @@ export const photos = {
   acessoPraia: "/photos/acesso-a-praia.webp",
   cachorroPraia: "/photos/cachorro-praia.webp",
   oMar: "/photos/o-mar.webp",
-  entrada: "/photos/entrada.webp",
   estacionamento: "/photos/estacionamento.webp",
   quarto1: "/photos/quarto1.webp",
   quarto2: "/photos/quarto2.webp",
