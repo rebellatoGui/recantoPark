@@ -224,7 +224,9 @@
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "madeWith": "Hecho con cariño para quienes visitan Penha.",
+    "description": "Posada en Penha, Santa Catarina, a 5 minutos de Beto Carrero World y muy cerca de la Playa de Gravatá.",
+    "navTitle": "Navegación",
+    "stayTitle": "Tu estadía",
     "paymentMethods": "Formas de pago aceptadas"
   },
   "whatsappButton": {

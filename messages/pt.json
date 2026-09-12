@@ -224,7 +224,9 @@
   },
   "footer": {
     "rights": "Todos os direitos reservados.",
-    "madeWith": "Feito com carinho para quem vem curtir Penha.",
+    "description": "Pousada em Penha/SC, a 5 minutos do Beto Carrero World e pertinho da Praia do Gravatá.",
+    "navTitle": "Navegação",
+    "stayTitle": "Sua estadia",
     "paymentMethods": "Formas de pagamento aceitas"
   },
   "whatsappButton": {

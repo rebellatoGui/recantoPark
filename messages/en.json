@@ -224,7 +224,9 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "madeWith": "Made with care for everyone visiting Penha.",
+    "description": "Guesthouse in Penha, Santa Catarina, five minutes from Beto Carrero World and close to Gravatá Beach.",
+    "navTitle": "Explore",
+    "stayTitle": "Your stay",
     "paymentMethods": "Accepted payment methods"
   },
   "whatsappButton": {
