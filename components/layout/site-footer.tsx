@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Clock, Mail, MapPin, PawPrint, CalendarCheck } from "lucide-react";
+import { Clock, Mail, MapPin, PawPrint } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
@@ -62,16 +62,13 @@ export function SiteFooter() {
   const navLinks = [
     { href: "/", label: tNav("home"), hash: false },
     { href: "/acomodacoes", label: tNav("accommodations"), hash: false },
+    { href: "/ingressos-beto-carrero", label: tNav("tickets"), hash: false },
     { href: "/#servicos", label: tNav("amenities"), hash: true },
     { href: "/#maps", label: tNav("location"), hash: true },
   ];
 
   const stayInfo = [
     { Icon: Clock, text: tAmenities("items.reception") },
-    {
-      Icon: CalendarCheck,
-      text: `${tInfo("cancellationLabel")}: ${tInfo("cancellationValue")}`,
-    },
     { Icon: PawPrint, text: `${tInfo("petLabel")}: ${tInfo("petValue")}` },
   ];
 
@@ -177,10 +174,24 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 flex flex-col-reverse gap-6 border-t border-white/10 pt-8 lg:mt-14 lg:flex-row lg:items-center lg:justify-between">
-          <p className="text-xs text-navy-foreground/55">
-            © {new Date().getFullYear()} Pousada Recanto do Park.{" "}
-            {tFooter("rights")}
-          </p>
+          <div className="flex flex-col gap-2 text-xs text-navy-foreground/55 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
+            <p>
+              © {new Date().getFullYear()} Pousada Recanto do Park.{" "}
+              {tFooter("rights")}
+            </p>
+            <Link
+              href="/politica-de-privacidade"
+              className="inline-flex min-h-11 items-center transition-colors hover:text-gold sm:min-h-0"
+            >
+              {tFooter("privacy")}
+            </Link>
+            <Link
+              href="/termos-de-uso"
+              className="inline-flex min-h-11 items-center transition-colors hover:text-gold sm:min-h-0"
+            >
+              {tFooter("terms")}
+            </Link>
+          </div>
           <div className="flex flex-wrap items-center gap-3">
             <span className="text-xs text-navy-foreground/55">
               {tFooter("paymentMethods")}

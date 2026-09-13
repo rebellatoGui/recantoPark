@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-09-13",
+  "products": [
+    {
+      "id": "passport",
+      "slug": "passaportes/01-dia",
+      "url": "https://www.betocarrero.com.br/passaportes/01-dia/257979",
+      "price": 159.9
+    },
+    {
+      "id": "fastpass",
+      "slug": "opcionais/fastpass-04-acessos",
+      "url": "https://www.betocarrero.com.br/opcionais/fastpass-04-acessos/268300",
+      "price": 150
+    },
+    {
+      "id": "adrenaline",
+      "slug": "opcionais/adrealine-pass-04-acessos",
+      "url": "https://www.betocarrero.com.br/opcionais/adrealine-pass-04-acessos/250605",
+      "price": 89
+    },
+    {
+      "id": "ultrapass",
+      "slug": "opcionais/ultrapass",
+      "url": "https://www.betocarrero.com.br/opcionais/ultrapass/255766",
+      "price": 799.9
+    },
+    {
+      "id": "portal",
+      "slug": "opcionais/portal-da-escuridao",
+      "url": "https://www.betocarrero.com.br/opcionais/portal-da-escuridao/238497",
+      "price": 30
+    }
+  ]
+}

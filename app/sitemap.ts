@@ -6,6 +6,9 @@ import { localizedPath, siteUrl } from "@/lib/seo/site";
 const paths = [
   { path: "", priority: 1 },
   { path: "/acomodacoes", priority: 0.8 },
+  { path: "/ingressos-beto-carrero", priority: 0.8 },
+  { path: "/politica-de-privacidade", priority: 0.3 },
+  { path: "/termos-de-uso", priority: 0.3 },
   ...rooms.map((room) => ({
     path: `/acomodacoes/${room.slug}`,
     priority: 0.6,

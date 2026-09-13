@@ -4,7 +4,9 @@
     "titleHome": "Pousada Recanto do Park | Penha, Santa Catarina",
     "descriptionHome": "Cozy lodging in Penha, Brazil, just minutes from Beto Carrero World and the best beaches in the region. Book your stay.",
     "titleAccommodations": "Rooms | Pousada Recanto do Park",
-    "descriptionAccommodations": "Discover the rooms and suites at Pousada Recanto do Park, in Penha, Brazil."
+    "descriptionAccommodations": "Discover the rooms and suites at Pousada Recanto do Park, in Penha, Brazil.",
+    "titleTickets": "Beto Carrero World Tickets | Pousada Recanto do Park",
+    "descriptionTickets": "Buy your Beto Carrero World tickets directly from Pousada Recanto do Park, in Penha, Brazil, and get 5% off your stay."
   },
   "nav": {
     "home": "Home",
@@ -12,7 +14,8 @@
     "amenities": "Services",
     "location": "Location",
     "contact": "Contact",
-    "bookNow": "Book now"
+    "bookNow": "Book now",
+    "tickets": "Tickets"
   },
   "hero": {
     "eyebrow": "Penha, Santa Catarina",
@@ -26,8 +29,6 @@
     "title": "What to know before you arrive",
     "subtitle": "A quick summary to help you plan your trip to Pousada Recanto do Park.",
     "receptionLabel": "Front desk",
-    "cancellationLabel": "Cancellation",
-    "cancellationValue": "Flexible, up to 48h before arrival",
     "petLabel": "Pet-Friendly",
     "petValue": "Please ask in advance"
   },
@@ -52,7 +53,8 @@
     "beachDistance": "just steps away",
     "beachDescription": "Rocky headlands, open sea and wide sand. And best of all: pet-friendly, your dog is welcome.",
     "carouselTitle": "The beach that awaits you",
-    "carouselSubtitle": "A glimpse of what you'll find near the pousada, at Gravatá Beach."
+    "carouselSubtitle": "A glimpse of what you'll find near the pousada, at Gravatá Beach.",
+    "parkLink": "Buy tickets through the guesthouse"
   },
   "amenities": {
     "eyebrow": "Services",
@@ -227,9 +229,262 @@
     "description": "Guesthouse in Penha, Santa Catarina, five minutes from Beto Carrero World and close to Gravatá Beach.",
     "navTitle": "Explore",
     "stayTitle": "Your stay",
-    "paymentMethods": "Accepted payment methods"
+    "paymentMethods": "Accepted payment methods",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
   },
   "whatsappButton": {
     "label": "Chat with us on WhatsApp"
+  },
+  "tickets": {
+    "hero": {
+      "badge": "Beto Carrero World accredited agent",
+      "eyebrow": "Beto Carrero World",
+      "title": "Beto Carrero tickets straight from the guesthouse",
+      "subtitle": "Official park prices, service from people five minutes away and {percent}% off your stay.",
+      "cta": "Buy on WhatsApp",
+      "secondary": "See tickets"
+    },
+    "trust": {
+      "distance": "5 min from the park",
+      "official": "Official park price",
+      "discount": "{percent}% off your stay"
+    },
+    "grid": {
+      "eyebrow": "Passes and add-ons",
+      "title": "Choose your ticket",
+      "subtitle": "The pass gets you into the park. Add-ons speed up the lines and only work together with it.",
+      "cta": "I want this one",
+      "priceFrom": "From",
+      "perPerson": "per person",
+      "priceOnRequest": "Ask for the price",
+      "mostPopular": "Most popular",
+      "requiresPassport": "Requires pass",
+      "minHeight": "Min. height {height}",
+      "updatedAt": "Official Beto Carrero World prices, checked on {date}. Prices change by batch and date."
+    },
+    "items": {
+      "passport": {
+        "name": "1-day pass",
+        "description": "A full day with over 100 attractions, shows and themed areas at Latin America's largest park."
+      },
+      "fastpass": {
+        "name": "FastPass",
+        "description": "Pick 4 of 13 attractions and book them in the BCW+ app to save time in line."
+      },
+      "adrenaline": {
+        "name": "Adrenaline Pass",
+        "description": "Special access to the park's 4 most thrilling and popular attractions."
+      },
+      "ultrapass": {
+        "name": "Ultrapass",
+        "description": "Unlimited special access to the 13 most popular attractions. Enjoy everything at your own pace."
+      },
+      "portal": {
+        "name": "Portal da Escuridão",
+        "description": "Interactive horror show for those who love a good scare."
+      }
+    },
+    "buildDay": {
+      "eyebrow": "Ticket + stay",
+      "title": "Plan your park day with {percent}% off your stay",
+      "text": "Sleep five minutes from Beto Carrero, with breakfast and parking. Buy your ticket with us and your stay gets {percent}% off.",
+      "rooms": "See rooms",
+      "whatsapp": "Build my package"
+    },
+    "steps": {
+      "title": "How it works",
+      "choose": {
+        "title": "Pick your ticket",
+        "text": "Tap \"I want this one\" on the pass or add-on that suits you."
+      },
+      "schedule": {
+        "title": "Arrange it on WhatsApp",
+        "text": "We confirm the date, number of people, batch price and payment method."
+      },
+      "enjoy": {
+        "title": "Get your e-ticket",
+        "text": "You receive the official ticket and just show it at the park entrance with your ID."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "official": {
+        "question": "Is the ticket official?",
+        "answer": "Yes. Pousada Recanto do Park is an accredited Beto Carrero World agent and sells official tickets at the park's price.",
+        "answerPending": "Yes. Tickets are official Beto Carrero World tickets at the same price as the park's website, and we handle everything for you on WhatsApp."
+      },
+      "delivery": {
+        "question": "How do I receive and use my ticket?",
+        "answer": "You get the e-ticket as a PDF. On the day, show it printed or on your phone at the entrance, with the photo ID used for the purchase."
+      },
+      "kids": {
+        "question": "Do children pay?",
+        "answer": "Children up to 1 year and 11 months are free. From age 2 the full pass applies, following park rules."
+      },
+      "optionals": {
+        "question": "Can I buy only the FastPass or the Ultrapass?",
+        "answer": "No. Add-ons only work together with an entry pass for the same day."
+      },
+      "withoutStay": {
+        "question": "Can I buy without staying at the guesthouse?",
+        "answer": "Yes. The lodging discount is a bonus for guests who also stay with us."
+      },
+      "discount": {
+        "question": "How does the {percent}% discount work?",
+        "answer": "When you buy your ticket through the guesthouse, you get {percent}% off the nights of the same trip. Just let us know on WhatsApp."
+      }
+    },
+    "sticky": "Buy tickets",
+    "whatsappMessage": "Hi! I'd like to buy Beto Carrero World tickets through the guesthouse.",
+    "whatsappTicketMessage": "Hi! I'm interested in the {ticket} ticket for Beto Carrero World. Could you send me the prices for my date?",
+    "whatsappStayMessage": "Hi! I'd like a Beto Carrero ticket + stay package with {percent}% off."
+  },
+  "legal": {
+    "eyebrow": "Legal information",
+    "updatedAt": "Last updated: {date}",
+    "privacy": {
+      "metaTitle": "Privacy Policy | Pousada Recanto do Park",
+      "metaDescription": "How Pousada Recanto do Park handles your personal data and uses cookies, in line with Brazil's LGPD.",
+      "title": "Privacy Policy",
+      "intro": "This policy explains, in plain terms, which personal data Pousada Recanto do Park receives, how we use it and what your rights are under Brazil's General Data Protection Law (Law No. 13,709/2018).",
+      "sections": [
+        {
+          "title": "Who we are",
+          "paragraphs": [
+            "This website belongs to Pousada Recanto do Park, located at {address}. For any matter about your data, contact us by email at {email} or on WhatsApp at {phone}."
+          ]
+        },
+        {
+          "title": "Data we receive",
+          "paragraphs": [
+            "The website has no forms or sign-up. Personal data reaches us when you contact us on WhatsApp, by email or on Instagram, and may include:"
+          ],
+          "items": [
+            "name and phone number;",
+            "stay dates and number of guests;",
+            "full name and photo ID, when you buy Beto Carrero World tickets, since tickets are issued in your name;",
+            "information needed for payment."
+          ]
+        },
+        {
+          "title": "How we use it",
+          "items": [
+            "to reply to your messages and arrange your booking;",
+            "to issue and send Beto Carrero World tickets;",
+            "to apply the lodging discount for guests who buy tickets through the guesthouse;",
+            "to meet legal obligations, such as guest registration."
+          ],
+          "closing": "We do not sell your data or use it for third-party advertising."
+        },
+        {
+          "title": "Who we share it with",
+          "paragraphs": [
+            "We only share what is needed to serve you:"
+          ],
+          "items": [
+            "Beto Carrero World, to issue the tickets you buy;",
+            "payment institutions, to process payments;",
+            "public authorities, when required by law."
+          ]
+        },
+        {
+          "title": "Cookies and third-party services",
+          "paragraphs": [
+            "We use a single functional cookie, NEXT_LOCALE, which remembers the language you chose. We do not use advertising cookies or visitor analytics tools.",
+            "The map on the website is loaded by Google Maps, which may use its own cookies under Google's privacy policy. When you open the WhatsApp or Instagram links, those platforms' policies apply."
+          ]
+        },
+        {
+          "title": "How long we keep it",
+          "paragraphs": [
+            "We keep data for as long as needed to handle your booking or purchase and to meet legal obligations. After that, it is deleted."
+          ]
+        },
+        {
+          "title": "Your rights",
+          "paragraphs": [
+            "Under the LGPD, you may at any time:"
+          ],
+          "items": [
+            "confirm whether we process your data and access it;",
+            "correct incomplete or outdated data;",
+            "request deletion of data we are not legally required to keep;",
+            "withdraw consent you previously gave."
+          ],
+          "closing": "To exercise any of these rights, write to {email}. You may also contact Brazil's National Data Protection Authority (ANPD)."
+        },
+        {
+          "title": "Security",
+          "paragraphs": [
+            "The website uses a secure connection (HTTPS), and access to the data we receive is limited to the people who need it to serve you."
+          ]
+        },
+        {
+          "title": "Changes to this policy",
+          "paragraphs": [
+            "This policy may be updated. The date at the top of the page shows the version in effect."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "metaTitle": "Terms of Use | Pousada Recanto do Park",
+      "metaDescription": "Terms for using the Pousada Recanto do Park website, bookings and Beto Carrero World ticket sales.",
+      "title": "Terms of Use",
+      "intro": "These terms describe the conditions for using the Pousada Recanto do Park website. By browsing it, you agree to them.",
+      "sections": [
+        {
+          "title": "Website information",
+          "paragraphs": [
+            "Photos, descriptions and amenities are meant to present the guesthouse and the region. Availability, prices and conditions are always confirmed when we reply on WhatsApp or by email."
+          ]
+        },
+        {
+          "title": "Bookings",
+          "paragraphs": [
+            "The website does not make automatic bookings. A booking is only confirmed after we reply, with the dates, prices, payment and cancellation terms given at that time."
+          ]
+        },
+        {
+          "title": "Beto Carrero World tickets",
+          "items": [
+            "Tickets are sold at the park's official price. The \"from\" prices shown on the website are a reference and change by batch and date; the final price is confirmed at purchase.",
+            "Tickets are issued in the buyer's name and follow Beto Carrero World rules, including use, date changes, refunds, minimum height for attractions and the need for an entry pass to use add-ons.",
+            "The park's operation, attractions and opening hours are the responsibility of Beto Carrero World."
+          ]
+        },
+        {
+          "title": "Lodging discount",
+          "paragraphs": [
+            "The 5% discount applies to the nights of the same trip for guests who buy tickets through the guesthouse. Just let us know when booking."
+          ]
+        },
+        {
+          "title": "Intellectual property",
+          "paragraphs": [
+            "The name, brand and texts of Pousada Recanto do Park may not be copied without permission. The Beto Carrero World brand and attraction names belong to their respective owners."
+          ]
+        },
+        {
+          "title": "External links",
+          "paragraphs": [
+            "The website links to WhatsApp, Instagram, Google Maps and the Beto Carrero World website. These services have their own terms and policies, for which we are not responsible."
+          ]
+        },
+        {
+          "title": "Governing law",
+          "paragraphs": [
+            "These terms are governed by Brazilian law, including the Consumer Protection Code and the General Data Protection Law."
+          ]
+        },
+        {
+          "title": "Contact",
+          "paragraphs": [
+            "Questions about these terms can be sent to {email} or on WhatsApp at {phone}."
+          ]
+        }
+      ]
+    }
   }
 }

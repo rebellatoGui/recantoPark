@@ -153,6 +153,15 @@
   }
 }
 
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 @keyframes whatsapp-ping {
   0% {
     transform: scale(1);

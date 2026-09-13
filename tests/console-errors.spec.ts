@@ -13,11 +13,16 @@ const routes = [
   "/acomodacoes/suite-01",
   "/acomodacoes/suite-08",
   "/acomodacoes/suite-16",
+  "/ingressos-beto-carrero",
+  "/politica-de-privacidade",
+  "/termos-de-uso",
   "/en",
   "/en/acomodacoes",
   "/en/acomodacoes/suite-01",
+  "/en/ingressos-beto-carrero",
   "/es",
   "/es/acomodacoes",
+  "/es/ingressos-beto-carrero",
 ];
 
 for (const route of routes) {

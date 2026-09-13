@@ -51,6 +51,10 @@ export function whatsappLink(message?: string) {
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
 
+export const isAccreditedAgent = false;
+
+export const lodgingDiscountPercent = 5;
+
 export type AmenityId =
   | "suites"
   | "breakfast"

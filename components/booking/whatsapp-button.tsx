@@ -6,10 +6,12 @@ import { cn } from "@/lib/utils";
 
 export function WhatsappButton({
   label,
+  message,
   variant = "default",
   className,
 }: {
   label?: string;
+  message?: string;
   variant?: "default" | "outline";
   className?: string;
 }) {
@@ -17,7 +19,13 @@ export function WhatsappButton({
 
   return (
     <Button
-      render={<a href={whatsappLink()} target="_blank" rel="noopener noreferrer" />}
+      render={
+        <a
+          href={whatsappLink(message)}
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+      }
       nativeButton={false}
       variant={variant}
       size="lg"

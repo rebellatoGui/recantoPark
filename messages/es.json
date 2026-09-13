@@ -4,7 +4,9 @@
     "titleHome": "Pousada Recanto do Park | Penha, Santa Catarina",
     "descriptionHome": "Alojamiento acogedor en Penha, Brasil, a pocos minutos de Beto Carrero World y las mejores playas de la región. Reserva tu estadía.",
     "titleAccommodations": "Habitaciones | Pousada Recanto do Park",
-    "descriptionAccommodations": "Conoce las habitaciones y suites de la Pousada Recanto do Park, en Penha, Brasil."
+    "descriptionAccommodations": "Conoce las habitaciones y suites de la Pousada Recanto do Park, en Penha, Brasil.",
+    "titleTickets": "Entradas Beto Carrero World | Pousada Recanto do Park",
+    "descriptionTickets": "Compra tus entradas de Beto Carrero World directamente con la Pousada Recanto do Park, en Penha, Brasil, y obtén 5% de descuento en el alojamiento."
   },
   "nav": {
     "home": "Inicio",
@@ -12,7 +14,8 @@
     "amenities": "Servicios",
     "location": "Ubicación",
     "contact": "Contacto",
-    "bookNow": "Reservar ahora"
+    "bookNow": "Reservar ahora",
+    "tickets": "Entradas"
   },
   "hero": {
     "eyebrow": "Penha, Santa Catarina",
@@ -26,8 +29,6 @@
     "title": "Lo que necesitas saber antes de llegar",
     "subtitle": "Un resumen rápido para organizar tu viaje a la Pousada Recanto do Park.",
     "receptionLabel": "Recepción",
-    "cancellationLabel": "Cancelación",
-    "cancellationValue": "Flexible, hasta 48h antes de la llegada",
     "petLabel": "Pet-Friendly",
     "petValue": "Consultar previamente"
   },
@@ -52,7 +53,8 @@
     "beachDistance": "muy cerca de la posada",
     "beachDescription": "Rocas, mar abierto y arena amplia. Y lo mejor: pet-friendly, tu perro es bienvenido.",
     "carouselTitle": "La playa que te espera",
-    "carouselSubtitle": "Un poco de lo que encontrarás cerca de la posada, en la Playa de Gravatá."
+    "carouselSubtitle": "Un poco de lo que encontrarás cerca de la posada, en la Playa de Gravatá.",
+    "parkLink": "Comprar entradas con la posada"
   },
   "amenities": {
     "eyebrow": "Servicios",
@@ -227,9 +229,262 @@
     "description": "Posada en Penha, Santa Catarina, a 5 minutos de Beto Carrero World y muy cerca de la Playa de Gravatá.",
     "navTitle": "Navegación",
     "stayTitle": "Tu estadía",
-    "paymentMethods": "Formas de pago aceptadas"
+    "paymentMethods": "Formas de pago aceptadas",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Uso"
   },
   "whatsappButton": {
     "label": "Habla con nosotros por WhatsApp"
+  },
+  "tickets": {
+    "hero": {
+      "badge": "Agente acreditado Beto Carrero World",
+      "eyebrow": "Beto Carrero World",
+      "title": "Entradas de Beto Carrero directo con la posada",
+      "subtitle": "Precios oficiales del parque, atención de quien está a 5 minutos y {percent}% de descuento en tu alojamiento.",
+      "cta": "Comprar por WhatsApp",
+      "secondary": "Ver entradas"
+    },
+    "trust": {
+      "distance": "A 5 min del parque",
+      "official": "Precio oficial del parque",
+      "discount": "{percent}% en el alojamiento"
+    },
+    "grid": {
+      "eyebrow": "Pases y adicionales",
+      "title": "Elige tu entrada",
+      "subtitle": "El pase da acceso al parque. Los adicionales agilizan las filas y solo valen junto con él.",
+      "cta": "Quiero esta",
+      "priceFrom": "Desde",
+      "perPerson": "por persona",
+      "priceOnRequest": "Consulta el precio",
+      "mostPopular": "Más buscado",
+      "requiresPassport": "Requiere pase",
+      "minHeight": "Altura mín. {height}",
+      "updatedAt": "Precios oficiales de Beto Carrero World, verificados el {date}. Cambian según lote y fecha."
+    },
+    "items": {
+      "passport": {
+        "name": "Pase de 1 día",
+        "description": "Un día completo con más de 100 atracciones, shows y áreas temáticas del parque más grande de América Latina."
+      },
+      "fastpass": {
+        "name": "FastPass",
+        "description": "Elige 4 de 13 atracciones y agéndalas en la app BCW+ para ahorrar tiempo en las filas."
+      },
+      "adrenaline": {
+        "name": "Adrenaline Pass",
+        "description": "Acceso especial a las 4 atracciones más extremas y concurridas del parque."
+      },
+      "ultrapass": {
+        "name": "Ultrapass",
+        "description": "Acceso ilimitado y especial a las 13 atracciones más buscadas. Para disfrutar todo sin prisa."
+      },
+      "portal": {
+        "name": "Portal da Escuridão",
+        "description": "Show interactivo de terror para quienes aman un buen susto."
+      }
+    },
+    "buildDay": {
+      "eyebrow": "Entrada + alojamiento",
+      "title": "Arma tu día en el parque con {percent}% de descuento en la estadía",
+      "text": "Duerme a 5 minutos de Beto Carrero, con desayuno y estacionamiento. Comprando la entrada con nosotros, el alojamiento tiene {percent}% de descuento.",
+      "rooms": "Ver habitaciones",
+      "whatsapp": "Armar mi paquete"
+    },
+    "steps": {
+      "title": "Cómo funciona",
+      "choose": {
+        "title": "Elige la entrada",
+        "text": "Toca \"Quiero esta\" en el pase o adicional que te conviene."
+      },
+      "schedule": {
+        "title": "Coordina por WhatsApp",
+        "text": "Confirmamos fecha, cantidad de personas, precio del lote y forma de pago."
+      },
+      "enjoy": {
+        "title": "Recibe el e-ticket",
+        "text": "Recibes la entrada oficial y solo la presentas en el acceso del parque con tu documento."
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "official": {
+        "question": "¿La entrada es oficial?",
+        "answer": "Sí. La Pousada Recanto do Park es agente acreditado de Beto Carrero World y vende entradas oficiales al precio del parque.",
+        "answerPending": "Sí. Las entradas son oficiales de Beto Carrero World, al mismo precio del sitio del parque, y te atendemos en todo por WhatsApp."
+      },
+      "delivery": {
+        "question": "¿Cómo recibo y uso la entrada?",
+        "answer": "Recibes el e-ticket en PDF. El día de la visita, preséntalo impreso o en el celular en el acceso, con el documento con foto usado en la compra."
+      },
+      "kids": {
+        "question": "¿Los niños pagan?",
+        "answer": "Los niños hasta 1 año y 11 meses no pagan. Desde los 2 años se paga el pase completo, según las reglas del parque."
+      },
+      "optionals": {
+        "question": "¿Puedo comprar solo el FastPass o el Ultrapass?",
+        "answer": "No. Los adicionales solo funcionan junto con el pase de entrada del mismo día."
+      },
+      "withoutStay": {
+        "question": "¿Puedo comprar sin hospedarme en la posada?",
+        "answer": "Sí. El descuento en el alojamiento es un bono para quienes también se quedan con nosotros."
+      },
+      "discount": {
+        "question": "¿Cómo funciona el descuento de {percent}%?",
+        "answer": "Al comprar la entrada con la posada, obtienes {percent}% de descuento en las noches del mismo viaje. Solo avísanos por WhatsApp."
+      }
+    },
+    "sticky": "Comprar entradas",
+    "whatsappMessage": "¡Hola! Quiero comprar entradas de Beto Carrero World con la posada.",
+    "whatsappTicketMessage": "¡Hola! Me interesa la entrada {ticket} de Beto Carrero World. ¿Me pasan los precios para mi fecha?",
+    "whatsappStayMessage": "¡Hola! Quiero armar un paquete de entrada de Beto Carrero + alojamiento con {percent}% de descuento."
+  },
+  "legal": {
+    "eyebrow": "Información legal",
+    "updatedAt": "Última actualización: {date}",
+    "privacy": {
+      "metaTitle": "Política de Privacidad | Pousada Recanto do Park",
+      "metaDescription": "Cómo la Pousada Recanto do Park trata tus datos personales y usa cookies, según la LGPD de Brasil.",
+      "title": "Política de Privacidad",
+      "intro": "Esta política explica, de forma sencilla, qué datos personales recibe la Pousada Recanto do Park, para qué los usa y cuáles son tus derechos según la Ley General de Protección de Datos de Brasil (Ley nº 13.709/2018).",
+      "sections": [
+        {
+          "title": "Quiénes somos",
+          "paragraphs": [
+            "Este sitio pertenece a la Pousada Recanto do Park, ubicada en {address}. Para cualquier asunto sobre tus datos, escríbenos a {email} o por WhatsApp al {phone}."
+          ]
+        },
+        {
+          "title": "Qué datos recibimos",
+          "paragraphs": [
+            "El sitio no tiene formularios ni registro. Los datos personales nos llegan cuando nos contactas por WhatsApp, correo electrónico o Instagram, y pueden incluir:"
+          ],
+          "items": [
+            "nombre y teléfono;",
+            "fechas de la estadía y número de huéspedes;",
+            "nombre completo y documento con foto, cuando compras entradas de Beto Carrero World, porque la entrada es nominal;",
+            "información necesaria para el pago."
+          ]
+        },
+        {
+          "title": "Para qué los usamos",
+          "items": [
+            "responder tus mensajes y organizar tu reserva;",
+            "emitir y enviar entradas de Beto Carrero World;",
+            "aplicar el descuento en el alojamiento a quien compra entradas con la posada;",
+            "cumplir obligaciones legales, como el registro de huéspedes."
+          ],
+          "closing": "No vendemos tus datos ni los usamos para publicidad de terceros."
+        },
+        {
+          "title": "Con quién los compartimos",
+          "paragraphs": [
+            "Compartimos solo lo necesario para atenderte:"
+          ],
+          "items": [
+            "con Beto Carrero World, para emitir las entradas compradas;",
+            "con instituciones de pago, para procesar los pagos;",
+            "con autoridades públicas, cuando la ley lo exija."
+          ]
+        },
+        {
+          "title": "Cookies y servicios de terceros",
+          "paragraphs": [
+            "Usamos una sola cookie funcional, NEXT_LOCALE, que recuerda el idioma elegido en el sitio. No usamos cookies de publicidad ni herramientas de análisis de visitas.",
+            "El mapa del sitio lo carga Google Maps, que puede usar cookies propias según la política de privacidad de Google. Al abrir los enlaces de WhatsApp o Instagram, se aplican las políticas de esas plataformas."
+          ]
+        },
+        {
+          "title": "Por cuánto tiempo los guardamos",
+          "paragraphs": [
+            "Guardamos los datos el tiempo necesario para atender tu reserva o compra y cumplir obligaciones legales. Después, se eliminan."
+          ]
+        },
+        {
+          "title": "Tus derechos",
+          "paragraphs": [
+            "Según la LGPD, puedes en cualquier momento:"
+          ],
+          "items": [
+            "confirmar si tratamos tus datos y acceder a ellos;",
+            "corregir datos incompletos o desactualizados;",
+            "solicitar la eliminación de los datos que no debamos conservar por ley;",
+            "revocar un consentimiento dado anteriormente."
+          ],
+          "closing": "Para ejercer cualquiera de estos derechos, escribe a {email}. También puedes acudir a la Autoridad Nacional de Protección de Datos de Brasil (ANPD)."
+        },
+        {
+          "title": "Seguridad",
+          "paragraphs": [
+            "El sitio usa conexión segura (HTTPS) y el acceso a los datos recibidos está restringido a quienes los necesitan para atenderte."
+          ]
+        },
+        {
+          "title": "Cambios en esta política",
+          "paragraphs": [
+            "Esta política puede actualizarse. La fecha en la parte superior indica la versión vigente."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "metaTitle": "Términos de Uso | Pousada Recanto do Park",
+      "metaDescription": "Condiciones de uso del sitio de la Pousada Recanto do Park, reservas y venta de entradas de Beto Carrero World.",
+      "title": "Términos de Uso",
+      "intro": "Estos términos describen las condiciones de uso del sitio de la Pousada Recanto do Park. Al navegar por él, los aceptas.",
+      "sections": [
+        {
+          "title": "Información del sitio",
+          "paragraphs": [
+            "Las fotos, descripciones y comodidades sirven para presentar la posada y la región. La disponibilidad, los precios y las condiciones siempre se confirman en la atención por WhatsApp o correo electrónico."
+          ]
+        },
+        {
+          "title": "Reservas",
+          "paragraphs": [
+            "El sitio no hace reservas automáticas. Una reserva solo queda confirmada después de nuestra respuesta, con las fechas, precios y condiciones de pago y cancelación informadas en ese momento."
+          ]
+        },
+        {
+          "title": "Entradas de Beto Carrero World",
+          "items": [
+            "Las entradas se venden al precio oficial del parque. Los precios \"desde\" del sitio son una referencia y cambian según el lote y la fecha; el valor final se confirma en la compra.",
+            "La entrada es nominal y sigue las reglas de Beto Carrero World, incluidos el uso, el cambio de fecha, el reembolso, la altura mínima de las atracciones y la necesidad del pase de entrada para usar los adicionales.",
+            "El funcionamiento del parque, sus atracciones y horarios son responsabilidad de Beto Carrero World."
+          ]
+        },
+        {
+          "title": "Descuento en el alojamiento",
+          "paragraphs": [
+            "El descuento del 5% vale para las noches del mismo viaje de quien compra entradas con la posada. Solo avísanos al hacer la reserva."
+          ]
+        },
+        {
+          "title": "Propiedad intelectual",
+          "paragraphs": [
+            "El nombre, la marca y los textos de la Pousada Recanto do Park no pueden copiarse sin autorización. La marca Beto Carrero World y los nombres de las atracciones pertenecen a sus titulares."
+          ]
+        },
+        {
+          "title": "Enlaces externos",
+          "paragraphs": [
+            "El sitio tiene enlaces a WhatsApp, Instagram, Google Maps y al sitio de Beto Carrero World. Estos servicios tienen términos y políticas propios, de los que no somos responsables."
+          ]
+        },
+        {
+          "title": "Legislación aplicable",
+          "paragraphs": [
+            "Estos términos se rigen por la legislación brasileña, incluidos el Código de Defensa del Consumidor y la Ley General de Protección de Datos."
+          ]
+        },
+        {
+          "title": "Contacto",
+          "paragraphs": [
+            "Las dudas sobre estos términos pueden enviarse a {email} o por WhatsApp al {phone}."
+          ]
+        }
+      ]
+    }
   }
 }

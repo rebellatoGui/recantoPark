@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { MapPin } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { photos, gravataCarousel } from "@/lib/data/images";
 import { useReveal } from "@/lib/animations/use-reveal";
 import { SectionBackdrop } from "@/components/home/section-backdrop";
@@ -14,12 +15,14 @@ function DestinationCard({
   distance,
   title,
   description,
+  link,
 }: {
   image: string;
   alt: string;
   distance: string;
   title: string;
   description: string;
+  link?: { href: string; label: string };
 }) {
   return (
     <div
@@ -47,6 +50,15 @@ function DestinationCard({
         <p className="mt-2 text-sm leading-relaxed text-navy-foreground/70">
           {description}
         </p>
+        {link && (
+          <Link
+            href={link.href}
+            className="mt-4 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-gold transition-colors hover:text-gold/80"
+          >
+            {link.label}
+            <ArrowRight className="size-4" />
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -81,6 +93,7 @@ export function LocationSection() {
             distance={t("parkDistance")}
             title={t("parkTitle")}
             description={t("parkDescription")}
+            link={{ href: "/ingressos-beto-carrero", label: t("parkLink") }}
           />
           <DestinationCard
             image={photos.gravataPedras}
