@@ -37,8 +37,6 @@
     "title": "Rest and adventure, side by side",
     "body": "Pousada Recanto do Park is the ideal base for those coming to experience Beto Carrero World and unwind at Gravatá Beach. Comfortable suites, breakfast included, on-site parking and a team that truly knows the region. Everything for your family to enjoy Penha with peace of mind.",
     "stats": {
-      "suitesValue": "16",
-      "suitesLabel": "Fully equipped suites",
       "distanceValue": "5 min",
       "distanceLabel": "From Beto Carrero World"
     }
@@ -60,7 +58,6 @@
     "eyebrow": "Services",
     "title": "Services designed for your stay",
     "items": {
-      "suites": "16 suites",
       "breakfast": "Breakfast included",
       "parking": "Parking",
       "reception": "Front desk from 7am to midnight",
@@ -69,24 +66,22 @@
       "minibar": "Mini fridge",
       "tv": "TV",
       "wifi": "Wi-Fi",
-      "accessibility": "Some accessible suites",
+      "accessibility": "Accessible suite",
       "petFriendly": "Pet-Friendly"
     }
   },
   "accommodationsPreview": {
     "eyebrow": "Where you'll stay",
-    "title": "Rooms for every kind of trip",
-    "ctaAll": "View all rooms"
+    "title": "Comfort for your trip",
+    "ctaAll": "Accommodations"
   },
   "accommodations": {
     "hero": {
       "eyebrow": "Our rooms",
       "title": "Comfort designed for your stay",
-      "subtitle": "16 suites with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi, just minutes from Beto Carrero World."
+      "subtitle": "Suites with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi, just minutes from Beto Carrero World."
     },
     "bookRoom": "Book this room",
-    "viewGrid": "Grid",
-    "viewList": "List",
     "capacityLabel": "Guests",
     "roomLabel": "Bedroom",
     "detail": {
@@ -99,97 +94,7 @@
     },
     "rooms": {
       "suite01": {
-        "name": "Suite 01",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite02": {
-        "name": "Suite 02",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite03": {
-        "name": "Suite 03",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite04": {
-        "name": "Suite 04",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite05": {
-        "name": "Suite 05",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite06": {
-        "name": "Suite 06",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite07": {
-        "name": "Suite 07",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite08": {
-        "name": "Suite 08",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite09": {
-        "name": "Suite 09",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite10": {
-        "name": "Suite 10",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite11": {
-        "name": "Suite 11",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite12": {
-        "name": "Suite 12",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite13": {
-        "name": "Suite 13",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite14": {
-        "name": "Suite 14",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite15": {
-        "name": "Suite 15",
-        "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
-        "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
-        "beds": ""
-      },
-      "suite16": {
-        "name": "Suite 16",
+        "name": "Standard Suite",
         "description": "Suite at Pousada Recanto do Park with a private bathroom, air conditioning, TV, mini fridge and Wi-Fi.",
         "longDescription": "Suite at Pousada Recanto do Park, in Penha, Brazil, just minutes from Beto Carrero World. Features a private bathroom, air conditioning, TV, mini fridge and free Wi-Fi.",
         "beds": ""

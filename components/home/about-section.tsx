@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { useTranslations } from "next-intl";
-import { BedDouble, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { gsap, useGSAP } from "@/lib/animations/gsap";
 import { prefersReducedMotion } from "@/lib/animations/reduced-motion";
 import { photos } from "@/lib/data/images";
@@ -10,7 +10,6 @@ import { DroneVideo } from "@/components/home/drone-video";
 import { SectionBackdrop } from "@/components/home/section-backdrop";
 
 const stats = [
-  { key: "suites", icon: BedDouble },
   { key: "distance", icon: MapPin },
 ] as const;
 

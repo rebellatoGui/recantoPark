@@ -3,7 +3,6 @@ import { useTranslations } from "next-intl";
 import { Clock, Mail, MapPin, PawPrint } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
-import { InstagramIcon } from "@/components/icons/instagram-icon";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import { MastercardIcon } from "@/components/icons/mastercard-icon";
 import { VisaIcon } from "@/components/icons/visa-icon";
@@ -100,26 +99,6 @@ export function SiteFooter() {
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-navy-foreground/70">
               {tFooter("description")}
             </p>
-            <div className="mt-6 flex items-center gap-3">
-              <a
-                href={whatsappLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                className="flex size-11 items-center justify-center rounded-full border border-white/15 text-navy-foreground/80 transition-colors hover:border-gold hover:text-gold"
-              >
-                <WhatsappIcon className="size-5" />
-              </a>
-              <a
-                href={contact.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="flex size-11 items-center justify-center rounded-full border border-white/15 text-navy-foreground/80 transition-colors hover:border-gold hover:text-gold"
-              >
-                <InstagramIcon className="size-5" />
-              </a>
-            </div>
           </div>
 
           <nav aria-label={tFooter("navTitle")} className="sm:col-span-2 lg:col-span-2">

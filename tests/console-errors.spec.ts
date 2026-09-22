@@ -11,8 +11,6 @@ const routes = [
   "/",
   "/acomodacoes",
   "/acomodacoes/suite-01",
-  "/acomodacoes/suite-08",
-  "/acomodacoes/suite-16",
   "/ingressos-beto-carrero",
   "/politica-de-privacidade",
   "/termos-de-uso",
@@ -126,7 +124,7 @@ test("room gallery thumbnail navigation works without errors", async ({
       errors.push("pageerror: " + err.message);
   });
 
-  await page.goto("/acomodacoes/suite-05", { waitUntil: "networkidle" });
+  await page.goto("/acomodacoes/suite-01", { waitUntil: "networkidle" });
   await page.waitForTimeout(800);
   const thumbs = page.locator("button img");
   const count = await thumbs.count();

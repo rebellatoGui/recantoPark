@@ -10,30 +10,19 @@ import { useReveal } from "@/lib/animations/use-reveal";
 export function AccommodationsPreview() {
   const t = useTranslations("accommodationsPreview");
   const scope = useReveal<HTMLElement>();
-  const preview = rooms.slice(0, 3);
 
   return (
     <section ref={scope} className="bg-secondary/40 py-16 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div
+      <div className="mx-auto max-w-5xl px-6">
+        <h2
           data-reveal
-          className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end"
+          className="text-center font-display text-3xl leading-tight text-foreground sm:text-4xl"
         >
-          <h2 className="font-display text-3xl leading-tight text-foreground sm:text-4xl">
-            {t("title")}
-          </h2>
-          <Button
-            render={<Link href="/acomodacoes" />}
-            nativeButton={false}
-            variant="link"
-            className="px-0 text-foreground hover:text-terracotta"
-          >
-            {t("ctaAll")} →
-          </Button>
-        </div>
+          {t("title")}
+        </h2>
 
-        <div className="mt-14 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {preview.map((room) => (
+        <div className="mt-10 flex flex-col gap-6 md:mt-14">
+          {rooms.map((room) => (
             <RoomCard
               key={room.id}
               id={room.id}
@@ -41,8 +30,20 @@ export function AccommodationsPreview() {
               capacity={room.capacity}
               image={room.images[0]}
               amenityIds={room.amenityIds}
+              layout="list"
             />
           ))}
+        </div>
+
+        <div data-reveal className="mt-10 flex justify-center">
+          <Button
+            render={<Link href="/acomodacoes" />}
+            nativeButton={false}
+            size="lg"
+            className="h-12 rounded-full bg-terracotta px-8 text-white hover:bg-terracotta/90"
+          >
+            {t("ctaAll")}
+          </Button>
         </div>
       </div>
     </section>

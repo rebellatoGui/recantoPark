@@ -50,30 +50,6 @@ export const beachImages = [
   unsplash("1520454974749-611b7248ffdb"),
 ];
 
-export const roomImages = [
-  unsplash("1618773928121-c32242e63f39"),
-  unsplash("1611892440504-42a792e24d32"),
-  unsplash("1629140727571-9b5c6f6267b4"),
-  unsplash("1631049307264-da0ec9d70304"),
-  unsplash("1566665797739-1674de7a421a"),
-  unsplash("1631049552057-403cdb8f0658"),
-  unsplash("1568495248636-6432b97bd949"),
-  unsplash("1562438668-bcf0ca6578f0"),
-  unsplash("1576354302919-96748cb8299e"),
-  unsplash("1445991842772-097fea258e7b"),
-  unsplash("1634072319894-107e61606191"),
-  unsplash("1647792855184-af42f1720b91"),
-  unsplash("1698927100805-2a32718a7e05"),
-  unsplash("1649369365908-a0d1225e0b05"),
-  unsplash("1548612486-94d786319018"),
-  unsplash("1616594039964-ae9021a400a0"),
-  unsplash("1615874959474-d609969a20ed"),
-  unsplash("1616047006789-b7af5afb8c20"),
-  unsplash("1616486029423-aaa4789e8c9a"),
-  unsplash("1586023492125-27b2c045efd7"),
-];
-
-
 // Carrossel da Praia do Gravatá (seção Localização) — fotografia real.
 export const gravataCarousel: { src: string; alt: string }[] = [
   { src: photos.gravataPedras, alt: "Costão de pedras e o mar na Praia do Gravatá" },

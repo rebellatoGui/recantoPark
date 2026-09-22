@@ -20,7 +20,7 @@ import { routing } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo/site";
 
 const amenityIcon = Object.fromEntries(
-  amenities.map((a) => [a.id, a.icon])
+  amenities.map((a) => [a.id, a.icon]),
 ) as Record<AmenityId, (typeof amenities)[number]["icon"]>;
 
 const nearby = [
@@ -30,12 +30,12 @@ const nearby = [
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    rooms.map((room) => ({ locale, room: room.slug }))
+    rooms.map((room) => ({ locale, room: room.slug })),
   );
 }
 
 export async function generateMetadata(
-  props: PageProps<"/[locale]/acomodacoes/[room]">
+  props: PageProps<"/[locale]/acomodacoes/[room]">,
 ): Promise<Metadata> {
   const { locale, room: slug } = await props.params;
   const room = getRoomBySlug(slug);
@@ -67,7 +67,11 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
       label: t("capacityLabel"),
       value: String(room.capacity),
     },
-    bedsText && { icon: BedDouble, label: t("detail.bedsLabel"), value: bedsText },
+    bedsText && {
+      icon: BedDouble,
+      label: t("detail.bedsLabel"),
+      value: bedsText,
+    },
     room.sizeSqm !== undefined && {
       icon: Ruler,
       label: t("detail.sizeLabel"),
@@ -88,18 +92,21 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
           {t("detail.backToRooms")}
         </Link>
 
-        <div className="mt-6">
+        <h1 className="mt-6 font-display text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+          {t(`rooms.${roomId}.name`)}
+        </h1>
+        <p className="mt-3 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground lg:max-w-none lg:text-lg">
+          {t(`rooms.${roomId}.description`)}
+        </p>
+
+        <div className="mt-8">
           <RoomGallery images={room.images} alt={t(`rooms.${roomId}.name`)} />
         </div>
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-[1.6fr_1fr] lg:gap-14">
+        <div className="mt-10 grid gap-10 md:mt-14 lg:grid-cols-[1.6fr_1fr] lg:gap-14">
           <div>
-            <h1 className="font-display text-2xl leading-tight text-foreground sm:text-3xl">
-              {t(`rooms.${roomId}.name`)}
-            </h1>
-
             {highlights.length > 0 && (
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="mb-8 flex flex-wrap gap-3">
                 {highlights.map(({ icon: Icon, label, value }) => (
                   <div
                     key={label}
@@ -121,21 +128,21 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
               </div>
             )}
 
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground">
+            <p className="hidden max-w-2xl text-lg leading-relaxed text-foreground md:block">
               {t(`rooms.${roomId}.longDescription`)}
             </p>
 
             <div className="mt-10">
-              <h2 className="font-display text-xl text-foreground">
+              <h2 className="font-display text-xl sm:text-2xl text-foreground">
                 {t("detail.amenitiesLabel")}
               </h2>
-              <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              <ul className="mt-5 grid gap-x-8 sm:grid-cols-2">
                 {room.amenityIds.map((amenityId) => {
                   const Icon = amenityIcon[amenityId];
                   return (
-                    <div
+                    <li
                       key={amenityId}
-                      className="flex items-center gap-3 rounded-2xl border border-border bg-card px-4 py-3"
+                      className="flex items-center gap-3 border-b border-border py-3.5"
                     >
                       <span className="flex size-9 items-center justify-center rounded-full bg-terracotta/10 text-terracotta">
                         <Icon className="size-5" strokeWidth={1.5} />
@@ -143,20 +150,17 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
                       <span className="text-sm font-medium text-foreground">
                         {tAmenities(`items.${amenityId}`)}
                       </span>
-                    </div>
+                    </li>
                   );
                 })}
-              </div>
+              </ul>
             </div>
           </div>
 
-          <aside className="lg:sticky lg:top-24 lg:h-fit">
-            <div className="rounded-3xl border border-border bg-card p-6 shadow-sm">
+          <aside className="lg:sticky lg:top-28 lg:h-fit">
+            <div className="rounded-3xl border border-border bg-card p-6 shadow-[0_20px_50px_-24px_rgba(79,59,46,0.35)] md:p-8">
               <p className="font-display text-xl text-foreground">
                 {t(`rooms.${roomId}.name`)}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {t(`rooms.${roomId}.description`)}
               </p>
               <div className="mt-6 flex flex-col gap-3">
                 <BookNowButton label={t("bookRoom")} className="w-full" />
@@ -205,7 +209,7 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
 }
 
 export default async function RoomPage(
-  props: PageProps<"/[locale]/acomodacoes/[room]">
+  props: PageProps<"/[locale]/acomodacoes/[room]">,
 ) {
   const { locale, room: slug } = await props.params;
   setRequestLocale(locale);

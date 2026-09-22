@@ -37,8 +37,6 @@
     "title": "Descanso y aventura, uno al lado del otro",
     "body": "La Pousada Recanto do Park es la base ideal para quienes vienen a vivir Beto Carrero World y relajarse en la Playa de Gravatá. Suites cómodas, desayuno incluido, estacionamiento propio y una atención de quien conoce la región de verdad. Todo para que tu familia disfrute Penha sin preocupaciones.",
     "stats": {
-      "suitesValue": "16",
-      "suitesLabel": "Suites equipadas",
       "distanceValue": "5 min",
       "distanceLabel": "De Beto Carrero World"
     }
@@ -60,7 +58,6 @@
     "eyebrow": "Servicios",
     "title": "Servicios pensados para tu estadía",
     "items": {
-      "suites": "16 suites",
       "breakfast": "Desayuno incluido",
       "parking": "Estacionamiento",
       "reception": "Recepción de 7h a medianoche",
@@ -69,24 +66,22 @@
       "minibar": "Frigobar",
       "tv": "TV",
       "wifi": "Wi-Fi",
-      "accessibility": "Algunas suites con accesibilidad",
+      "accessibility": "Suite con accesibilidad",
       "petFriendly": "Pet-Friendly"
     }
   },
   "accommodationsPreview": {
     "eyebrow": "Dónde te vas a hospedar",
-    "title": "Habitaciones para cada tipo de viaje",
-    "ctaAll": "Ver todas las habitaciones"
+    "title": "Comodidad para tu viaje",
+    "ctaAll": "Alojamientos"
   },
   "accommodations": {
     "hero": {
       "eyebrow": "Nuestras habitaciones",
       "title": "Confort pensado para tu estadía",
-      "subtitle": "16 suites equipadas con baño privado, aire acondicionado, TV, frigobar y Wi-Fi, a pocos minutos de Beto Carrero World."
+      "subtitle": "Suites equipadas con baño privado, aire acondicionado, TV, frigobar y Wi-Fi, a pocos minutos de Beto Carrero World."
     },
     "bookRoom": "Reservar esta habitación",
-    "viewGrid": "Cuadrícula",
-    "viewList": "Lista",
     "capacityLabel": "Huéspedes",
     "roomLabel": "Habitación",
     "detail": {
@@ -99,97 +94,7 @@
     },
     "rooms": {
       "suite01": {
-        "name": "Suite 01",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite02": {
-        "name": "Suite 02",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite03": {
-        "name": "Suite 03",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite04": {
-        "name": "Suite 04",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite05": {
-        "name": "Suite 05",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite06": {
-        "name": "Suite 06",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite07": {
-        "name": "Suite 07",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite08": {
-        "name": "Suite 08",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite09": {
-        "name": "Suite 09",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite10": {
-        "name": "Suite 10",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite11": {
-        "name": "Suite 11",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite12": {
-        "name": "Suite 12",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite13": {
-        "name": "Suite 13",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite14": {
-        "name": "Suite 14",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite15": {
-        "name": "Suite 15",
-        "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
-        "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
-        "beds": ""
-      },
-      "suite16": {
-        "name": "Suite 16",
+        "name": "Suite Estándar",
         "description": "Suite de la Pousada Recanto do Park con baño privado, aire acondicionado, TV, frigobar y Wi-Fi.",
         "longDescription": "Suite de la Pousada Recanto do Park, en Penha/SC, a pocos minutos de Beto Carrero World. Cuenta con baño privado, aire acondicionado, TV, frigobar y Wi-Fi gratis.",
         "beds": ""

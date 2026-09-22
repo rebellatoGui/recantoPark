@@ -10,7 +10,7 @@ import {
   PawPrint,
   type LucideIcon,
 } from "lucide-react";
-import { roomImages, photos, amenityStock } from "./images";
+import { photos, amenityStock } from "./images";
 
 const GOOGLE_PLACE_ID = "ChIJZYBvBUHR2JQR-sRR8mTT-gc";
 const GOOGLE_PLACE_CID = "575004332958795002";
@@ -20,8 +20,8 @@ const LONGITUDE = -48.6156718;
 
 export const contact = {
   whatsappNumber:
-    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5547997491856",
-  phoneDisplay: "+55 47 99749-1856",
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "554732671937",
+  phoneDisplay: "+55 47 3267-1937",
   bookingEngineUrl:
     process.env.NEXT_PUBLIC_BOOKING_ENGINE_URL ?? "#reservar-em-breve",
   email: "pousadarecantodopark@gmail.com",
@@ -56,7 +56,6 @@ export const isAccreditedAgent = false;
 export const lodgingDiscountPercent = 5;
 
 export type AmenityId =
-  | "suites"
   | "breakfast"
   | "parking"
   | "reception"
@@ -92,8 +91,6 @@ const ROOM_AMENITY_IDS: AmenityId[] = [
   "minibar",
 ];
 
-const SUITE_COUNT = 16;
-
 export type RoomId = `suite${string}`;
 
 export const rooms: {
@@ -103,24 +100,14 @@ export const rooms: {
   sizeSqm?: number;
   images: string[];
   amenityIds: AmenityId[];
-}[] = Array.from({ length: SUITE_COUNT }, (_, i) => {
-  const number = String(i + 1).padStart(2, "0");
-  // Suíte 01 tem fotografia real (as demais seguem banco de imagens por ora).
-  const images =
-    i === 0
-      ? [photos.quarto1, photos.quarto2, photos.banheiro1]
-      : [
-          roomImages[i % roomImages.length],
-          roomImages[(i + 5) % roomImages.length],
-          roomImages[(i + 10) % roomImages.length],
-        ];
-  return {
-    id: `suite${number}` as RoomId,
-    slug: `suite-${number}`,
-    images,
+}[] = [
+  {
+    id: "suite01",
+    slug: "suite-01",
+    images: [photos.quarto1, photos.quarto2, photos.banheiro1],
     amenityIds: ROOM_AMENITY_IDS,
-  };
-});
+  },
+];
 
 export function getRoomBySlug(slug: string) {
   return rooms.find((room) => room.slug === slug);
