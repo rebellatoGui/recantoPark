@@ -15,10 +15,17 @@ export function BookNowButton({
 
   return (
     <Button
-      render={<a href={contact.bookingEngineUrl} />}
+      render={
+        <a
+          href={contact.bookingEngineUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+      }
       nativeButton={false}
       size="lg"
       className={cn(
+        "h-11 px-5 lg:h-9 lg:px-4",
         "bg-terracotta text-white hover:bg-terracotta/90",
         "dark:bg-brown dark:hover:bg-brown/90",
         className

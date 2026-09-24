@@ -19,11 +19,9 @@ const LATITUDE = -26.8145072;
 const LONGITUDE = -48.6156718;
 
 export const contact = {
-  whatsappNumber:
-    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "554732671937",
+  whatsappNumber: "554732671937",
   phoneDisplay: "+55 47 3267-1937",
-  bookingEngineUrl:
-    process.env.NEXT_PUBLIC_BOOKING_ENGINE_URL ?? "#reservar-em-breve",
+  bookingEngineUrl: "https://reservas.pousadarecantodopark.com.br/",
   email: "pousadarecantodopark@gmail.com",
   instagramHandle: "@recantodopark",
   instagramUrl: "https://instagram.com/recantodopark",

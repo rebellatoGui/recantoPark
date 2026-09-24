@@ -39,3 +39,11 @@ test("whatsapp and booking CTAs point to configured placeholders", async ({
   });
   await expect(floating).toHaveAttribute("href", /wa\.me\/554732671937/);
 });
+
+test("book now buttons open the booking engine in a new tab", async ({ page }) => {
+  await page.goto("/");
+  const links = page.locator('a[href="https://reservas.pousadarecantodopark.com.br/"]');
+  expect(await links.count()).toBeGreaterThan(0);
+  await expect(links.first()).toHaveAttribute("target", "_blank");
+  await expect(page.locator('a[href*="reservar-em-breve"]')).toHaveCount(0);
+});

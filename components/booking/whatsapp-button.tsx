@@ -30,6 +30,7 @@ export function WhatsappButton({
       variant={variant}
       size="lg"
       className={cn(
+        "h-11 px-5 lg:h-9 lg:px-4",
         variant === "default" &&
           "bg-[#25D366] text-white hover:bg-[#1fb757]",
         className

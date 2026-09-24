@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { MapPin } from "lucide-react";
 import { gsap, useGSAP } from "@/lib/animations/gsap";
@@ -16,7 +16,9 @@ const stats = [
 export function AboutSection() {
   const t = useTranslations("about");
   const scope = useRef<HTMLElement>(null);
-  const words = t("title").split(" ");
+  const lines = t("title")
+    .split(/(?<=,)\s+/)
+    .map((line) => line.split(" "));
 
   useGSAP(
     () => {
@@ -81,15 +83,18 @@ export function AboutSection() {
 
           <div className="order-first col-span-2 text-center lg:order-2 lg:col-span-1">
             <h2 className="font-display text-3xl leading-tight sm:text-4xl">
-              {words.map((word, i) => (
-                <span
-                  key={`${word}-${i}`}
-                  className="-mb-[0.18em] inline-block overflow-hidden pb-[0.18em] align-bottom"
-                >
-                  <span data-about-word className="inline-block">
-                    {word}
-                  </span>
-                  {i < words.length - 1 && " "}
+              {lines.map((words, l) => (
+                <span key={l} className="block">
+                  {words.map((word, i) => (
+                    <Fragment key={`${word}-${i}`}>
+                      <span className="-mb-[0.18em] inline-block overflow-hidden pb-[0.18em] align-bottom">
+                        <span data-about-word className="inline-block">
+                          {word}
+                        </span>
+                      </span>
+                      {i < words.length - 1 && " "}
+                    </Fragment>
+                  ))}
                 </span>
               ))}
             </h2>

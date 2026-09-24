@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
+import { siteUrl } from "@/lib/seo/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://pousadarecantodopark.com.br"
-  ),
+  metadataBase: new URL(siteUrl),
   icons: {
     icon: [
       { url: "/brand/favicon.ico" },

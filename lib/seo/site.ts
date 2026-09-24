@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 
-export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://pousadarecantodopark.com.br"
-).replace(/\/$/, "");
+export const siteUrl = "https://pousadarecantodopark.com.br";
 
 export const ogImage = {
   url: "/brand/og-image.jpg",

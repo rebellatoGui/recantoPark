@@ -96,12 +96,12 @@ export function SiteHeader() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-navy lg:hidden dark:text-navy-foreground"
+                className="size-11 text-navy lg:hidden dark:text-navy-foreground"
                 aria-label="Menu"
               />
             }
           >
-            <Menu className="size-5" />
+            <Menu className="size-6" />
           </SheetTrigger>
           <SheetContent side="right" className="bg-white text-navy dark:bg-navy dark:text-navy-foreground">
             <SheetHeader className="sr-only">
