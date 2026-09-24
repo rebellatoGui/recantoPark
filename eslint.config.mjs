@@ -16,6 +16,8 @@ const eslintConfig = defineConfig([
     "new_assets/**",
     ".open-next/**",
     ".wrangler/**",
+    ".remember/**",
+    ".claude/**",
   ]),
 ]);
 
