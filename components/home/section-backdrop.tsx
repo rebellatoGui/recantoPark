@@ -73,7 +73,7 @@ export function SectionBackdrop({
             data-backdrop-layer
             className="absolute inset-x-0 bottom-0 h-[125%] bg-[url('/brand/bg-sunset.webp')] bg-cover bg-bottom bg-no-repeat opacity-55 dark:opacity-30 dark:brightness-[0.45] dark:saturate-[0.85]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-b from-background via-background/60 to-transparent" />
         </>
       ) : variant === "park" ? (
         <>
@@ -82,7 +82,7 @@ export function SectionBackdrop({
             className="absolute inset-x-0 top-0 h-[120%] scale-105 bg-[url('/photos/beto-carrero-world-parque.webp')] bg-cover bg-center"
           />
           <div className="absolute inset-0 bg-navy/82" />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-transparent to-navy/60" />
+          <div className="absolute inset-0 bg-linear-to-b from-navy/60 via-transparent to-navy/60" />
         </>
       ) : variant === "map" ? (
         <>
@@ -91,7 +91,7 @@ export function SectionBackdrop({
             className="absolute inset-x-0 top-0 h-[120%] scale-105 bg-[url('/photos/google-maps.webp')] bg-cover bg-center blur-[3px]"
           />
           <div className="absolute inset-0 bg-navy/88" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,theme(colors.gold)/10%,transparent_70%)]" />
+          <div className="absolute inset-0 bg-radial-[ellipse_70%_60%_at_50%_0%] from-gold/10 to-transparent to-70%" />
         </>
       ) : variant === "grain" ? (
         <div className="absolute inset-0 bg-grain opacity-[0.1] mix-blend-multiply dark:opacity-[0.08] dark:mix-blend-screen" />
@@ -102,7 +102,7 @@ export function SectionBackdrop({
             viewBox="0 0 1200 400"
             fill="none"
             preserveAspectRatio="xMidYMid slice"
-            className="absolute inset-x-0 top-[8%] h-[70%] w-full text-terracotta/[0.13] dark:text-gold/10"
+            className="absolute inset-x-0 top-[8%] h-[70%] w-full text-terracotta/13 dark:text-gold/10"
           >
             <path
               d="M-20 330 C 120 330 160 120 280 120 S 400 300 480 300 S 560 60 640 60 C 700 60 740 150 700 190 C 660 230 590 180 620 130 C 650 80 760 90 800 170 S 900 330 1000 250 S 1120 90 1230 110"
@@ -125,7 +125,7 @@ export function SectionBackdrop({
       ) : (
         <div
           data-backdrop-layer
-          className="absolute inset-x-0 top-0 h-[125%] bg-terracotta opacity-20 [mask-image:url('/brand/bg-topo.webp')] [mask-position:center] [mask-repeat:no-repeat] [mask-size:cover] dark:bg-gold dark:opacity-15"
+          className="absolute inset-x-0 top-0 h-[125%] bg-terracotta opacity-20 [mask-image:url('/brand/bg-topo.webp')] mask-center mask-no-repeat mask-cover dark:bg-gold dark:opacity-15"
         />
       )}
     </div>

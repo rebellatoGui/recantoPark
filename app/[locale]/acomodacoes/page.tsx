@@ -35,7 +35,7 @@ function AccommodationsHero() {
           className="object-cover opacity-40"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/60" />
+        <div className="absolute inset-0 bg-linear-to-t from-navy via-navy/80 to-navy/60" />
       </div>
       <div className="mx-auto max-w-3xl px-6 text-center">
         <p className="text-sm uppercase tracking-[0.35em] text-gold">

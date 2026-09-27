@@ -73,7 +73,7 @@ export function GoogleReviewsSection() {
 
               <div
                 aria-hidden
-                className="mx-auto mt-auto aspect-square w-full max-w-[150px] pt-6 sm:max-w-[200px] lg:max-w-[260px] lg:-translate-y-4"
+                className="mx-auto mt-auto aspect-square w-full max-w-37.5 pt-6 sm:max-w-50 lg:max-w-65 lg:-translate-y-4"
               >
                 <Image
                   src="/brand/logo-oficial.png"
@@ -86,7 +86,7 @@ export function GoogleReviewsSection() {
               </div>
             </div>
 
-            <InteractiveMap className="min-h-[300px] sm:min-h-[440px]" />
+            <InteractiveMap className="min-h-75 sm:min-h-110" />
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-2.5 sm:grid-cols-3">

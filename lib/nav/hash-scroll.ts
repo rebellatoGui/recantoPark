@@ -15,7 +15,7 @@ export function handleHashNav(
 
   const id = href.slice(i + 1);
   const alvo = document.getElementById(id);
-  if (!alvo) return; // âncora de outra página: deixa o roteador navegar
+  if (!alvo) return;
 
   event.preventDefault();
   alvo.scrollIntoView({

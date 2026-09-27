@@ -107,7 +107,7 @@ export function AboutSection() {
                 <span key={l} className="block">
                   {words.map((word, i) => (
                     <Fragment key={`${word}-${i}`}>
-                      <span className="-mb-[0.18em] inline-block overflow-hidden pb-[0.18em] align-bottom">
+                      <span className="mb-[-0.18em] inline-block overflow-hidden pb-[0.18em] align-bottom">
                         <span data-about-word className="inline-block">
                           {word}
                         </span>

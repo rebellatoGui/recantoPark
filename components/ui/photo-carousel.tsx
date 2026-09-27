@@ -57,12 +57,12 @@ export function PhotoCarousel({
     <div className="relative">
       <div
         ref={trackRef}
-        className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 scrollbar-none [&::-webkit-scrollbar]:hidden"
       >
         {photos.map((photo) => (
           <div
             key={photo.src}
-            className="relative aspect-[4/3] w-[78%] shrink-0 snap-start overflow-hidden rounded-3xl sm:w-[46%] lg:w-[38%]"
+            className="relative aspect-4/3 w-[78%] shrink-0 snap-start overflow-hidden rounded-3xl sm:w-[46%] lg:w-[38%]"
           >
             <Image
               src={photo.src}

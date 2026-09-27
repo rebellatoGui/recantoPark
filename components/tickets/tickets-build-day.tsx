@@ -14,7 +14,7 @@ export function TicketsBuildDay() {
   return (
     <section ref={scope} className="bg-surface-cream px-6 pb-20 md:pb-32">
       <div className="relative isolate mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] bg-navy text-navy-foreground lg:grid-cols-2">
-        <div className="relative aspect-[16/10] lg:aspect-auto">
+        <div className="relative aspect-16/10 lg:aspect-auto">
           <Image
             src="/photos/atracoes/star-mountain.webp"
             alt=""
@@ -22,7 +22,7 @@ export function TicketsBuildDay() {
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-navy/40" />
+          <div className="absolute inset-0 bg-linear-to-t from-navy/70 to-transparent lg:bg-linear-to-r lg:from-transparent lg:to-navy/40" />
         </div>
 
         <div data-reveal className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">

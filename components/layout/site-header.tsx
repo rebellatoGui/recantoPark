@@ -50,7 +50,7 @@ export function SiteHeader() {
       ref={headerRef}
       className="sticky top-0 z-40 border-b border-navy/10 bg-white text-navy shadow-none transition-shadow duration-300 [&.is-scrolled]:shadow-lg [&.is-scrolled]:shadow-black/10 dark:border-white/10 dark:bg-navy dark:text-navy-foreground"
     >
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 transition-[padding] duration-300 sm:py-5 [.is-scrolled_&]:py-3 sm:[.is-scrolled_&]:py-3.5">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 transition-[padding] duration-300 sm:py-5 in-[.is-scrolled]:py-3 sm:in-[.is-scrolled]:py-3.5">
         <Link
           href="/"
           className="w-20 shrink-0 transition-opacity duration-300 hover:opacity-80 sm:w-24 md:w-28"

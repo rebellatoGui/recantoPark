@@ -21,18 +21,22 @@ export const photos = {
 // AV1 primeiro (mesma qualidade com bem menos bytes); H.264 para navegadores sem AV1.
 // O navegador usa a primeira <source> cujo type ele aceita. /photos tem cache de 30 dias:
 // ao trocar um vídeo, troque também o nome do arquivo, senão o navegador segue no antigo.
+// No celular em pé o object-cover só mostra o centro do hero, então ele recebe um recorte
+// vertical a 30fps (~1/6 do peso) em vez do 1080p60 inteiro.
 const AV1 = 'video/mp4; codecs="av01.0.09M.10"';
 const H264 = "video/mp4";
 
-function videoSources(name: string) {
+const PORTRAIT_PHONE = "(max-width: 767px) and (orientation: portrait)";
+
+function videoSources(name: string, media?: string) {
   return [
-    { src: `/photos/${name}.av1.mp4`, type: AV1 },
-    { src: `/photos/${name}.mp4`, type: H264 },
+    { src: `/photos/${name}.av1.mp4`, type: AV1, media },
+    { src: `/photos/${name}.mp4`, type: H264, media },
   ];
 }
 
 export const videos = {
-  hero: videoSources("hero-10s-60fps"),
+  hero: [...videoSources("hero-10s-mobile", PORTRAIT_PHONE), ...videoSources("hero-10s-60fps")],
   droneGravata: videoSources("drone-gravata"),
   droneGravata2: videoSources("drone-gravata-2"),
 };

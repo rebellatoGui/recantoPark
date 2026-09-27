@@ -30,7 +30,7 @@ export function RoomGallery({
 
   return (
     <div>
-      <div className="grid gap-3 sm:grid-cols-4 sm:grid-rows-2 lg:h-[34rem]">
+      <div className="grid gap-3 sm:grid-cols-4 sm:grid-rows-2 lg:h-136">
         {images.slice(0, 3).map((src, index) => (
           <button
             key={src + index}
@@ -39,7 +39,7 @@ export function RoomGallery({
             className={cn(
               "group relative overflow-hidden rounded-2xl",
               index === 0
-                ? "aspect-[4/3] sm:col-span-3 sm:row-span-2 sm:aspect-auto sm:min-h-80"
+                ? "aspect-4/3 sm:col-span-3 sm:row-span-2 sm:aspect-auto sm:min-h-80"
                 : "hidden sm:block",
             )}
           >

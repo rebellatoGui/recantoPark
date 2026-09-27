@@ -24,7 +24,7 @@ export function ScrollProgress() {
   });
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50 h-[2px] bg-transparent">
+    <div className="fixed inset-x-0 top-0 z-50 h-0.5 bg-transparent">
       <div
         ref={barRef}
         className="h-full w-full origin-left bg-gold"

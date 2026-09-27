@@ -46,7 +46,7 @@ function ContactItem({
         className="group flex min-h-11 items-start gap-3 py-2.5 transition-colors hover:text-gold lg:min-h-0 lg:py-1.5"
       >
         <Icon className="mt-0.5 size-4 shrink-0 text-gold/80 transition-colors group-hover:text-gold" />
-        <span className="break-words">{children}</span>
+        <span className="wrap-break-word">{children}</span>
       </a>
     </li>
   );

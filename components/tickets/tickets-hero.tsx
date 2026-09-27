@@ -28,7 +28,7 @@ export function TicketsHero() {
       />
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-navy via-navy/70 to-navy/10"
+        className="absolute inset-0 -z-10 bg-linear-to-t from-navy via-navy/70 to-navy/10"
       />
 
       <div className="mx-auto w-full max-w-7xl px-6 pt-32 pb-10 md:pb-14">

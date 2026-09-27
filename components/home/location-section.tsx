@@ -32,7 +32,7 @@ function DestinationCard({
       data-destination
       className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm"
     >
-      <div className="relative aspect-[16/10] overflow-hidden">
+      <div className="relative aspect-16/10 overflow-hidden">
         <Image
           src={image}
           alt={alt}
@@ -40,7 +40,7 @@ function DestinationCard({
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="(min-width: 768px) 45vw, 90vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-navy/80 via-navy/10 to-transparent" />
         <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-navy/70 px-3 py-1 text-xs font-medium text-gold backdrop-blur">
           <MapPin className="size-3.5" />
           {distance}

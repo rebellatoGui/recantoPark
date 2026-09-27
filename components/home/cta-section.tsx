@@ -64,14 +64,14 @@ export function CtaSection() {
           href={contact.instagramUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group mt-12 inline-flex items-center gap-3 text-sm text-foreground/80 sm:text-base"
+          className="group mx-auto mt-10 flex w-fit flex-col items-center gap-3 text-base text-foreground sm:mt-12 sm:flex-row sm:text-left sm:text-foreground/80"
         >
-          <span className="flex size-10 items-center justify-center rounded-full bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] text-white shadow-md shadow-[#dd2a7b]/25 transition-transform duration-500 motion-safe:group-hover:rotate-12 motion-safe:group-hover:scale-110">
-            <InstagramIcon className="size-5" />
+          <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] text-white shadow-md shadow-[#dd2a7b]/25 transition-transform duration-500 motion-safe:group-hover:rotate-12 motion-safe:group-hover:scale-110 sm:size-10">
+            <InstagramIcon className="size-7 sm:size-5" />
           </span>
-          <span>
+          <span className="flex flex-col sm:block">
             {tInstagram("invite")}{" "}
-            <span className="link-underline font-semibold text-foreground">
+            <span className="link-underline text-lg font-semibold text-foreground sm:text-base">
               {contact.instagramHandle}
             </span>
           </span>

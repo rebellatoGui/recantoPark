@@ -180,7 +180,7 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
                 key={key}
                 className="group relative overflow-hidden rounded-3xl border border-border"
               >
-                <div className="relative aspect-[16/10]">
+                <div className="relative aspect-16/10">
                   <Image
                     src={image}
                     alt={tLocation(`${key}Title`)}
@@ -188,7 +188,7 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(min-width: 640px) 45vw, 90vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-navy/85 via-navy/20 to-transparent" />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 p-5 text-navy-foreground">
                   <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gold">
