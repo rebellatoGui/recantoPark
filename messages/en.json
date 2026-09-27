@@ -2,11 +2,11 @@
   "meta": {
     "siteName": "Pousada Recanto do Park",
     "titleHome": "Pousada Recanto do Park | Penha, Santa Catarina",
-    "descriptionHome": "Cozy lodging in Penha, Brazil, just minutes from Beto Carrero World and the best beaches in the region. Book your stay.",
+    "descriptionHome": "Guesthouse in Penha, Brazil, five minutes from Beto Carrero World and close to Gravatá Beach. Book your stay.",
     "titleAccommodations": "Rooms | Pousada Recanto do Park",
     "descriptionAccommodations": "Discover the rooms and suites at Pousada Recanto do Park, in Penha, Brazil.",
     "titleTickets": "Beto Carrero World Tickets | Pousada Recanto do Park",
-    "descriptionTickets": "Buy your Beto Carrero World tickets directly from Pousada Recanto do Park, in Penha, Brazil, and get 5% off your stay."
+    "descriptionTickets": "Buy your Beto Carrero World tickets directly from Pousada Recanto do Park, in Penha, Brazil, five minutes from the park."
   },
   "nav": {
     "home": "Home",
@@ -22,7 +22,8 @@
     "title": "Your retreat between the park and the sea",
     "subtitle": "Five minutes from Beto Carrero World and steps from Gravatá Beach. Comfort for the whole family.",
     "ctaPrimary": "Book now",
-    "ctaWhatsapp": "Chat on WhatsApp"
+    "ctaWhatsapp": "Chat on WhatsApp",
+    "videoLabel": "Aerial view of Beto Carrero World, a few minutes from the guesthouse"
   },
   "essentialInfo": {
     "eyebrow": "Essential information",
@@ -35,11 +36,12 @@
   "about": {
     "eyebrow": "About us",
     "title": "Rest and adventure, side by side",
-    "body": "Pousada Recanto do Park is the ideal base for those coming to experience Beto Carrero World and unwind at Gravatá Beach. Comfortable suites, breakfast included, on-site parking and a team that truly knows the region. Everything for your family to enjoy Penha with peace of mind.",
+    "body": "Pousada Recanto do Park is five minutes from Beto Carrero World and close to Gravatá Beach. The suites are comfortable, there's breakfast and on-site parking, and the people at the front desk know the area well.",
     "stats": {
       "distanceValue": "5 min",
       "distanceLabel": "From Beto Carrero World"
-    }
+    },
+    "droneLabel": "Aerial view of Gravatá Beach"
   },
   "location": {
     "eyebrow": "Prime location",
@@ -49,7 +51,7 @@
     "parkDescription": "Latin America's largest theme park, right around the corner.",
     "beachTitle": "Gravatá Beach",
     "beachDistance": "just steps away",
-    "beachDescription": "Rocky headlands, open sea and wide sand. And best of all: pet-friendly, your dog is welcome.",
+    "beachDescription": "Rocky headlands, open sea and wide sand. The beach is pet-friendly, so your dog can come along.",
     "carouselTitle": "The beach that awaits you",
     "carouselSubtitle": "A glimpse of what you'll find near the pousada, at Gravatá Beach.",
     "parkLink": "Buy tickets through the guesthouse"
@@ -58,7 +60,7 @@
     "eyebrow": "Services",
     "title": "Services designed for your stay",
     "items": {
-      "breakfast": "Breakfast included",
+      "breakfast": "Breakfast",
       "parking": "Parking",
       "reception": "Front desk from 7am to midnight",
       "ac": "Air conditioning",
@@ -113,7 +115,7 @@
   },
   "testimonials": {
     "eyebrow": "Guests who stayed here",
-    "title": "Stories from those who lived the experience",
+    "title": "What our guests say",
     "source": "on Google",
     "placeholderTitle": "Leave your review!",
     "placeholderBody": "Have you stayed with us? Tell us how it went.",
@@ -146,14 +148,14 @@
       "badge": "Beto Carrero World accredited agent",
       "eyebrow": "Beto Carrero World",
       "title": "Beto Carrero tickets straight from the guesthouse",
-      "subtitle": "Official park prices, service from people five minutes away and {percent}% off your stay.",
+      "subtitle": "Official park prices and help from people five minutes away, straight through WhatsApp.",
       "cta": "Buy on WhatsApp",
       "secondary": "See tickets"
     },
     "trust": {
       "distance": "5 min from the park",
       "official": "Official park price",
-      "discount": "{percent}% off your stay"
+      "whatsapp": "Support via WhatsApp"
     },
     "grid": {
       "eyebrow": "Passes and add-ons",
@@ -162,11 +164,12 @@
       "cta": "I want this one",
       "priceFrom": "From",
       "perPerson": "per person",
-      "priceOnRequest": "Ask for the price",
+      "priceOnRequest": "Price coming soon",
       "mostPopular": "Most popular",
-      "requiresPassport": "Requires pass",
       "minHeight": "Min. height {height}",
-      "updatedAt": "Official Beto Carrero World prices, checked on {date}. Prices change by batch and date."
+      "updatedAt": "Official Beto Carrero World prices, checked on {date}. Prices change by batch and date.",
+      "optionalsTitle": "Add-ons",
+      "optionalsNote": "Skip the lines. Valid only together with a same-day park pass."
     },
     "items": {
       "passport": {
@@ -183,7 +186,7 @@
       },
       "ultrapass": {
         "name": "Ultrapass",
-        "description": "Unlimited special access to the 13 most popular attractions. Enjoy everything at your own pace."
+        "description": "Unlimited special access to the 13 most popular attractions, so you can enjoy the park at your own pace."
       },
       "portal": {
         "name": "Portal da Escuridão",
@@ -192,8 +195,8 @@
     },
     "buildDay": {
       "eyebrow": "Ticket + stay",
-      "title": "Plan your park day with {percent}% off your stay",
-      "text": "Sleep five minutes from Beto Carrero, with breakfast and parking. Buy your ticket with us and your stay gets {percent}% off.",
+      "title": "Plan your park day and sleep five minutes away",
+      "text": "Stay right next to Beto Carrero, with breakfast and parking, and sort out tickets and lodging in a single conversation.",
       "rooms": "See rooms",
       "whatsapp": "Build my package"
     },
@@ -233,17 +236,13 @@
       },
       "withoutStay": {
         "question": "Can I buy without staying at the guesthouse?",
-        "answer": "Yes. The lodging discount is a bonus for guests who also stay with us."
-      },
-      "discount": {
-        "question": "How does the {percent}% discount work?",
-        "answer": "When you buy your ticket through the guesthouse, you get {percent}% off the nights of the same trip. Just let us know on WhatsApp."
+        "answer": "Yes. You get the same service whether you stay with us or not."
       }
     },
     "sticky": "Buy tickets",
     "whatsappMessage": "Hi! I'd like to buy Beto Carrero World tickets through the guesthouse.",
     "whatsappTicketMessage": "Hi! I'm interested in the {ticket} ticket for Beto Carrero World. Could you send me the prices for my date?",
-    "whatsappStayMessage": "Hi! I'd like a Beto Carrero ticket + stay package with {percent}% off."
+    "whatsappStayMessage": "Hi! I'd like to put together a Beto Carrero ticket + lodging package."
   },
   "legal": {
     "eyebrow": "Legal information",
@@ -277,7 +276,6 @@
           "items": [
             "to reply to your messages and arrange your booking;",
             "to issue and send Beto Carrero World tickets;",
-            "to apply the lodging discount for guests who buy tickets through the guesthouse;",
             "to meet legal obligations, such as guest registration."
           ],
           "closing": "We do not sell your data or use it for third-party advertising."
@@ -360,12 +358,6 @@
           ]
         },
         {
-          "title": "Lodging discount",
-          "paragraphs": [
-            "The 5% discount applies to the nights of the same trip for guests who buy tickets through the guesthouse. Just let us know when booking."
-          ]
-        },
-        {
           "title": "Intellectual property",
           "paragraphs": [
             "The name, brand and texts of Pousada Recanto do Park may not be copied without permission. The Beto Carrero World brand and attraction names belong to their respective owners."
@@ -391,5 +383,8 @@
         }
       ]
     }
+  },
+  "instagram": {
+    "invite": "Follow the guesthouse on Instagram"
   }
 }

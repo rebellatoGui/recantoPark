@@ -6,7 +6,9 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { photos, gravataCarousel } from "@/lib/data/images";
 import { useReveal } from "@/lib/animations/use-reveal";
+import { gsap, useGSAP } from "@/lib/animations/gsap";
 import { SectionBackdrop } from "@/components/home/section-backdrop";
+import { SectionWave } from "@/components/home/section-wave";
 import { PhotoCarousel } from "@/components/ui/photo-carousel";
 
 function DestinationCard({
@@ -27,6 +29,7 @@ function DestinationCard({
   return (
     <div
       data-reveal
+      data-destination
       className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm"
     >
       <div className="relative aspect-[16/10] overflow-hidden">
@@ -68,20 +71,45 @@ export function LocationSection() {
   const t = useTranslations("location");
   const scope = useReveal<HTMLElement>();
 
+  useGSAP(
+    () => {
+      gsap
+        .matchMedia()
+        .add("(min-width: 1024px) and (prefers-reduced-motion: no-preference)", () => {
+          gsap.utils.toArray<HTMLElement>("[data-destination]").forEach((card, index) => {
+            const side = index === 0 ? -1 : 1;
+            gsap.fromTo(
+              card,
+              { xPercent: side * 14, rotate: side * 2.5 },
+              {
+                xPercent: 0,
+                rotate: 0,
+                ease: "none",
+                scrollTrigger: { trigger: card, start: "top bottom", end: "top 35%", scrub: 0.8 },
+              }
+            );
+          });
+        });
+    },
+    { scope }
+  );
+
   return (
     <section
       ref={scope}
       id="localizacao"
-      className="relative isolate overflow-hidden bg-navy py-16 text-navy-foreground md:py-24"
+      className="relative isolate overflow-hidden bg-navy py-24 text-navy-foreground md:py-36"
     >
       <SectionBackdrop variant="map" />
+      <SectionWave position="top" surface="surface-clay" />
+      <SectionWave position="bottom" surface="surface-cream" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative z-20 mx-auto max-w-7xl px-6">
         <div data-reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-gold">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-4 font-display text-3xl sm:text-4xl">
+          <h2 className="heading-section mt-4">
             {t("title")}
           </h2>
         </div>

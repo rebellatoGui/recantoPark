@@ -5,6 +5,7 @@ export function CoasterBanner({ className }: { className?: string }) {
     <div className={className}>
       <Image
         src="/brand/menu-lateral-mobile-transparent.png"
+        sizes="(min-width: 640px) 400px, 90vw"
         alt="Pousada Recanto do Park"
         width={1351}
         height={422}

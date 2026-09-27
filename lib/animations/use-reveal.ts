@@ -16,28 +16,35 @@ export function useReveal<T extends HTMLElement>(
   const scope = useRef<T>(null);
 
   useGSAP(
-    () => {
+    (_context, contextSafe) => {
       const targets = scope.current?.querySelectorAll(selector);
-      if (!targets?.length) return;
+      if (!targets?.length || prefersReducedMotion()) return;
 
-      if (prefersReducedMotion()) {
-        gsap.set(targets, { opacity: 1, y: 0 });
+      const setup = contextSafe!(() => {
+        gsap.from(targets, {
+          y,
+          opacity: 0,
+          duration,
+          stagger,
+          delay,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: scope.current,
+            start: "top 80%",
+            once: true,
+          },
+        });
+      });
+
+      // Seções abaixo da dobra não precisam de animação pronta no primeiro quadro;
+      // adiar tira esse trabalho do carregamento (TBT).
+      const top = scope.current?.getBoundingClientRect().top ?? 0;
+      if (top < window.innerHeight || !("requestIdleCallback" in window)) {
+        setup();
         return;
       }
-
-      gsap.from(targets, {
-        y,
-        opacity: 0,
-        duration,
-        stagger,
-        delay,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: scope.current,
-          start: "top 80%",
-          once: true,
-        },
-      });
+      const id = window.requestIdleCallback(setup, { timeout: 2000 });
+      return () => window.cancelIdleCallback(id);
     },
     { scope }
   );

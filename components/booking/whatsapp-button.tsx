@@ -8,11 +8,13 @@ export function WhatsappButton({
   label,
   message,
   variant = "default",
+  size = "default",
   className,
 }: {
   label?: string;
   message?: string;
   variant?: "default" | "outline";
+  size?: "default" | "lg";
   className?: string;
 }) {
   const t = useTranslations("hero");
@@ -30,13 +32,13 @@ export function WhatsappButton({
       variant={variant}
       size="lg"
       className={cn(
-        "h-11 px-5 lg:h-9 lg:px-4",
+        size === "lg" ? "h-12 px-6 text-base" : "h-11 px-5 lg:h-9 lg:px-4",
         variant === "default" &&
-          "bg-[#25D366] text-white hover:bg-[#1fb757]",
+          "bg-[#16853F] text-white hover:bg-[#137A3B]",
         className
       )}
     >
-      <WhatsappIcon className="size-4" />
+      <WhatsappIcon className={size === "lg" ? "size-5" : "size-4"} />
       {label ?? t("ctaWhatsapp")}
     </Button>
   );

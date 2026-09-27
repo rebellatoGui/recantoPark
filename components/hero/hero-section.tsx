@@ -4,78 +4,56 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/animations/gsap";
-import { photos } from "@/lib/data/images";
+import { videos } from "@/lib/data/images";
+import { SmartVideo } from "@/components/ui/smart-video";
 import { WhatsappButton } from "@/components/booking/whatsapp-button";
 import { BookNowButton } from "@/components/booking/book-now-button";
 import { Magnetic } from "@/components/animations/magnetic";
+import { SplitWords } from "@/components/animations/split-words";
 import { prefersReducedMotion } from "@/lib/animations/reduced-motion";
+import { whenIdle } from "@/lib/animations/when-idle";
 
 export function HeroSection() {
   const t = useTranslations("hero");
   const scope = useRef<HTMLElement>(null);
 
   useGSAP(
-    () => {
-      if (prefersReducedMotion()) {
-        gsap.set(
-          "[data-hero-glow], [data-hero-seal], [data-hero-eyebrow], [data-hero-title], [data-hero-subtitle], [data-hero-cta]",
-          { opacity: 1, scale: 1, y: 0 }
-        );
-        gsap.set("[data-hero-image]", { autoAlpha: 1, scale: 1 });
-        return;
-      }
+    (_context, contextSafe) => {
+      if (prefersReducedMotion()) return;
 
-      const tl = gsap.timeline({ delay: 0.2 });
-      tl.from("[data-hero-glow]", {
-        scale: 0.4,
-        opacity: 0,
-        duration: 1.4,
-        ease: "power2.out",
-      })
-        .from(
-          "[data-hero-seal]",
-          {
-            scale: 0.85,
-            y: 16,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out",
-          },
-          "<0.1"
+      // Os estados iniciais espelham os do globals.css (.hero-intro): o HTML do servidor
+      // já nasce neles. A entrada espera a hidratação liberar a thread principal; começar
+      // durante ela faz o primeiro quadro saltar.
+      const play = contextSafe!(() => {
+        const tl = gsap.timeline({ defaults: { ease: "power3.out", force3D: true } });
+        tl.fromTo(
+          "[data-hero-glow]",
+          { opacity: 0, scale: 0.4 },
+          { opacity: 1, scale: 1, duration: 1.4, ease: "power2.out" }
         )
-        .from(
-          "[data-hero-eyebrow]",
-          {
-            opacity: 0,
-            y: 20,
-            duration: 0.8,
-            ease: "power3.out",
-          },
-          "-=0.6"
-        )
-        .from(
-          "[data-hero-title]",
-          { opacity: 0, y: 40, duration: 1, ease: "power3.out" },
-          "-=0.5"
-        )
-        .from(
-          "[data-hero-subtitle]",
-          { opacity: 0, y: 20, duration: 0.8, ease: "power3.out" },
-          "-=0.6"
-        )
-        .from(
-          "[data-hero-cta]",
-          { opacity: 0, y: 20, duration: 0.8, stagger: 0.1, ease: "power3.out" },
-          "-=0.5"
-        );
+          .fromTo(
+            "[data-hero-seal]",
+            { opacity: 0, scale: 0.85, y: 16 },
+            { opacity: 1, scale: 1, y: 0, duration: 1.1 },
+            "<0.1"
+          )
+          .fromTo("[data-hero-eyebrow]", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.7")
+          .fromTo(
+            "[data-hero-word]",
+            { y: 0, yPercent: 110 },
+            { y: 0, yPercent: 0, duration: 1.1, stagger: 0.07, ease: "power4.out" },
+            "-=0.55"
+          )
+          .fromTo("[data-hero-subtitle]", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.7")
+          .fromTo(
+            "[data-hero-cta]",
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.8, stagger: 0.1 },
+            "-=0.55"
+          );
+      });
 
-      // Abertura suave: o vídeo surge do fundo escuro com um leve recuo de
-      // enquadramento, sem competir com o movimento do próprio drone.
-      gsap.fromTo(
-        "[data-hero-image]",
-        { autoAlpha: 0, scale: 1.1 },
-        { autoAlpha: 1, scale: 1, duration: 2.8, ease: "power2.out" }
-      );
+      return whenIdle(play);
     },
     { scope }
   );
@@ -83,19 +61,17 @@ export function HeroSection() {
   return (
     <section
       ref={scope}
-      className="relative flex h-[92vh] min-h-[640px] items-end overflow-hidden bg-navy"
+      className="hero-intro relative flex h-[92vh] min-h-[640px] items-end overflow-hidden bg-navy"
     >
-      <div data-hero-image className="absolute inset-0 will-change-transform">
-        <video
-          className="h-full w-full object-cover"
-          src={photos.heroVideo}
-          poster={photos.heroVideoPoster}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-label="Vista aérea do Beto Carrero World, a poucos minutos da pousada"
+      <noscript>
+        <style>{`.hero-intro [data-hero-glow], .hero-intro [data-hero-seal], .hero-intro [data-hero-eyebrow], .hero-intro [data-hero-subtitle], .hero-intro [data-hero-cta], .hero-intro [data-hero-word] { opacity: 1 !important; transform: none !important; animation: none !important; }`}</style>
+      </noscript>
+      <div data-hero-image className="absolute inset-0">
+        <SmartVideo
+          priority
+          sources={videos.hero}
+          label={t("videoLabel")}
+          className="h-full w-full"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-navy/10" />
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-navy/85 via-navy/35 to-transparent sm:h-80" />
@@ -131,9 +107,9 @@ export function HeroSection() {
         </p>
         <h1
           data-hero-title
-          className="max-w-[20ch] font-display text-3xl leading-[1.05] font-semibold text-balance sm:text-5xl md:text-6xl"
+          className="max-w-[18ch] font-display text-[2.6rem] leading-[1] font-semibold tracking-[-0.018em] sm:text-6xl md:text-7xl"
         >
-          {t("title")}
+          <SplitWords text={t("title")} attr="data-hero-word" />
         </h1>
         <p
           data-hero-subtitle

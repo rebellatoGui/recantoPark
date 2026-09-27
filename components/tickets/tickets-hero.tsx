@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { BadgePercent, MapPin, ShieldCheck } from "lucide-react";
+import { MapPin, MessageCircle, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsappButton } from "@/components/booking/whatsapp-button";
-import { isAccreditedAgent, lodgingDiscountPercent } from "@/lib/data/pousada";
+import { TICKETS_HERO_CTA_ID } from "@/components/tickets/ids";
+import { isAccreditedAgent } from "@/lib/data/pousada";
 
 export function TicketsHero() {
   const t = useTranslations("tickets");
@@ -11,7 +12,7 @@ export function TicketsHero() {
   const trust = [
     { icon: MapPin, label: t("trust.distance") },
     { icon: ShieldCheck, label: t("trust.official") },
-    { icon: BadgePercent, label: t("trust.discount", { percent: lodgingDiscountPercent }) },
+    { icon: MessageCircle, label: t("trust.whatsapp") },
   ];
 
   return (
@@ -45,13 +46,13 @@ export function TicketsHero() {
             {t("hero.title")}
           </h1>
           <p className="mt-5 max-w-xl text-base text-navy-foreground/85 sm:text-lg">
-            {t("hero.subtitle", { percent: lodgingDiscountPercent })}
+            {t("hero.subtitle")}
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div id={TICKETS_HERO_CTA_ID} className="mt-8 flex flex-wrap gap-3">
             <WhatsappButton
               label={t("hero.cta")}
               message={t("whatsappMessage")}
-              className="h-12 px-6 text-base"
+              size="lg"
             />
             <Button
               render={<a href="#tipos" />}

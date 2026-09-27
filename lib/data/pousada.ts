@@ -23,8 +23,8 @@ export const contact = {
   phoneDisplay: "+55 47 3267-1937",
   bookingEngineUrl: "https://reservas.pousadarecantodopark.com.br/",
   email: "pousadarecantodopark@gmail.com",
-  instagramHandle: "@recantodopark",
-  instagramUrl: "https://instagram.com/recantodopark",
+  instagramHandle: "@pousadarecantodopark",
+  instagramUrl: "https://www.instagram.com/pousadarecantodopark/",
   googlePlaceId: GOOGLE_PLACE_ID,
   googlePlaceCid: GOOGLE_PLACE_CID,
   placeName: PLACE_NAME,
@@ -50,8 +50,6 @@ export function whatsappLink(message?: string) {
 }
 
 export const isAccreditedAgent = false;
-
-export const lodgingDiscountPercent = 5;
 
 export type AmenityId =
   | "breakfast"
@@ -80,6 +78,10 @@ export const amenities: {
   { id: "accessibility", icon: Accessibility, image: amenityStock.accessibility },
   { id: "petFriendly", icon: PawPrint, image: amenityStock.petFriendly },
 ];
+
+export const showcaseAmenities = amenities.filter(
+  ({ id }) => id !== "privateBathroom",
+);
 
 const ROOM_AMENITY_IDS: AmenityId[] = [
   "privateBathroom",

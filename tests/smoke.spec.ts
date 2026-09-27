@@ -47,3 +47,16 @@ test("book now buttons open the booking engine in a new tab", async ({ page }) =
   await expect(links.first()).toHaveAttribute("target", "_blank");
   await expect(page.locator('a[href*="reservar-em-breve"]')).toHaveCount(0);
 });
+
+test("home invites to the official instagram in the final CTA", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator("[data-instagram-invite]")).toHaveAttribute(
+    "href",
+    "https://www.instagram.com/pousadarecantodopark/"
+  );
+});
+
+test("hero video label is translated", async ({ page }) => {
+  await page.goto("/en");
+  await expect(page.locator("section video").first()).toHaveAttribute("aria-label", /aerial view/i);
+});

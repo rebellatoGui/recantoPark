@@ -58,6 +58,7 @@ export function SiteHeader() {
           <span className="absolute bottom-0 left-6 z-10 block h-20 w-20 translate-y-1/2 sm:h-24 sm:w-24 md:h-28 md:w-28">
             <Image
               src="/brand/logo-oficial.png"
+              sizes="128px"
               alt="Pousada Recanto do Park"
               width={1254}
               height={1254}

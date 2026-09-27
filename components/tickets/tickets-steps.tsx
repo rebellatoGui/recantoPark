@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useReveal } from "@/lib/animations/use-reveal";
+import { SectionBackdrop } from "@/components/home/section-backdrop";
 
 const STEPS = ["choose", "schedule", "enjoy"] as const;
 
@@ -10,11 +11,12 @@ export function TicketsSteps() {
   const scope = useReveal<HTMLElement>();
 
   return (
-    <section ref={scope} className="px-6 py-16 md:py-20">
+    <section ref={scope} className="relative isolate overflow-hidden px-6 py-20 md:py-32">
+      <SectionBackdrop variant="topo" />
       <div className="mx-auto max-w-5xl">
         <h2
           data-reveal
-          className="text-center font-display text-2xl leading-tight text-foreground sm:text-3xl"
+          className="heading-section text-center text-foreground"
         >
           {t("title")}
         </h2>

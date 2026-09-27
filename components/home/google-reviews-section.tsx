@@ -18,11 +18,11 @@ export function GoogleReviewsSection() {
     <section
       id="maps"
       ref={scope}
-      className="mx-auto max-w-6xl px-6 pt-16 md:pt-24"
+      className="mx-auto max-w-6xl scroll-mt-24 px-6 pt-20 md:pt-32"
     >
       <div
         data-reveal
-        className="overflow-hidden rounded-3xl border border-border bg-card"
+        className="overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-foreground/5"
       >
         <div className="p-8 sm:p-12">
           <div className="grid gap-8 sm:grid-cols-[1fr_1.15fr] sm:gap-10">
@@ -32,7 +32,7 @@ export function GoogleReviewsSection() {
                 {t("eyebrow")}
               </span>
 
-              <h2 className="mt-4 font-display text-2xl leading-tight text-foreground sm:text-3xl">
+              <h2 className="heading-section mt-4 text-foreground">
                 {t("title")}
               </h2>
 
@@ -77,6 +77,7 @@ export function GoogleReviewsSection() {
               >
                 <Image
                   src="/brand/logo-oficial.png"
+                  sizes="176px"
                   alt=""
                   width={1254}
                   height={1254}

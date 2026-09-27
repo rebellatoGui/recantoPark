@@ -4,6 +4,7 @@ import { Clock, Mail, MapPin, PawPrint } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
+import { InstagramIcon } from "@/components/icons/instagram-icon";
 import { MastercardIcon } from "@/components/icons/mastercard-icon";
 import { VisaIcon } from "@/components/icons/visa-icon";
 import { PixIcon } from "@/components/icons/pix-icon";
@@ -132,6 +133,9 @@ export function SiteFooter() {
                 external={false}
               >
                 {contact.email}
+              </ContactItem>
+              <ContactItem href={contact.instagramUrl} Icon={InstagramIcon}>
+                {contact.instagramHandle}
               </ContactItem>
               <ContactItem href={contact.googleMapsUrl} Icon={MapPin}>
                 {tContact("address")}

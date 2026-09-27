@@ -6,6 +6,9 @@ import { gsap, ScrollTrigger } from "./gsap";
 
 export function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
+    // No toque a rolagem nativa já é suave; o loop do Lenis só custaria CPU no celular.
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+
     const lenis = new Lenis({
       duration: 1.2,
       smoothWheel: true,
@@ -13,14 +16,12 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
 
     lenis.on("scroll", ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
+    const tick = (time: number) => lenis.raf(time * 1000);
+    gsap.ticker.add(tick);
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove(lenis.raf);
+      gsap.ticker.remove(tick);
     };
   }, []);
 

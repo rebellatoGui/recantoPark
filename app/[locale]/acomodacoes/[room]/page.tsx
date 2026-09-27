@@ -92,7 +92,7 @@ function RoomDetail({ room }: { room: (typeof rooms)[number] }) {
           {t("detail.backToRooms")}
         </Link>
 
-        <h1 className="mt-6 font-display text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+        <h1 className="heading-section mt-6 text-foreground">
           {t(`rooms.${roomId}.name`)}
         </h1>
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-pretty text-muted-foreground lg:max-w-none lg:text-lg">

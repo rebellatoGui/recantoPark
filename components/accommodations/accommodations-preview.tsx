@@ -6,17 +6,43 @@ import { RoomCard } from "./room-card";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { useReveal } from "@/lib/animations/use-reveal";
+import { gsap, useGSAP } from "@/lib/animations/gsap";
+import { prefersReducedMotion } from "@/lib/animations/reduced-motion";
+import { SectionBackdrop } from "@/components/home/section-backdrop";
 
 export function AccommodationsPreview() {
   const t = useTranslations("accommodationsPreview");
   const scope = useReveal<HTMLElement>();
 
+  useGSAP(
+    () => {
+      if (prefersReducedMotion()) return;
+      gsap.utils.toArray<HTMLElement>("[data-room-media]").forEach((media) => {
+        gsap.fromTo(
+          media.querySelector("img"),
+          { yPercent: -6, scale: 1.14 },
+          {
+            yPercent: 6,
+            scale: 1.14,
+            ease: "none",
+            scrollTrigger: { trigger: media, start: "top bottom", end: "bottom top", scrub: true },
+          }
+        );
+      });
+    },
+    { scope }
+  );
+
   return (
-    <section ref={scope} className="bg-secondary/40 py-16 md:py-32">
+    <section
+      ref={scope}
+      className="relative isolate overflow-hidden bg-surface-cream py-12 md:py-20"
+    >
+      <SectionBackdrop variant="grain" />
       <div className="mx-auto max-w-5xl px-6">
         <h2
           data-reveal
-          className="text-center font-display text-3xl leading-tight text-foreground sm:text-4xl"
+          className="heading-section text-center text-foreground"
         >
           {t("title")}
         </h2>

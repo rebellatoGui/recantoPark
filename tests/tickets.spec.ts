@@ -57,3 +57,38 @@ test("header links to the tickets page", async ({ page }) => {
   await page.getByRole("banner").getByRole("link", { name: "Ingressos" }).click();
   await expect(page).toHaveURL(/\/ingressos-beto-carrero/);
 });
+
+test("tickets page shows a single whatsapp CTA on mobile", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/ingressos-beto-carrero");
+  await expect(page.locator("[data-whatsapp-floating]")).toBeHidden();
+  await page.mouse.wheel(0, 1600);
+  await expect(page.locator("[data-tickets-sticky]")).toBeVisible();
+});
+
+test("home keeps the floating whatsapp button", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator("[data-whatsapp-floating]")).toBeVisible();
+});
+
+test("tickets page keeps the floating whatsapp button on desktop", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto("/ingressos-beto-carrero");
+  await expect(page.locator("[data-whatsapp-floating]")).toBeVisible();
+});
+
+test("sticky whatsapp bar does not cover the footer links on tablet", async ({ page }) => {
+  await page.setViewportSize({ width: 800, height: 900 });
+  await page.goto("/ingressos-beto-carrero");
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  const link = page.getByRole("contentinfo").getByRole("link", { name: /termos/i });
+  await link.scrollIntoViewIfNeeded();
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await page.waitForTimeout(700);
+  const covered = await link.evaluate((el) => {
+    const r = el.getBoundingClientRect();
+    const hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+    return !el.contains(hit);
+  });
+  expect(covered).toBe(false);
+});

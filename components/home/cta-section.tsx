@@ -6,10 +6,30 @@ import { BookNowButton } from "@/components/booking/book-now-button";
 import { Magnetic } from "@/components/animations/magnetic";
 import { SectionBackdrop } from "@/components/home/section-backdrop";
 import { useReveal } from "@/lib/animations/use-reveal";
+import { gsap, useGSAP } from "@/lib/animations/gsap";
+import { prefersReducedMotion } from "@/lib/animations/reduced-motion";
+import { SplitWords } from "@/components/animations/split-words";
+import { InstagramIcon } from "@/components/icons/instagram-icon";
+import { contact } from "@/lib/data/pousada";
 
 export function CtaSection() {
   const t = useTranslations("ctaFinal");
+  const tInstagram = useTranslations("instagram");
   const scope = useReveal<HTMLElement>();
+
+  useGSAP(
+    () => {
+      if (prefersReducedMotion()) return;
+      gsap.from("[data-word]", {
+        yPercent: 110,
+        duration: 1.1,
+        stagger: 0.06,
+        ease: "power4.out",
+        scrollTrigger: { trigger: scope.current, start: "top 75%", once: true },
+      });
+    },
+    { scope }
+  );
 
   return (
     <section
@@ -18,11 +38,8 @@ export function CtaSection() {
     >
       <SectionBackdrop variant="sunset" />
       <div className="mx-auto max-w-5xl">
-        <h2
-          data-reveal
-          className="font-display text-3xl leading-tight text-foreground sm:text-4xl"
-        >
-          {t("title")}
+        <h2 className="heading-section text-foreground">
+          <SplitWords text={t("title")} />
         </h2>
         <p
           data-reveal
@@ -41,6 +58,24 @@ export function CtaSection() {
             <WhatsappButton label={t("ctaWhatsapp")} />
           </Magnetic>
         </div>
+        <a
+          data-reveal
+          data-instagram-invite
+          href={contact.instagramUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group mt-12 inline-flex items-center gap-3 text-sm text-foreground/80 sm:text-base"
+        >
+          <span className="flex size-10 items-center justify-center rounded-full bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] text-white shadow-md shadow-[#dd2a7b]/25 transition-transform duration-500 motion-safe:group-hover:rotate-12 motion-safe:group-hover:scale-110">
+            <InstagramIcon className="size-5" />
+          </span>
+          <span>
+            {tInstagram("invite")}{" "}
+            <span className="link-underline font-semibold text-foreground">
+              {contact.instagramHandle}
+            </span>
+          </span>
+        </a>
       </div>
     </section>
   );

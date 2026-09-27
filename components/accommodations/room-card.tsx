@@ -37,6 +37,7 @@ export function RoomCard({
       >
         <Link
           href={href}
+          data-room-media
           className="relative block aspect-[4/3] shrink-0 overflow-hidden will-change-transform [backface-visibility:hidden] sm:aspect-auto sm:w-2/5 sm:min-h-72"
         >
           <Image

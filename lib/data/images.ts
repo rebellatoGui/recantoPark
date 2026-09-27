@@ -2,8 +2,6 @@ function unsplash(id: string, width = 1600, height = 1200) {
   return `https://images.unsplash.com/photo-${id}?w=${width}&h=${height}&fit=crop&auto=format&q=80`;
 }
 
-// Fotografia real da pousada, do Beto Carrero e da Praia do Gravatá.
-// Otimizadas em public/photos/*.webp (fonte em new_assets/, fora do repo).
 export const photos = {
   betoCarrero: "/photos/beto-carrero-world.webp",
   googleMaps: "/photos/google-maps.webp",
@@ -16,16 +14,29 @@ export const photos = {
   quarto1: "/photos/quarto1.webp",
   quarto2: "/photos/quarto2.webp",
   banheiro1: "/photos/banheiro1.webp",
-  droneGravata: "/photos/drone-gravata.mp4",
   droneGravataPoster: "/photos/drone-gravata-poster.webp",
-  droneGravata2: "/photos/drone-gravata-2.mp4",
   droneGravata2Poster: "/photos/drone-gravata-2-poster.webp",
-  heroVideo: "/photos/hero-beto-carrero.mp4",
-  heroVideoPoster: "/photos/hero-beto-carrero-poster.webp",
 } as const;
 
-// Banco de imagens (Unsplash) para os serviços que ainda não têm foto própria
-// da pousada. Trocar por fotografia real assim que houver.
+// AV1 primeiro (mesma qualidade com bem menos bytes); H.264 para navegadores sem AV1.
+// O navegador usa a primeira <source> cujo type ele aceita. /photos tem cache de 30 dias:
+// ao trocar um vídeo, troque também o nome do arquivo, senão o navegador segue no antigo.
+const AV1 = 'video/mp4; codecs="av01.0.09M.10"';
+const H264 = "video/mp4";
+
+function videoSources(name: string) {
+  return [
+    { src: `/photos/${name}.av1.mp4`, type: AV1 },
+    { src: `/photos/${name}.mp4`, type: H264 },
+  ];
+}
+
+export const videos = {
+  hero: videoSources("hero-10s-60fps"),
+  droneGravata: videoSources("drone-gravata"),
+  droneGravata2: videoSources("drone-gravata-2"),
+};
+
 export const amenityStock = {
   breakfast: unsplash("1504754524776-8f4f37790ca0", 600, 600),
   ac: unsplash("1762341123870-d706f257a12e", 600, 600),
@@ -36,21 +47,6 @@ export const amenityStock = {
   petFriendly: unsplash("1698949654875-544ecfef27ac", 600, 600),
 } as const;
 
-export const poolImages = [
-  unsplash("1623718649591-311775a30c43"),
-  unsplash("1582719508461-905c673771fd"),
-  unsplash("1584132967334-10e028bd69f7"),
-  unsplash("1563911302283-d2bc129e7570"),
-];
-
-export const beachImages = [
-  unsplash("1533760881669-80db4d7b4c15"),
-  unsplash("1519046904884-53103b34b206"),
-  unsplash("1507525428034-b723cf961d3e"),
-  unsplash("1520454974749-611b7248ffdb"),
-];
-
-// Carrossel da Praia do Gravatá (seção Localização) — fotografia real.
 export const gravataCarousel: { src: string; alt: string }[] = [
   { src: photos.gravataPedras, alt: "Costão de pedras e o mar na Praia do Gravatá" },
   { src: photos.oMar, alt: "Mar aberto visto da Praia do Gravatá" },

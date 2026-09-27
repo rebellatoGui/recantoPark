@@ -5,9 +5,10 @@ import { useTranslations } from "next-intl";
 import { MapPin } from "lucide-react";
 import { gsap, useGSAP } from "@/lib/animations/gsap";
 import { prefersReducedMotion } from "@/lib/animations/reduced-motion";
-import { photos } from "@/lib/data/images";
+import { photos, videos } from "@/lib/data/images";
 import { DroneVideo } from "@/components/home/drone-video";
 import { SectionBackdrop } from "@/components/home/section-backdrop";
+import { CountUp } from "@/components/animations/count-up";
 
 const stats = [
   { key: "distance", icon: MapPin },
@@ -64,6 +65,25 @@ export function AboutSection() {
           { y: 24, opacity: 0, duration: 0.8, stagger: 0.14, ease: "power3.out" },
           "-=0.55"
         );
+
+      gsap.matchMedia().add("(min-width: 1024px)", () => {
+        gsap.utils.toArray<HTMLElement>("[data-about-video]").forEach((video, index) => {
+          gsap.fromTo(
+            video,
+            { yPercent: index === 0 ? 10 : -10 },
+            {
+              yPercent: index === 0 ? -10 : 10,
+              ease: "none",
+              scrollTrigger: {
+                trigger: scope.current,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+              },
+            }
+          );
+        });
+      });
     },
     { scope }
   );
@@ -78,11 +98,11 @@ export function AboutSection() {
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-2 items-center gap-5 lg:grid-cols-[1fr_1.25fr_1fr] lg:gap-10">
           <div data-about-video className="lg:order-1">
-            <DroneVideo className="w-full" />
+            <DroneVideo label={t("droneLabel")} className="w-full" />
           </div>
 
           <div className="order-first col-span-2 text-center lg:order-2 lg:col-span-1">
-            <h2 className="font-display text-3xl leading-tight sm:text-4xl">
+            <h2 className="heading-section">
               {lines.map((words, l) => (
                 <span key={l} className="block">
                   {words.map((word, i) => (
@@ -111,7 +131,7 @@ export function AboutSection() {
                 <div key={key} data-about-stat>
                   <dt className="flex items-center justify-center gap-2 font-display text-2xl text-gold sm:text-3xl">
                     <Icon className="size-5 shrink-0 sm:size-6" strokeWidth={1.5} />
-                    {t(`stats.${key}Value`)}
+                    <CountUp value={t(`stats.${key}Value`)} />
                   </dt>
                   <dd className="mt-1 text-sm text-navy-foreground/70">
                     {t(`stats.${key}Label`)}
@@ -123,7 +143,8 @@ export function AboutSection() {
 
           <div data-about-video className="lg:order-3">
             <DroneVideo
-              src={photos.droneGravata2}
+              label={t("droneLabel")}
+              sources={videos.droneGravata2}
               poster={photos.droneGravata2Poster}
               className="w-full"
             />

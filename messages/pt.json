@@ -2,11 +2,11 @@
   "meta": {
     "siteName": "Pousada Recanto do Park",
     "titleHome": "Pousada Recanto do Park | Penha, Santa Catarina",
-    "descriptionHome": "Hospedagem aconchegante em Penha/SC, a poucos minutos do Beto Carrero World e das melhores praias da região. Reserve sua estadia.",
+    "descriptionHome": "Pousada em Penha/SC, a 5 minutos do Beto Carrero World e perto da Praia do Gravatá. Reserve sua estadia.",
     "titleAccommodations": "Acomodações | Pousada Recanto do Park",
     "descriptionAccommodations": "Conheça os quartos e suítes da Pousada Recanto do Park, em Penha/SC.",
     "titleTickets": "Ingressos Beto Carrero World | Pousada Recanto do Park",
-    "descriptionTickets": "Compre seus ingressos do Beto Carrero World direto com a Pousada Recanto do Park, em Penha/SC, e ganhe 5% de desconto na hospedagem."
+    "descriptionTickets": "Compre seus ingressos do Beto Carrero World direto com a Pousada Recanto do Park, em Penha/SC, a 5 minutos do parque."
   },
   "nav": {
     "home": "Início",
@@ -22,7 +22,8 @@
     "title": "Seu refúgio entre o parque e o mar",
     "subtitle": "A 5 minutos do Beto Carrero World e pertinho da Praia do Gravatá. Conforto para a família toda.",
     "ctaPrimary": "Reservar agora",
-    "ctaWhatsapp": "Falar no WhatsApp"
+    "ctaWhatsapp": "Falar no WhatsApp",
+    "videoLabel": "Vista aérea do Beto Carrero World, a poucos minutos da pousada"
   },
   "essentialInfo": {
     "eyebrow": "Informações essenciais",
@@ -35,11 +36,12 @@
   "about": {
     "eyebrow": "Sobre nós",
     "title": "Descanso e aventura, lado a lado",
-    "body": "A Pousada Recanto do Park é a base ideal de quem vem viver o Beto Carrero World e relaxar na Praia do Gravatá. Suítes confortáveis, café da manhã incluso, estacionamento próprio e um atendimento de quem conhece a região de verdade. Tudo para a sua família aproveitar Penha sem preocupação.",
+    "body": "A Pousada Recanto do Park fica a 5 minutos do Beto Carrero World e perto da Praia do Gravatá. As suítes são confortáveis, tem café da manhã e estacionamento próprio, e quem atende conhece a região de verdade.",
     "stats": {
       "distanceValue": "5 min",
       "distanceLabel": "Do Beto Carrero World"
-    }
+    },
+    "droneLabel": "Vista aérea da Praia do Gravatá"
   },
   "location": {
     "eyebrow": "Localização privilegiada",
@@ -49,7 +51,7 @@
     "parkDescription": "O maior parque temático da América Latina, pertinho de você.",
     "beachTitle": "Praia do Gravatá",
     "beachDistance": "pertinho da pousada",
-    "beachDescription": "Costão de pedras, mar aberto e areia larga. E o melhor: pet-friendly, seu cachorro é bem-vindo.",
+    "beachDescription": "Costão de pedras, mar aberto e areia larga. A praia é pet-friendly, então dá para levar o cachorro.",
     "carouselTitle": "A praia que te espera",
     "carouselSubtitle": "Um pouco do que você encontra pertinho da pousada, na Praia do Gravatá.",
     "parkLink": "Comprar ingressos com a pousada"
@@ -58,7 +60,7 @@
     "eyebrow": "Serviços",
     "title": "Serviços pensados para a sua estadia",
     "items": {
-      "breakfast": "Café da manhã incluso",
+      "breakfast": "Café da manhã",
       "parking": "Estacionamento",
       "reception": "Recepção das 7h à meia-noite",
       "ac": "Ar-condicionado",
@@ -113,7 +115,7 @@
   },
   "testimonials": {
     "eyebrow": "Quem já ficou aqui",
-    "title": "Histórias de quem viveu essa experiência",
+    "title": "O que dizem os hóspedes",
     "source": "no Google",
     "placeholderTitle": "Deixe sua avaliação!",
     "placeholderBody": "Já se hospedou com a gente? Conte como foi a sua estadia.",
@@ -146,14 +148,14 @@
       "badge": "Agente credenciado Beto Carrero World",
       "eyebrow": "Beto Carrero World",
       "title": "Ingressos do Beto Carrero direto com a pousada",
-      "subtitle": "Valores oficiais do parque, atendimento de quem está a 5 minutos dele e {percent}% de desconto na sua hospedagem.",
+      "subtitle": "Valores oficiais do parque e atendimento de quem está a 5 minutos dele, direto pelo WhatsApp.",
       "cta": "Comprar pelo WhatsApp",
       "secondary": "Ver ingressos"
     },
     "trust": {
       "distance": "A 5 min do parque",
       "official": "Valor oficial do parque",
-      "discount": "{percent}% na hospedagem"
+      "whatsapp": "Atendimento pelo WhatsApp"
     },
     "grid": {
       "eyebrow": "Passaportes e opcionais",
@@ -162,11 +164,12 @@
       "cta": "Quero este",
       "priceFrom": "A partir de",
       "perPerson": "por pessoa",
-      "priceOnRequest": "Consulte o valor",
+      "priceOnRequest": "Valor em breve",
       "mostPopular": "Mais procurado",
-      "requiresPassport": "Exige passaporte",
       "minHeight": "Altura mín. {height}",
-      "updatedAt": "Valores oficiais do Beto Carrero World, conferidos em {date}. Os preços mudam por lote e data."
+      "updatedAt": "Valores oficiais do Beto Carrero World, conferidos em {date}. Os preços mudam por lote e data.",
+      "optionalsTitle": "Opcionais",
+      "optionalsNote": "Aceleram as filas e só valem junto com o passaporte do mesmo dia."
     },
     "items": {
       "passport": {
@@ -183,7 +186,7 @@
       },
       "ultrapass": {
         "name": "Ultrapass",
-        "description": "Acesso ilimitado e especial às 13 atrações mais procuradas. Para aproveitar tudo sem pressa."
+        "description": "Acesso ilimitado e especial às 13 atrações mais procuradas, para aproveitar o parque sem pressa."
       },
       "portal": {
         "name": "Portal da Escuridão",
@@ -192,8 +195,8 @@
     },
     "buildDay": {
       "eyebrow": "Ingresso + hospedagem",
-      "title": "Monte seu dia no parque com {percent}% de desconto na estadia",
-      "text": "Durma a 5 minutos do Beto Carrero, com café da manhã e estacionamento. Comprando o ingresso com a gente, a hospedagem sai com {percent}% de desconto.",
+      "title": "Monte seu dia no parque e durma a 5 minutos dele",
+      "text": "Hospede-se pertinho do Beto Carrero, com café da manhã e estacionamento, e resolva ingresso e estadia numa conversa só.",
       "rooms": "Ver acomodações",
       "whatsapp": "Montar meu pacote"
     },
@@ -233,17 +236,13 @@
       },
       "withoutStay": {
         "question": "Posso comprar sem me hospedar na pousada?",
-        "answer": "Pode. O desconto na hospedagem é um bônus para quem também fica com a gente."
-      },
-      "discount": {
-        "question": "Como funciona o desconto de {percent}%?",
-        "answer": "Ao comprar o ingresso com a pousada, você ganha {percent}% de desconto nas diárias da mesma viagem. É só avisar no WhatsApp."
+        "answer": "Pode. O atendimento é o mesmo para quem se hospeda com a gente ou não."
       }
     },
     "sticky": "Comprar ingressos",
     "whatsappMessage": "Olá! Quero comprar ingressos do Beto Carrero World com a pousada.",
     "whatsappTicketMessage": "Olá! Tenho interesse no ingresso {ticket} do Beto Carrero World. Pode me passar os valores para a minha data?",
-    "whatsappStayMessage": "Olá! Quero montar um pacote de ingresso do Beto Carrero + hospedagem com {percent}% de desconto."
+    "whatsappStayMessage": "Olá! Quero montar um pacote de ingresso do Beto Carrero + hospedagem."
   },
   "legal": {
     "eyebrow": "Informações legais",
@@ -277,7 +276,6 @@
           "items": [
             "responder suas mensagens e organizar sua reserva;",
             "emitir e enviar ingressos do Beto Carrero World;",
-            "aplicar o desconto na hospedagem de quem compra ingressos com a pousada;",
             "cumprir obrigações legais, como o registro de hóspedes."
           ],
           "closing": "Não vendemos seus dados e não os usamos para publicidade de terceiros."
@@ -360,12 +358,6 @@
           ]
         },
         {
-          "title": "Desconto na hospedagem",
-          "paragraphs": [
-            "O desconto de 5% vale para as diárias da mesma viagem de quem compra ingressos com a pousada. Para usar, é só avisar no momento da reserva."
-          ]
-        },
-        {
           "title": "Propriedade intelectual",
           "paragraphs": [
             "O nome, a marca e os textos da Pousada Recanto do Park não podem ser copiados sem autorização. As marcas Beto Carrero World e os nomes das atrações pertencem aos seus titulares."
@@ -391,5 +383,8 @@
         }
       ]
     }
+  },
+  "instagram": {
+    "invite": "Acompanhe a pousada no Instagram"
   }
 }

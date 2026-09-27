@@ -6,14 +6,13 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { WhatsappButton } from "@/components/booking/whatsapp-button";
 import { useReveal } from "@/lib/animations/use-reveal";
-import { lodgingDiscountPercent } from "@/lib/data/pousada";
 
 export function TicketsBuildDay() {
   const t = useTranslations("tickets");
   const scope = useReveal<HTMLElement>();
 
   return (
-    <section ref={scope} className="px-6 pb-16 md:pb-24">
+    <section ref={scope} className="bg-surface-cream px-6 pb-20 md:pb-32">
       <div className="relative isolate mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] bg-navy text-navy-foreground lg:grid-cols-2">
         <div className="relative aspect-[16/10] lg:aspect-auto">
           <Image
@@ -30,17 +29,17 @@ export function TicketsBuildDay() {
           <p className="text-xs font-medium uppercase tracking-[0.25em] text-gold">
             {t("buildDay.eyebrow")}
           </p>
-          <h2 className="mt-4 font-display text-3xl leading-tight font-semibold text-balance sm:text-4xl">
-            {t("buildDay.title", { percent: lodgingDiscountPercent })}
+          <h2 className="heading-section mt-4">
+            {t("buildDay.title")}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-navy-foreground/80 sm:text-lg">
-            {t("buildDay.text", { percent: lodgingDiscountPercent })}
+            {t("buildDay.text")}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <WhatsappButton
               label={t("buildDay.whatsapp")}
-              message={t("whatsappStayMessage", { percent: lodgingDiscountPercent })}
-              className="h-12 px-6 text-base"
+              message={t("whatsappStayMessage")}
+              size="lg"
             />
             <Button
               render={<Link href="/acomodacoes" />}

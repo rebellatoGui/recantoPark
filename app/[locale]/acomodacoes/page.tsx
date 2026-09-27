@@ -41,7 +41,7 @@ function AccommodationsHero() {
         <p className="text-sm uppercase tracking-[0.35em] text-gold">
           {t("eyebrow")}
         </p>
-        <h1 className="mt-4 font-display text-3xl leading-tight sm:text-4xl">
+        <h1 className="heading-section mt-4">
           {t("title")}
         </h1>
         <p className="mt-4 text-navy-foreground/80">{t("subtitle")}</p>

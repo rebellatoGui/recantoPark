@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { ChevronDown } from "lucide-react";
-import { isAccreditedAgent, lodgingDiscountPercent } from "@/lib/data/pousada";
+import { SectionBackdrop } from "@/components/home/section-backdrop";
+import { isAccreditedAgent } from "@/lib/data/pousada";
 
 const QUESTIONS = [
   "official",
@@ -8,7 +9,6 @@ const QUESTIONS = [
   "kids",
   "optionals",
   "withoutStay",
-  "discount",
 ] as const;
 
 export function TicketsFaq() {
@@ -17,19 +17,20 @@ export function TicketsFaq() {
   const answer = (id: (typeof QUESTIONS)[number]) =>
     id === "official" && !isAccreditedAgent
       ? t("official.answerPending")
-      : t(`${id}.answer`, { percent: lodgingDiscountPercent });
+      : t(`${id}.answer`);
 
   return (
-    <section className="bg-muted/40 px-6 py-16 pb-28 md:py-24">
+    <section className="relative isolate overflow-hidden bg-surface-clay px-6 py-20 pb-32 md:py-32">
+      <SectionBackdrop variant="grain" />
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-center font-display text-3xl leading-tight font-semibold text-foreground sm:text-4xl">
+        <h2 className="heading-section text-center text-foreground">
           {t("title")}
         </h2>
         <div className="mt-10 divide-y divide-border rounded-3xl border border-border bg-card">
           {QUESTIONS.map((id) => (
             <details key={id} className="group px-5 sm:px-7">
               <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 text-base font-medium text-foreground [&::-webkit-details-marker]:hidden">
-                {t(`${id}.question`, { percent: lodgingDiscountPercent })}
+                {t(`${id}.question`)}
                 <ChevronDown className="size-5 shrink-0 text-terracotta transition-transform group-open:rotate-180" />
               </summary>
               <p className="pb-5 text-[0.95rem] leading-relaxed text-muted-foreground sm:text-base">

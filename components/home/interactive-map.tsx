@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { MapPin } from "lucide-react";
 import { googleMapsEmbedUrl } from "@/lib/data/pousada";
+import { photos } from "@/lib/data/images";
 
 export function InteractiveMap({ className = "" }: { className?: string }) {
   const t = useTranslations("googleReviews");
@@ -40,6 +42,13 @@ export function InteractiveMap({ className = "" }: { className?: string }) {
       ref={containerRef}
       className={`relative isolate overflow-hidden rounded-2xl border border-border bg-secondary ${className}`}
     >
+      <Image
+        src={photos.googleMaps}
+        alt=""
+        fill
+        sizes="(min-width: 1024px) 560px, 90vw"
+        className="-z-10 object-cover"
+      />
       {visible ? (
         <iframe
           src={googleMapsEmbedUrl(locale)}
@@ -60,7 +69,9 @@ export function InteractiveMap({ className = "" }: { className?: string }) {
           loaded ? "pointer-events-none opacity-0" : "opacity-100"
         }`}
       >
-        <MapPin className="size-8 animate-pulse text-muted-foreground" />
+        <span className="flex size-14 items-center justify-center rounded-full bg-terracotta text-white shadow-lg shadow-black/20">
+          <MapPin className="size-6 motion-safe:animate-bounce" />
+        </span>
       </div>
     </div>
   );
