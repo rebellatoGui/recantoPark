@@ -10,7 +10,7 @@ Site institucional da Pousada Recanto do Park, em Penha/SC.
 </p>
 
 <p align="center">
-  <img alt="Capa Recanto do Park" src="readme-preview.png" style="border-radius: 10px;">
+  <img alt="Capa Recanto do Park" src="assets/readme-preview.png" style="border-radius: 10px;">
 <br>
 
 ## 🚀 Tecnologias
